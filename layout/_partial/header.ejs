@@ -1,0 +1,15 @@
+<header id="header">
+    <a href="<%- url_for("/") %>">
+        <%- (theme.customize.logo && theme.customize.logo.enabled ? '<div class="logo"></div>':'') %>
+        <div id="title">
+          <h1>
+              <%= config.title %>
+          </h1>
+          <% if (config.subtitle) { %>
+          <h2>
+              <%= config.subtitle %>
+          </h2>
+          <% } %>
+        </div>
+    </a>
+</header>

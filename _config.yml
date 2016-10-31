@@ -1,0 +1,26 @@
+projects_url: http://github.com/probberechts
+
+customize:
+    logo:
+        enabled: true
+        width: 50
+        height: 50
+        url: https://raw.githubusercontent.com/probberechts/cactus-dark/gh-pages/images/logo.png
+    favicon: /images/favicon.png # path to favicon
+    social_links:
+        github: http://github.com/probberechts/cactus-dark
+        twitter: /
+        facebook: /
+        linkedin: /
+
+# Plugins
+plugins:
+    google_analytics: UA-86660611-1 # enter the tracking ID for your Google Analytics
+
+# Miscellaneous
+miscellaneous:
+    open_graph: # see http://ogp.me
+        fb_app_id:
+        fb_admins:
+        twitter_id:
+        google_plus:

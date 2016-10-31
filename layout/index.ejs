@@ -1,0 +1,44 @@
+<div class="content index width mx-auto px2 my4">
+    <%- partial('_partial/header') %>
+    <section id="about">
+      <% if (config.description) { %>
+        <%- markdown(config.description) %>
+      <% } %>
+      <p style="display: inline">
+      <% if (theme.customize.social_links.twitter) { %>
+        Find me on
+        <ul id="sociallinks">
+          <% for(var i in theme.customize.social_links) { %>
+            <li><a class="icon" target="_blank" href="<%- url_for(theme.customize.social_links[i]) %>" title="<%= i %>"><i class="fa fa-lg fa-<%= i %>"></i></a></li>
+          <% } %>
+        </ul>
+      <% } %>
+      </p>
+    </section>
+    <section id="writing">
+      <span class="h1"><a href="<%- url_for("archives") %>">Writing</a></span>
+      <ul class="post-list">
+        <% site.posts.sort('date', 'desc').limit(5).each(function(post, i){ %>
+          <li class="post-item">
+              <%- partial('_partial/post/date', { post: post, class_name: 'meta' }) %>
+              <span><%- partial('_partial/post/title', { post: post, index: true, class_name: '' }) %></span>
+          </li>
+        <% }); %>
+        <% if (site.posts.length > 5) { %>
+            <li class="post-more"><a href="<%- url_for("archives") %>"><emph>more...</emph></a></li>
+        <% } %>
+      </ul>
+    </section>
+    <% if (site.data.projects) { %>
+    <section id="projects">
+      <span class="h1"><a href="<%- url_for(theme.projects_url) %>">Projects</a></span>
+      <ul class="project-list">
+          <% for(var obj in site.data.projects){ %>
+              <li class="project-item">
+                  <a href="<%= site.data.projects[obj].url %>"><%= site.data.projects[obj].name %></a>: <%= site.data.projects[obj].desc %>
+              </li>
+          <% } %>
+      </ul>
+    </section>
+    <% } %>
+</div>
