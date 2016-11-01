@@ -1,0 +1,9 @@
+<div class="content index width mx-auto px2 my4">
+  <%- partial('_partial/header') %>
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <%- partial('_partial/post/gallery') %>
+    <div class="content" itemprop="articleBody">
+      <%- page.content %>
+    </div>
+  </article>
+</div>

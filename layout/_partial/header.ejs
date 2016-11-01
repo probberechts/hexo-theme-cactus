@@ -5,7 +5,15 @@
           <h1>
               <%= config.title %>
           </h1>
-          <% if (config.subtitle) { %>
+          <% if (is_home() && config.subtitle) { %>
+          <h2>
+              <%= config.subtitle %>
+          </h2>
+          <% } else if (page.title) { %>
+          <h2>
+              <%= page.title %>
+          </h2>
+          <% } else if (config.subtitle) { %>
           <h2>
               <%= config.subtitle %>
           </h2>
