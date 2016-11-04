@@ -13,6 +13,9 @@ customize:
         facebook: /
         linkedin: /
 
+# RSS
+rss: false
+
 # Plugins
 plugins:
     disqus_shortname: # Disqus Comments Shortname

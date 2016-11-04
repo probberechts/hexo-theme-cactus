@@ -12,7 +12,6 @@ A responsive, dark and simple [Hexo](http://hexo.io) theme for a personal websit
 - [Features](#features)
 - [Install](#install)
 - [Quick start](#quick-start)
-- [About](#about)
 - [License](#license)
 
 ## General
@@ -65,6 +64,28 @@ Create a projects file `source/_data/projects.json`.
       }
   ]
   ```
+
+### Social media links
+
+Cactus Dark can automatically add links to your social media accounts:
+
+  ```
+  customize:
+    social_links:
+      github: your-github-url
+      twitter: your-twitter-url
+      NAME: your-NAME-url
+  ```
+
+where `NAME` is the name of a [Font Awesome icon](http://fontawesome.io/icons/#brand).
+
+### RSS
+
+Set the `rss` field in the theme's `_config.yml` to one of the following values:
+
+1. `rss: false` will totally disable rss (default).
+2. `rss: http://your-feed-url` sets a specific feed link.
+3. `rss:`leave empty to use the [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) plugin. 
 
 ### Analytics
 
