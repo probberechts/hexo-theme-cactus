@@ -1,0 +1,192 @@
+From e64ff1ccf38fe81f90aead8d9d0202fbd5416e53 Mon Sep 17 00:00:00 2001
+From: kg <kylgrvs@gmail.com>
+Date: Mon, 7 Nov 2016 02:29:22 -0800
+Subject: [PATCH] changes settings to use site's config by default
+
+To make this theme more customizable, rather than hacking the theme's config
+file, I made all settings look to the site's config first and fallback on the
+theme's defaults.
+---
+ _config.yml                     |  2 +-
+ layout/_partial/comments.ejs    |  3 ++-
+ layout/_partial/footer.ejs      |  2 +-
+ layout/_partial/head.ejs        | 16 +++++++++-------
+ layout/_partial/header.ejs      |  5 ++++-
+ layout/_partial/scripts.ejs     |  8 ++++----
+ layout/index.ejs                |  9 +++++----
+ source/css/_partial/header.styl |  1 -
+ source/css/_variables.styl      |  1 -
+ 9 files changed, 26 insertions(+), 21 deletions(-)
+
+diff --git a/_config.yml b/_config.yml
+index d1d9d7b..4e7d66d 100644
+--- a/_config.yml
++++ b/_config.yml
+@@ -19,7 +19,7 @@ rss: false
+ # Plugins
+ plugins:
+     disqus_shortname: # Disqus Comments Shortname
+-    google_analytics: UA-86660611-1 # enter the tracking ID for your Google Analytics
++    google_analytics: # enter the tracking ID for your Google Analytics
+ 
+ # Miscellaneous
+ miscellaneous:
+diff --git a/layout/_partial/comments.ejs b/layout/_partial/comments.ejs
+index 40e8c0e..21e2370 100644
+--- a/layout/_partial/comments.ejs
++++ b/layout/_partial/comments.ejs
+@@ -1,4 +1,5 @@
+-<% if(page.comments && theme.plugins.disqus_shortname){ %>
++<% var plugins = config.plugins || theme.plugins; %>
++<% if(page.comments && plugins.disqus_shortname){ %>
+     <div class="blog-post-comments">
+         <div id="disqus_thread">
+             <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+diff --git a/layout/_partial/footer.ejs b/layout/_partial/footer.ejs
+index 6b2b790..7802bb9 100644
+--- a/layout/_partial/footer.ejs
++++ b/layout/_partial/footer.ejs
+@@ -7,7 +7,7 @@
+       <ul>
+         <li><a href="<%- url_for("/") %>">Home</a></li>
+         <li><a href="<%- url_for("archives") %>">Writing</a></li>
+-        <li><a href="<%- url_for(theme.projects_url) %>">Projects</a></li>
++        <li><a href="<%- url_for(config.projects_url || theme.projects_url) %>">Projects</a></li>
+       </ul>
+     </nav>
+   </div>
+diff --git a/layout/_partial/head.ejs b/layout/_partial/head.ejs
+index 57fae77..f0bdc23 100644
+--- a/layout/_partial/head.ejs
++++ b/layout/_partial/head.ejs
+@@ -4,16 +4,18 @@
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="HandheldFriendly" content="True">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
++    <% var misc = config.miscellaneous || theme.miscellaneous; %>
+     <%- open_graph({
+         image:          thumbnail(page),
+-        fb_app_id:      theme.miscellaneous.open_graph.fb_app_id,
+-        fb_admins:      theme.miscellaneous.open_graph.fb_admins,
+-        twitter_id:     theme.miscellaneous.open_graph.twitter_id,
+-        google_plus:    theme.miscellaneous.open_graph.google_plus,
++        fb_app_id:      misc.open_graph.fb_app_id,
++        fb_admins:      misc.open_graph.fb_admins,
++        twitter_id:     misc.open_graph.twitter_id,
++        google_plus:    misc.open_graph.google_plus,
+     }) %>
+     <%- meta(page) %>
+-    <% if (theme.customize.favicon) { %>
+-        <link rel="icon" type="image/png" href="<%= url_for(theme.customize.favicon) %>" sizes="32x32" />
++    <% var customize = config.customize || theme.customize; %>
++    <% if (customize.favicon) { %>
++        <link rel="icon" type="image/png" href="<%= url_for(customize.favicon) %>" sizes="32x32" />
+     <% } %>
+     <!-- title -->
+     <title><%= page.title ? page.title : config.title %></title>
+@@ -23,7 +25,7 @@
+     <%- css('lib/justified-gallery/justifiedGallery.min.css') %>
+     <%- css('css/style') %>
+     <!-- rss -->
+-    <% if (theme.rss === '' && config.feed && config.feed.path) { %>
++    <% if (!theme.rss && config.feed && config.feed.path) { %>
+       <% theme.rss = config.feed.path %>
+     <% } %>
+     <% if (theme.rss) { %>
+diff --git a/layout/_partial/header.ejs b/layout/_partial/header.ejs
+index e57e270..1a26f1a 100644
+--- a/layout/_partial/header.ejs
++++ b/layout/_partial/header.ejs
+@@ -1,6 +1,9 @@
+ <header id="header">
+     <a href="<%- url_for("/") %>">
+-        <%- (theme.customize.logo && theme.customize.logo.enabled ? '<div class="logo"></div>':'') %>
++        <% var logo = (config.customize && config.customize.logo) || theme.customize.logo; %>
++        <% if (logo && logo.enabled) { %>
++          <div class="logo" style="background-image: url(<%- url_for(logo.url) %>);"></div>
++        <% } %>
+         <div id="title">
+           <h1>
+               <%= config.title %>
+diff --git a/layout/_partial/scripts.ejs b/layout/_partial/scripts.ejs
+index b0c3d8c..00e926b 100644
+--- a/layout/_partial/scripts.ejs
++++ b/layout/_partial/scripts.ejs
+@@ -1,20 +1,20 @@
+ <%- js('lib/justified-gallery/jquery.justifiedGallery.min.js') %>
+ <%- js('js/main') %>
+ <!-- Google Analytics -->
+-<% if (theme.plugins.google_analytics){ %>
++<% if (config.plugins && config.plugins.google_analytics){ %>
+     <script type="text/javascript">
+         (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+-        ga('create', '<%= theme.plugins.google_analytics %>', 'auto');
++        ga('create', '<%= config.plugins.google_analytics %>', 'auto');
+         ga('send', 'pageview');
+     </script>
+ <% } %>
+ <!-- Disqus Comments -->
+-<% if (theme.plugins.disqus_shortname){ %>
++<% if (config.plugins && config.plugins.disqus_shortname){ %>
+     <script type="text/javascript">
+-        var disqus_shortname = '<%= theme.plugins.disqus_shortname %>';
++        var disqus_shortname = '<%= config.plugins.disqus_shortname %>';
+ 
+         (function(){
+             var dsq = document.createElement('script');
+diff --git a/layout/index.ejs b/layout/index.ejs
+index be47717..5246d2a 100644
+--- a/layout/index.ejs
++++ b/layout/index.ejs
+@@ -5,11 +5,12 @@
+         <%- markdown(config.description) %>
+       <% } %>
+       <p style="display: inline">
+-      <% if (theme.customize.social_links.twitter) { %>
++      <% var social_links = (config.customize && config.customize.social_links) || theme.customize.social_links; %>
++      <% if (Object.keys(social_links).length > 0) { %>
+         Find me on
+         <ul id="sociallinks">
+-          <% for(var i in theme.customize.social_links) { %>
+-            <li><a class="icon" target="_blank" href="<%- url_for(theme.customize.social_links[i]) %>" title="<%= i %>"><i class="fa fa-lg fa-<%= i %>"></i></a></li>
++          <% for(var i in social_links) { %>
++            <li><a class="icon" target="_blank" href="<%- url_for(social_links[i]) %>" title="<%= i %>"><i class="fa fa-lg fa-<%= i %>"></i></a></li>
+           <% } %>
+         </ul>
+       <% } %>
+@@ -31,7 +32,7 @@
+     </section>
+     <% if (site.data.projects) { %>
+     <section id="projects">
+-      <span class="h1"><a href="<%- url_for(theme.projects_url) %>">Projects</a></span>
++      <span class="h1"><a href="<%- url_for(config.projects_url || theme.projects_url) %>">Projects</a></span>
+       <ul class="project-list">
+           <% for(var obj in site.data.projects){ %>
+               <li class="project-item">
+diff --git a/source/css/_partial/header.styl b/source/css/_partial/header.styl
+index 8be37d7..5e427a4 100644
+--- a/source/css/_partial/header.styl
++++ b/source/css/_partial/header.styl
+@@ -37,5 +37,4 @@
+     width: logo-width
+     height: logo-height
+     background-repeat: no-repeat
+-    background-image: url($logo-url)
+     background-size: logo-width logo-height
+diff --git a/source/css/_variables.styl b/source/css/_variables.styl
+index 9022264..c35c201 100644
+--- a/source/css/_variables.styl
++++ b/source/css/_variables.styl
+@@ -15,6 +15,5 @@ $color-accent = #2bbc8a
+ $ease-in-sine = cubic-bezier(0.47, 0, 0.745, 0.715)
+ 
+ // Logo
+-$logo-url = hexo-config("customize.logo.url")
+ logo-width = 0px + hexo-config("customize.logo.width")
+ logo-height = 0px + hexo-config("customize.logo.height")
+-- 
+2.9.3
+

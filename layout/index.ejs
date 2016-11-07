@@ -5,11 +5,12 @@
         <%- markdown(config.description) %>
       <% } %>
       <p style="display: inline">
-      <% if (theme.customize.social_links.twitter) { %>
+      <% var social_links = (config.customize && config.customize.social_links) || theme.customize.social_links; %>
+      <% if (Object.keys(social_links).length > 0) { %>
         Find me on
         <ul id="sociallinks">
-          <% for(var i in theme.customize.social_links) { %>
-            <li><a class="icon" target="_blank" href="<%- url_for(theme.customize.social_links[i]) %>" title="<%= i %>"><i class="fa fa-lg fa-<%= i %>"></i></a></li>
+          <% for(var i in social_links) { %>
+            <li><a class="icon" target="_blank" href="<%- url_for(social_links[i]) %>" title="<%= i %>"><i class="fa fa-lg fa-<%= i %>"></i></a></li>
           <% } %>
         </ul>
       <% } %>
@@ -31,7 +32,7 @@
     </section>
     <% if (site.data.projects) { %>
     <section id="projects">
-      <span class="h1"><a href="<%- url_for(theme.projects_url) %>">Projects</a></span>
+      <span class="h1"><a href="<%- url_for(config.projects_url || theme.projects_url) %>">Projects</a></span>
       <ul class="project-list">
           <% for(var obj in site.data.projects){ %>
               <li class="project-item">
