@@ -11,7 +11,7 @@ A responsive, dark and simple [Hexo](http://hexo.io) theme for a personal websit
 - [General](#general)
 - [Features](#features)
 - [Install](#install)
-- [Quick start](#quick-start)
+- [Configuration](#configuration)
 - [License](#license)
 
 ## General
@@ -44,7 +44,7 @@ A responsive, dark and simple [Hexo](http://hexo.io) theme for a personal websit
 
 3. Run: `hexo server`
 
-## Quick Start
+## Configuration
 
 ### Projects list
 
@@ -67,7 +67,7 @@ Create a projects file `source/_data/projects.json`.
 
 ### Social media links
 
-Cactus Dark can automatically add links to your social media accounts:
+Cactus Dark can automatically add links to your social media accounts. Therefore, update the theme's `_config.yml`:
 
   ```
   customize:
@@ -89,7 +89,7 @@ Set the `rss` field in the theme's `_config.yml` to one of the following values:
 
 ### Analytics
 
-Add you Google Analytics `tracking_id` to `_config.yml`.
+Add you Google Analytics `tracking_id` to the theme's `_config.yml`.
 
   ```
   plugins:
@@ -100,7 +100,7 @@ Add you Google Analytics `tracking_id` to `_config.yml`.
 
 First, create a site on Disqus: [https://disqus.com/admin/create/](http://disqus.com/admin/create/).
 
-Next, update the `_config.yaml` file:
+Next, update the theme's `_config.yml` file:
 
   ```
   plugins:
