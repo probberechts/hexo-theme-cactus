@@ -5,7 +5,7 @@ customize:
         enabled: true
         width: 50
         height: 50
-        url: https://raw.githubusercontent.com/probberechts/cactus-dark/gh-pages/images/logo.png
+        url: /images/logo.png
     favicon: /images/favicon.png # path to favicon
     social_links:
         github: http://github.com/probberechts/cactus-dark
