@@ -1,3 +1,8 @@
+nav:
+  Home: /
+  Writing: archives
+  Projects: http://github.com/probberechts
+
 projects_url: http://github.com/probberechts
 
 customize:
@@ -6,7 +11,7 @@ customize:
         width: 50
         height: 50
         url: /images/logo.png
-    favicon: /images/favicon.png # path to favicon
+        favicon: /images/favicon.png # path to favicon
     social_links:
         github: http://github.com/probberechts/cactus-dark
         twitter: /

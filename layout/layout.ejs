@@ -2,7 +2,10 @@
 <html<%= config.language ? " lang=" + config.language.substring(0, 2) : ""%>>
 <%- partial('_partial/head') %>
 <body>
-    <%- body %>
+    <div class="content index width mx-auto px2 my4">
+        <%- partial('_partial/header') %>
+        <%- body %>
+      </div>
     <%- partial('_partial/footer') %>
     <%- partial('_partial/scripts') %>
 </body>

@@ -1,14 +1,9 @@
-<div class="content archive width mx-auto px2 my4">
-  <header id="header">
-    <h1 id="writing"><a href="<%- url_for("archives") %>">Writing</a></h1>
-  </header>
-  <ul class="post-list">
-    <% site.posts.sort('date', 'desc').each(function(post) { %>
-      <li class="post-item">
-          <%- partial('_partial/post/date', { post: post, class_name: 'meta' }) %>
-          <span><%- partial('_partial/post/title', { post: post, index: true, class_name: '' }) %><span>
-      </li>
-    <% }); %>
-  </ul>
-</div>
+<ul class="post-list">
+  <% site.posts.sort('date', 'desc').each(function(post) { %>
+    <li class="post-item">
+      <%- partial('_partial/post/date', { post: post, class_name: 'meta' }) %>
+      <span><%- partial('_partial/post/title', { post: post, index: true, class_name: '' }) %><span>
+    </li>
+  <% }); %>
+</ul>
 

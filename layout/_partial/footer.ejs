@@ -5,9 +5,9 @@
   <div class="footer-right">
     <nav>
       <ul>
-        <li><a href="<%- url_for("/") %>">Home</a></li>
-        <li><a href="<%- url_for("archives") %>">Writing</a></li>
-        <li><a href="<%- url_for(theme.projects_url) %>">Projects</a></li>
+        <% for (var i in theme.nav) { %> 
+          <li><a href="<%- url_for(theme.nav[i]) %>"><%= i %></a></li>
+        <% } %>
       </ul>
     </nav>
   </div>
