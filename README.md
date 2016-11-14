@@ -16,7 +16,7 @@ A responsive, dark and simple [Hexo](http://hexo.io) theme for a personal websit
 
 ## General
 
-- **Version** : 1.0
+- **Version** : 2.0
 - **Compatibility** : Hexo 3 or later
 
 ## Features
@@ -24,6 +24,9 @@ A responsive, dark and simple [Hexo](http://hexo.io) theme for a personal websit
 - Fully responsive
 - Disqus
 - Googe analytics
+- Font Awesome icons
+- Pick your own code highlighting scheme
+- Configurable navigation menu
 - Projects list
 - Simplicity
 
@@ -32,7 +35,7 @@ A responsive, dark and simple [Hexo](http://hexo.io) theme for a personal websit
 
     ```git
     $ git clone https://github.com/probberechts/cactus-dark.git themes/cactus-dark
-    $ npm install
+    $ npm install hexo-pagination --save
     ```
 
 2. Change the `theme` property in the `config.yml` file.
@@ -42,9 +45,22 @@ A responsive, dark and simple [Hexo](http://hexo.io) theme for a personal websit
     theme: cactus-dark
     ```
 
-3. Run: `hexo server`
+3. Run: `hexo generate` and `hexo server`
 
 ## Configuration
+
+### Navigation
+
+Setup the navigation menu in the theme's `_config.yml`:
+
+  ```
+  nav:
+    Home: /
+    About: /about/
+    Writing: /archives/
+    Projects: http://github.com/probberechts
+    LINK_NAME: URL
+  ```
 
 ### Projects list
 
@@ -108,6 +124,15 @@ Next, update the theme's `_config.yml` file:
   ```
 
 where `SITENAME` is the name you gave your site on Disqus.
+
+### Code Highlighting
+
+Pick one of [the available colorschemes](https://github.com/probberechts/cactus-dark/tree/master/source/css/_highlight) and add it to the theme's `_config.yml`:
+
+  ```
+  customize:
+      highlight: COLORSCHEME_NAME
+  ```
 
 ## License
 MIT
