@@ -70,53 +70,6 @@ body
   h6 a:hover
     underline(6px, $color-link)
 
-  h1,
-  .h1
-    letter-spacing: 0.01em
-    font-size: 1.5em
-    font-style: normal
-    font-weight: 700
-    color: $color-accent
-    margin-top: 3rem
-    margin-bottom: 1rem
-    display: block
-    antialias()
-
-  h2,
-  .h2
-    position: relative
-    font-size: 1rem
-    font-weight: bold
-    text-transform: none
-    letter-spacing: normal
-    margin-top: 3rem
-    margin-bottom: 0.5rem
-    color: $color-lightest
-    display: block
-
-  h3
-    font-size: 1rem
-    font-weight: bold
-    text-decoration: underline;
-    color: $color-lightest
-
-  h4,
-  h5,
-  h6
-    font-size: 1rem
-    font-weight: normal
-    color: $color-light
-    border-bottom: 1px dashed $color-light
-    display: inline
-    text-decoration: none
-
-  h3,
-  h4,
-  h5,
-  h6
-    margin-top: 1rem
-    margin-bottom: 0.5rem
-
 @media (min-width: 540px)
   .image-wrap
     flex-direction: row
@@ -152,70 +105,51 @@ body
 @import "_partial/footer"
 
 // Code
-pre,
-  font-family: "Source Code Pro", Monaco, Menlo, Consolas, monospace
-  color: #4d4d4c
-  font-size: 13px
-code
-  -webkit-border-radius: 2px
-  border-radius: 2px
-  border: 1px dotted #666
-  padding: 0 5px
+@import 'syntax'
 pre
+  font-family: $font-family-mono
+  font-size: 13px
   padding: 10px 15px
   padding-bottom: 0
   line-height: 22px
   -webkit-border-radius: 4px
   border-radius: 4px
   border: 1px dotted #666
+code
+  -webkit-border-radius: 2px
+  border-radius: 2px
+  border: 1px dotted #666
+  padding: 0 5px
 pre code
   border: none
   display: block
   padding: 0
+
 .highlight
-  border: 1px solid #666
   -webkit-border-radius: 4px
   border-radius: 4px
   padding: 10px 15px
-  color: #4d4d4c
   overflow: auto
-  margin: 0
-.highlight figcaption
-  zoom: 1
-  margin: -5px 0 5px
-  font-size: 0.9em
-  color: #999
-.highlight figcaption:before,
-  content: ""
-  display: table
-.highlight figcaption:after
-  clear: both
-.highlight figcaption a
-  float: right
-.highlight pre
-  padding: 0
-  border: none
-  background: none
-.highlight table
-  width: auto
-pre .comment,
-  color: #8e908c
-pre .variable,
-  color: #c82829
-pre .number,
-  color: #f5871f
-pre .class,
-  color: #718c00
-pre .string,
-  color: #718c00
-pre .css .hexcolor
-  color: #3e999f
-pre .function,
-  color: #4271ae
-pre .keyword,
-  color: #8959a8
-.highlight
-  .gutter
+  margin: 1rem 0 1rem 0
+  figcaption
+    zoom: 1
+    margin: -5px 0 5px
+    font-size: 0.9em
+    color: #999
+    a
+      float: right
+    &:before,
+      content: ""
+      display: table
+    &:after
+      clear: both
+  pre
+    padding: 0
+    border: none
+    background: none
+  table
+    width: auto
+  td.gutter
+    padding: 20px
     display: none
 
-@import 'syntax'
