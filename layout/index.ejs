@@ -17,7 +17,7 @@
 <section id="writing">
   <span class="h1"><a href="<%- url_for("archives") %>">Writing</a></span>
   <ul class="post-list">
-    <% site.posts.sort('date', 'desc').limit(5).each(function(post, i){ %>
+    <% site.posts.sort('date', 'desc').limit(theme.customize.post_count || 5).each(function(post, i){ %>
       <li class="post-item">
         <%- partial('_partial/post/date', { post: post, class_name: 'meta' }) %>
         <span><%- partial('_partial/post/title', { post: post, index: true, class_name: '' }) %></span>

@@ -1,6 +1,7 @@
 nav:
   Home: /
-  Writing: archives
+  About: /about/
+  Writing: /archives/
   Projects: http://github.com/probberechts
 
 projects_url: http://github.com/probberechts
@@ -17,6 +18,7 @@ customize:
         twitter: /
         facebook: /
         linkedin: /
+    post_count: 5
     highlight: rainbow
 
 # RSS
