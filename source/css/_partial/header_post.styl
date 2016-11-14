@@ -1,0 +1,99 @@
+#header-post
+  position: fixed
+  top: 2rem
+  right: 2rem
+  display: inline-block
+  float: right
+  a
+    color: inherit
+    text-decoration: none
+    background: none
+  a.icon
+    background: none
+    &:hover
+      color: $color-link
+  ol
+    list-style-type: none
+  ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+    display: inline-block
+    li
+      margin-right: 15px
+      display: inline-block
+      vertical-align: middle
+    li:last-child
+      margin-right: 0
+  #menu-icon
+    float: right
+    margin-left: 15px
+  .active
+    color: $color-accent
+  #menu
+    visibility: hidden
+  #nav
+    letter-spacing: 0.01em
+    font-size: .8rem
+    font-style: normal
+    font-weight: 200
+    color: $color-accent
+    ul
+      line-height: 15px
+      a
+        margin-right: 15px
+        color: color-accent
+      a:hover
+          underline(5px, $color-accent)
+      li
+        border-right: 1px dotted $color-accent
+      li:last-child
+        border-right: 0
+        margin-right: 0
+        a
+          margin-right: 0
+  #actions
+    float: right
+    margin-top: 2rem
+    .info
+      float: left
+      margin-right: 2rem
+      font-style: italic
+  #share
+    clear: both
+    text-align: right
+    padding-top: 1rem
+    li
+      margin: 0
+      display: block
+  #toc
+    clear: both
+    text-align: right
+    padding-top: 1rem
+    a:hover
+      color: $color-link
+    .toc-level-1
+      display: none
+    .toc-level-2
+      font-size: 0.8rem
+      color: $color-text
+      &:before
+        content: "#"
+        color: $color-accent
+    .toc-level-3
+      font-size: 0.7rem
+      color: #b3b3b3
+    .toc-level-4
+      font-size: 0.4rem
+      color: #666 
+    .toc-level-5
+      display: none
+    .toc-level-6
+      display: none
+    .toc-number
+      display: none
+
+
+@media screen and (max-width:1199px)
+  #header-post
+    display: none

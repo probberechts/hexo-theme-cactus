@@ -20,6 +20,7 @@
     background: none
 
   #logo
+    display: inline-block
     float: left
     margin-right: 20px
     width: logo-width
@@ -51,6 +52,8 @@
         vertical-align: middle
         margin-right: 15px
         border-right: 1px dotted $color-accent
+      .icon
+        display: none
       li:last-child
         border-right: 0
         margin-right: 0
@@ -61,3 +64,27 @@
   #logo
     -webkit-filter: none
     filter: none
+
+@media screen and (max-width:480px)
+  #header #title
+    padding-top: (logo-height / 2) - 16
+    padding-bottom: (logo-height / 2) - 16
+  #header #nav
+    ul
+      a:hover
+        background: none
+      li
+        display: none
+        border-right: 0
+      li.icon
+        display: inline-block
+        position: absolute
+        top: 55px
+        right: 1rem
+    ul.responsive
+      li
+        display: block;
+    li:not(:first-child)
+        padding-top: 1rem
+        padding-left: logo-width + 20px
+        font-size: 1rem
