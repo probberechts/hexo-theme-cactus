@@ -17,6 +17,7 @@ customize:
         twitter: /
         facebook: /
         linkedin: /
+    highlight: rainbow
 
 # RSS
 rss: false
