@@ -98,10 +98,14 @@ article
     font-size: 1.5em
     line-height: 1.25
 
+
 .article-tag
-    display: inline
+  .tag-link
     &:before
-      content: "|"
-    .tag-link
-        &:before
-            content: "#"
+      content: "#"
+
+@media (min-width: 480px)
+  .article-tag
+      display: inline
+      &:before
+        content: "|"
