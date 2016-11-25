@@ -1,5 +1,5 @@
 <ul class="post-list">
-  <% site.posts.sort('date', 'desc').each(function(post) { %>
+  <% page.posts.sort('date', 'desc').each(function(post) { %>
     <li class="post-item">
       <%- partial('_partial/post/date', { post: post, class_name: 'meta' }) %>
       <span><%- partial('_partial/post/title', { post: post, index: true, class_name: '' }) %><span>
