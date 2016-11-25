@@ -13,7 +13,15 @@
     }) %>
     <%- meta(page) %>
     <% if (theme.customize.favicon) { %>
-        <link rel="icon" type="image/png" href="<%= url_for(theme.customize.favicon) %>" sizes="32x32" />
+        <% if (theme.customize.favicon.desktop) { %>
+          <link rel="shortcut icon" href="<%= url_for(theme.customize.favicon.desktop) %>">
+        <% } %>
+        <% if (theme.customize.favicon.android) { %>
+          <link rel="icon" type="image/png" href="<%= url_for(theme.customize.favicon.android) %>" sizes="192x192">
+        <% } %>
+        <% if (theme.customize.favicon.apple) { %>
+          <link rel="apple-touch-icon" sizes="180x180" href="<%= url_for(theme.customize.favicon.apple) %>">
+        <% } %>
     <% } %>
     <!-- title -->
     <title><%= page.title ? page.title : config.title %></title>
