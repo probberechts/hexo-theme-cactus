@@ -28,6 +28,20 @@
   #menu-icon
     float: right
     margin-left: 15px
+    &:hover
+      color: $color-accent
+  #menu-icon-tablet
+    float: right
+    margin-left: 15px
+    &:hover
+      color: $color-accent
+  #top-icon-tablet
+    margin-left: 15px
+    bottom: 2rem
+    right: 2rem
+    position: fixed
+    &:hover
+      color: $color-accent
   .active
     color: $color-accent
   #menu
@@ -55,9 +69,12 @@
   #actions
     float: right
     margin-top: 2rem
+    width: 100%
+    text-align: right
+    ul
+      display: block
     .info
-      float: left
-      margin-right: 2rem
+      display: block
       font-style: italic
   #share
     clear: both
@@ -94,6 +111,41 @@
       display: none
 
 
-@media screen and (max-width:1199px)
+// smartphone + phapblet
+@media screen and (max-width:500px)
   #header-post
     display: none
+
+
+@media screen and (max-width:900px)
+  #header-post
+    #menu-icon
+      display: none
+    #actions
+      display: none
+
+@media screen and (max-width:1199px)
+  #header-post
+    #toc
+      display: none
+
+
+@media screen and (min-width:900px)
+  #header-post
+    #menu-icon-tablet
+      display: none !important
+    #top-icon-tablet
+      display: none !important
+
+@media screen and (min-width:1199px)
+  #header-post
+    #actions
+      width: auto
+      ul
+        display: inline-block
+        float: right
+      .info
+        float: left
+        margin-right: 2rem
+        font-style: italic
+        display: inline

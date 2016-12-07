@@ -3,14 +3,17 @@
 <%- partial('_partial/head') %>
 <body>
     <% if (is_post()) { %>
-      <%- partial('_partial/header_post') %>
+      <%- partial('_partial/post/actions_desktop') %>
     <% } %>
     <div class="content index width mx-auto px2 my4">
         <% if (!is_post()) { %>
           <%- partial('_partial/header') %>
         <% } %>
         <%- body %>
-      </div>
+    </div>
+    <% if (is_post()) { %>
+      <%- partial('_partial/post/actions_mobile') %>
+    <% } %>
     <%- partial('_partial/footer') %>
     <%- partial('_partial/scripts') %>
 </body>
