@@ -14,7 +14,11 @@
     <%- meta(page) %>
     <% if (theme.customize.favicon) { %>
         <% if (theme.customize.favicon.desktop) { %>
-          <link rel="shortcut icon" href="<%= url_for(theme.customize.favicon.desktop) %>">
+          <% if (theme.customize.gravatar.email && theme.customize.favicon.gravatar) { %>
+              <link rel="shortcut icon" href="<%= gravatar(theme.customize.gravatar.email, 16) %>">
+          <% } else { %>
+              <link rel="shortcut icon" href="<%= url_for(theme.customize.favicon.desktop) %>">
+          <% } %>
         <% } %>
         <% if (theme.customize.favicon.android) { %>
           <link rel="icon" type="image/png" href="<%= url_for(theme.customize.favicon.android) %>" sizes="192x192">

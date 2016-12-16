@@ -1,7 +1,11 @@
 <header id="header">
   <a href="<%- url_for("/") %>">
   <% if (theme.customize.logo && theme.customize.logo.enabled) { %>
-    <div id="logo" style="background-image: url(<%- url_for(theme.customize.logo.url) %>);"></div>
+      <% if (theme.customize.gravatar.email && theme.customize.logo.gravatar) { %>
+          <div id="logo" style="background-image: url(<%- gravatar(theme.customize.gravatar.email) %>);"></div>
+      <% } else { %>
+          <div id="logo" style="background-image: url(<%- url_for(theme.customize.logo.url) %>);"></div>
+      <% } %>
   <% } %>
     <div id="title">
       <h1><%= config.title %></h1>

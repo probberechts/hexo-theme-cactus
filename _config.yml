@@ -7,16 +7,20 @@ nav:
 projects_url: http://github.com/probberechts
 
 customize:
+    gravatar:
+        email: 
     logo:
         enabled: true
         width: 50
         height: 50
         url: /images/logo.png
+        gravatar: false
     favicon: 
       # eg. generate with http://realfavicongenerator.net/
       desktop: /images/favicon.ico
       android: /images/favicon-192x192.png
       apple: /images/apple-touch-icon.png
+      gravatar: false
     social_links:
         github: http://github.com/probberechts/cactus-dark
         twitter: /
