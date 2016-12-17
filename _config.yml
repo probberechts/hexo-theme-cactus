@@ -17,10 +17,15 @@ customize:
         gravatar: false
     favicon: 
       # eg. generate with http://realfavicongenerator.net/
-      desktop: /images/favicon.ico
-      android: /images/favicon-192x192.png
-      apple: /images/apple-touch-icon.png
-      gravatar: false
+      desktop:
+        url: /images/favicon.ico
+        gravatar: false
+      android:
+        url: /images/favicon-192x192.png
+        gravator: false
+      apple:
+        url: /images/apple-touch-icon.png
+        gravator: false
     social_links:
         github: http://github.com/probberechts/cactus-dark
         twitter: /
