@@ -25,6 +25,9 @@ body
   min-height: 100%
   display: flex
   flex-direction: column
+  // tells WebKit to disable unwanted auto-enlargement of small text 
+  // in mobile Safari, but to still allow user-initiated zoom.
+  ‑webkit‑text‑size‑adjust: 100%
   antialias()
 
 .content
