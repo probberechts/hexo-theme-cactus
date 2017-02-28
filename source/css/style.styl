@@ -25,9 +25,6 @@ body
   min-height: 100%
   display: flex
   flex-direction: column
-  // tells WebKit to disable unwanted auto-enlargement of small text 
-  // in mobile Safari, but to still allow user-initiated zoom.
-  ‑webkit‑text‑size‑adjust: 100%
   antialias()
 
 .content
@@ -89,8 +86,9 @@ body
 
 @media (max-width: 480px)
   // smaller margins at smaller screen widths
-  body
-    -webkit-text-size-adjust: none
+  pre
+    .line
+      -webkit-text-size-adjust: none
   .px3
     padding-left: 1rem
     padding-right: 1rem
