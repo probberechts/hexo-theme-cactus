@@ -13,6 +13,8 @@ global-reset()
 html
   height: 100%
   border-top: 2px solid $color-text
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
 
 body
   color: $color-text
@@ -25,9 +27,6 @@ body
   min-height: 100%
   display: flex
   flex-direction: column
-  // tells WebKit to disable unwanted auto-enlargement of small text 
-  // in mobile Safari, but to still allow user-initiated zoom.
-  ‑webkit‑text‑size‑adjust: 100%
   antialias()
 
 .content
