@@ -62,6 +62,25 @@ Setup the navigation menu in the theme's `_config.yml`:
     LINK_NAME: URL
   ```
 
+### Blog posts list on home page
+
+You have two options for the list of blog posts on the home page:
+
+  - Show only the 5 most recent posts (default)
+
+  ```
+  customize:
+    show_all_posts: false
+    post_count: 5
+  ```
+
+  - Show all posts 
+
+  ```
+  customize:
+    show_all_posts: true
+  ```
+
 ### Projects list
 
 Create a projects file `source/_data/projects.json`.
