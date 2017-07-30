@@ -1,7 +1,7 @@
 #header-post
   position: fixed
   top: 2rem
-  right: 2rem
+  right: 0
   display: inline-block
   float: right
   a
@@ -28,15 +28,18 @@
   #menu-icon
     float: right
     margin-left: 15px
+    margin-right: 2rem
     &:hover
       color: $color-accent
   #menu-icon-tablet
     float: right
     margin-left: 15px
+    margin-right: 2rem
     &:hover
       color: $color-accent
   #top-icon-tablet
     margin-left: 15px
+    margin-right: 2rem
     bottom: 2rem
     right: 2rem
     position: fixed
@@ -46,6 +49,7 @@
     color: $color-accent
   #menu
     visibility: hidden
+    margin-right: 2rem
   #nav
     letter-spacing: 0.01em
     font-size: .8rem
@@ -69,6 +73,7 @@
   #actions
     float: right
     margin-top: 2rem
+    margin-right: 2rem
     width: 100%
     text-align: right
     ul
@@ -86,9 +91,12 @@
   #toc
     clear: both
     text-align: right
-    padding-top: 1rem
+    margin-top: 1rem
+    padding-right: 2rem
     max-width: 20em
     float: right
+    overflow: auto
+    max-height: 100vh
     a:hover
       color: $color-link
     .toc-level-1 > .toc-link
