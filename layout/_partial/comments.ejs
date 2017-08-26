@@ -5,3 +5,18 @@
         </div>
     </div>
 <% } %>
+<% if(page.comments && theme.plugins.isso_host){ %>
+        <script data-isso="//<%= theme.plugins.isso_host %>"
+                    data-isso-require-author="true"
+                    data-isso-require-email="false"
+                    data-isso-max-comments-top="3"
+                    data-isso-max-comments-nested="5"
+                    data-isso-reveal-on-click="3"
+                    data-isso-avatar="true"
+                    data-isso-vote="true"
+                    data-isso-vote-levels="[0,1,2,3,4,5,6,7,8,9,]"
+                    src="//<%= theme.plugins.isso_host %>/js/embed.min.js"></script>
+
+                <section id="isso-thread"></section>
+<% } %>
+

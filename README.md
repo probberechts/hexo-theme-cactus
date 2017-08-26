@@ -23,6 +23,7 @@ A responsive, dark and simple [Hexo](http://hexo.io) theme for a personal websit
 
 - Fully responsive
 - Disqus
+- Isso
 - Googe analytics
 - Font Awesome icons
 - Pick your own code highlighting scheme
@@ -133,6 +134,8 @@ Add you Google Analytics `tracking_id` to the theme's `_config.yml`.
 
 ### Comments
 
+#### Disqus
+
 First, create a site on Disqus: [https://disqus.com/admin/create/](http://disqus.com/admin/create/).
 
 Next, update the theme's `_config.yml` file:
@@ -143,6 +146,23 @@ Next, update the theme's `_config.yml` file:
   ```
 
 where `SITENAME` is the name you gave your site on Disqus.
+
+#### Isso
+
+For installation and configuration see https://posativ.org/isso/docs/
+
+Next, update the theme's `_config.yml` file:
+
+  ```
+  plugins:
+      isso_host: host
+  # Or if isso is in a subdir
+  plugins:
+      isso_host: host/subdir
+  ```
+
+For Custom settings you can edit `layout/_partial/comments.ejs` (see https://posativ.org/isso/docs/configuration/client/ )
+
 
 ### Code Highlighting
 
