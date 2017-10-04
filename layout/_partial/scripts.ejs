@@ -2,6 +2,10 @@
 <%- js('lib/jquery/jquery.min') %>
 <%- js('lib/justified-gallery/jquery.justifiedGallery.min.js') %>
 <%- js('js/main') %>
+<!-- search -->
+<% if (page.layout === 'search') { %>
+    <%- js('js/search.js') %>
+<% } %>
 <!-- Google Analytics -->
 <% if (theme.plugins.google_analytics){ %>
     <script type="text/javascript">
