@@ -29,6 +29,7 @@ A responsive, dark and simple [Hexo](http://hexo.io) theme for a personal websit
 - Configurable navigation menu
 - Projects list
 - Simplicity
+- Support local search
 
 ## Install
 1. In the `root` directory:
@@ -36,6 +37,7 @@ A responsive, dark and simple [Hexo](http://hexo.io) theme for a personal websit
     ```git
     $ git clone https://github.com/probberechts/cactus-dark.git themes/cactus-dark
     $ npm install hexo-pagination --save
+    $ npm install hexo-generator-search --save
     ```
 
 2. Change the `theme` property in the `config.yml` file.
@@ -44,8 +46,17 @@ A responsive, dark and simple [Hexo](http://hexo.io) theme for a personal websit
     # theme: landscape
     theme: cactus-dark
     ```
+3. Move search page to blog source folder.
 
-3. Run: `hexo generate` and `hexo server`
+    ```sh 
+    $ ls
+        _config.yml  db.json  node_modules  package-lock.json  package.json  public  scaffolds  source  themes
+    $ mv themes\cactus-dark\search source\
+    $ cd source\ & ls
+        _posts  search
+    ```
+
+4. Run: `hexo generate` and `hexo server`
 
 ## Configuration
 
@@ -59,6 +70,7 @@ Setup the navigation menu in the theme's `_config.yml`:
     About: /about/
     Writing: /archives/
     Projects: http://github.com/probberechts
+    Search: /search/
     LINK_NAME: URL
   ```
 

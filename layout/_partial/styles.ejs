@@ -2,4 +2,6 @@
 <%- css('lib/font-awesome/css/font-awesome.min') %>
 <%- css('lib/meslo-LG/styles') %>
 <%- css('lib/justified-gallery/justifiedGallery.min.css') %>
-
+<% if (page.layout === 'search') { %>
+	<%- css('lib/flexboxgrid/flexboxgrid.min.css') %>
+<% } %>
