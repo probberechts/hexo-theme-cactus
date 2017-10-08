@@ -27,6 +27,7 @@ A responsive, dark and simple [Hexo](http://hexo.io) theme for a personal websit
 - Font Awesome icons
 - Pick your own code highlighting scheme
 - Configurable navigation menu
+- Support for local search
 - Projects list
 - Simplicity
 
@@ -44,7 +45,6 @@ A responsive, dark and simple [Hexo](http://hexo.io) theme for a personal websit
     # theme: landscape
     theme: cactus-dark
     ```
-
 3. Run: `hexo generate` and `hexo server`
 
 ## Configuration
@@ -151,6 +151,30 @@ Pick one of [the available colorschemes](https://github.com/probberechts/cactus-
   ```
   customize:
       highlight: COLORSCHEME_NAME
+  ```
+
+### Local search
+
+First, install the [hexo-generate-search](https://www.npmjs.com/package/hexo-generator-search) plugin, which will generate a search index file.
+
+  ```git
+  $ npm install hexo-generator-search --save
+  ```
+
+Next, create a page to display the search engine:
+
+  ```sh 
+  $ hexo new page Search
+  ```
+and put `search: true` in the front-matter.
+
+Finally, edit the theme's `_config.yml` and add a link to the navigation menu.
+
+  ```
+  nav:
+    ...
+    Search: /Search/
+    ...
   ```
 
 ## License
