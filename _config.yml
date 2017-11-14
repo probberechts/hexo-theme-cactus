@@ -41,6 +41,18 @@ rss: false
 # Plugins
 plugins:
     disqus_shortname: # Disqus Comments Shortname
+    # Valine comment system. https://valine.js.org
+    valine:
+        enable: true # if you want use valine, please set this value to true
+        appId:  # your leancloud appId
+        appKey:  # your leancloud appKey
+        notify: false # Mail notify
+        verify: false # Verify code
+        avatar: mm # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
+        placeholder: Just go go # Comment Box placeholder
+        guest_info: nick,mail,link # Comment header info
+        pageSize: 10 # comment list page size
+
     google_analytics: UA-86660611-1 # enter the tracking ID for your Google Analytics
 
 # Miscellaneous
