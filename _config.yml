@@ -43,7 +43,7 @@ plugins:
     disqus_shortname: # Disqus Comments Shortname
     # Valine comment system. https://valine.js.org
     valine:
-        enable: true # if you want use valine, please set this value to true
+        enable: false # if you want use valine, please set this value to true
         appId:  # your leancloud appId
         appKey:  # your leancloud appKey
         notify: false # Mail notify
