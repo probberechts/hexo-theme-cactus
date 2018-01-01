@@ -17,7 +17,7 @@
         <a href="#"><i class="fa fa-bars fa-2x"></i></a>
       </li>
       <% for (var i in theme.nav) { %> 
-        <li><a href="<%- url_for(theme.nav[i]) %>"><%= _p(i) %></a></li>
+        <li><a href="<%- url_for(theme.nav[i]) %>"><%= __(i) %></a></li>
       <% } %>
     </ul>
   </div>
