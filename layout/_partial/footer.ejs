@@ -6,7 +6,7 @@
     <nav>
       <ul>
         <% for (var i in theme.nav) { %> 
-          <li><a href="<%- url_for(theme.nav[i]) %>"><%= i %></a></li>
+          <li><a href="<%- url_for(theme.nav[i]) %>"><%= __(i) %></a></li>
         <% } %>
       </ul>
     </nav>
