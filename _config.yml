@@ -1,8 +1,8 @@
 nav:
-  Home: /
-  About: /about/
-  Writing: /archives/
-  Projects: http://github.com/probberechts
+  home: /
+  about: /about/
+  articles: /archives/
+  projects: http://github.com/probberechts
 
 projects_url: http://github.com/probberechts
 

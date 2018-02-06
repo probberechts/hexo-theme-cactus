@@ -4,18 +4,21 @@
   <% } %>
   <p style="display: inline">
     <% if (theme.customize.social_links) { %>
-      Find me on
-      <ul id="socialinfo">
-        <% for(var i in theme.customize.social_links) { %>
-          <li><a class="icon" target="_blank" href="<%- url_for(theme.customize.social_links[i]) %>"><i class="fa fa-<%= i %>"></i></a></li>
+      <%= __('index.find_me_on') %>
+      <p id="socialinfo">
+        <% var nb_links = Object.keys(theme.customize.social_links).length %>
+        <% var i = 0 %>
+        <% for(var link in theme.customize.social_links) { %>
+          <a class="icon" target="_blank" href="<%- url_for(theme.customize.social_links[link]) %>"><i class="fa fa-<%= link %>"></i></a><%= ( nb_links > 0 && i < nb_links-1 ? ( i == nb_links-2 ? ' '+__('index.enum_and')+' ' : __('index.enum_comma')+' ' ) : '' ) %>
+          <% i+=1 %>
         <% } %>
-      </ul>.
+      </p>.
     <% } %>
   </p>
 </section>
 
 <section id="writing">
-  <span class="h1"><a href="<%- url_for("archives") %>"><%= __('Writing') %></a></span>
+  <span class="h1"><a href="<%- url_for("archives") %>"><%= __('index.articles') %></a></span>
   <ul class="post-list">
     <% if (theme.customize.show_all_posts) { %>
       <% var show_posts = page.posts.sort('date', 'desc') %>
@@ -36,7 +39,7 @@
 
 <% if (site.data.projects) { %>
 <section id="projects">
-  <span class="h1"><a href="<%- url_for(theme.projects_url) %>"><%= __('Projects') %></a></span>
+  <span class="h1"><a href="<%- url_for(theme.projects_url) %>"><%= __('index.projects') %></a></span>
   <ul class="project-list">
     <% for(var obj in site.data.projects){ %>
       <li class="project-item">

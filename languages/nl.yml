@@ -1,0 +1,38 @@
+nav:
+  home: Home
+  about: Over mij
+  articles: Blog
+  projects: Projecten
+  search: Zoeken
+
+footer:
+  copyright: Copyright
+
+index:
+  find_me_on: Je vindt me op
+  enum_comma: ','
+  enum_and: en
+  articles: Blogposts
+  projects: Projecten
+
+post:
+  desktop:
+    previous: Vorige post
+    next: Volgende post
+    back_to_top: Naar boven
+    share: Deel deze post
+  mobile:
+    menu: Menu
+    toc: Inhoudsopgave
+    back_to_top: Top
+    share: Deel
+
+search:
+  search: zoeken...
+  no_results: Geen resultaten gevonden.
+
+pagination:
+  page: Pagina %d van %d
+
+comments:
+  no_js: Activeer Javascript om de commentaarsectie te kunnen bekijken.

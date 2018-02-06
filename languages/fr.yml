@@ -1,0 +1,38 @@
+nav:
+  home: Accueil
+  about: A propos
+  articles: Articles
+  projects: Projets
+  search: Chercher
+
+footer:
+  copyright: Copyright
+
+index:
+  find_me_on: Retrouve moi sur
+  enum_comma: ','
+  enum_and: et
+  articles: Articles
+  projects: Projets
+
+post:
+  desktop:
+    previous: Article précédent
+    next: Article suivant
+    back_to_top: Retour au début
+    share: Partager cette article
+  mobile:
+    menu: Menu
+    toc: Table des matière
+    back_to_top: Début
+    share: Partager
+
+search:
+  search: chercher...
+  no_results: Aucun résultat trouvé.
+
+pagination:
+  page: Page %d de %d
+
+comments:
+  no_js: Veuillez activer JavaScript pour voir les réactions.
