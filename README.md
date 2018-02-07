@@ -30,7 +30,7 @@ A responsive, dark and simple [Hexo](http://hexo.io) theme for a personal websit
 - Support for local search
 - Projects list
 - Simplicity
-* I18n support
+- I18n support
 
 ## Install
 1. In the `root` directory:
