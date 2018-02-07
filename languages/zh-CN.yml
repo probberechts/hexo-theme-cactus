@@ -1,0 +1,38 @@
+nav:
+  home: 首页
+  about: 关于
+  articles: 归档
+  projects: 项目
+  search: 搜索
+
+footer:
+  copyright: Copyright
+
+index:
+  find_me_on: Find me on
+  enum_comma: ','
+  enum_and: and
+  articles: 文章
+  projects: 项目
+
+post:
+  desktop:
+    previous: 上一篇
+    next: 下一篇
+    back_to_top: 返回顶部
+    share: 分享文章
+  mobile:
+    menu: 菜单
+    toc: 目录
+    back_to_top: 返回顶部
+    share: 分享
+
+search:
+  search: 搜索...
+  no_results: 抱歉，没有符合您搜索条件的结果。请换其它关键词再试。
+
+pagination:
+  page: Page %d of %d
+
+comments:
+  no_js: 加载评论需要在浏览器启用 JavaScript 脚本支持。
