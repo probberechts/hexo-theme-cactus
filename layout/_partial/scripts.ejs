@@ -58,3 +58,30 @@
         }());
     </script>
 <% } %>
+
+<!-- Valine Comments -->
+<% if (theme.plugins.valine && theme.plugins.valine.enable){ %>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+
+<script type="text/javascript">
+    var notify = '<%= theme.plugins.valine.notify %>' == true ? true : false;
+    var verify = '<%= theme.plugins.valine.verify %>' == true ? true : false;
+    var GUEST_INFO = ['nick','mail','link'];
+    var guest_info = '<%= theme.plugins.valine.guest_info %>'.split(',').filter(function(item){
+      return GUEST_INFO.indexOf(item) > -1
+    });
+    guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+    new Valine({
+        el: '.vcomment',
+        notify: notify,
+        verify: verify,
+        appId: "<%= theme.plugins.valine.appId %>",
+        appKey: "<%= theme.plugins.valine.appKey %>",
+        avatar:"<%= theme.plugins.valine.avatar %>",
+        placeholder: "<%= theme.plugins.valine.placeholder %>",
+        guest_info:guest_info,
+        pageSize:"<%= theme.plugins.valine.pageSize %>"
+    })
+</script>
+<% } %>
