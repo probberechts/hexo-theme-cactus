@@ -122,7 +122,7 @@ If you are new to Hexo and internationalization (i18n), please read [Hexo docume
 Currently, the theme is delivered with:
 
 - English (en), default
-- Traditional Chinese (zh-CN)
+- Chinese (Simplified, PRC) (zh-CN)
 - French (fr)
 - Dutch (nl)
 
