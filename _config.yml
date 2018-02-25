@@ -1,52 +1,125 @@
+##############################################################################
+# Content
+##############################################################################
+
+# Link to a page that gives an overview of all your projects.
+# This can be an external link (e.g., to you GitHub profile) or to another
+# page within your website.
+projects_url: http://github.com/probberechts
+
+# Configure the navigation menu.
+# A pair 'Key: url' will result in a link to 'url' with the name 'Key' in the
+# navigation menu. Optionally, you can add translations for the 'Key' in
+# languages/*.yml
 nav:
   home: /
   about: /about/
   articles: /archives/
-  projects: http://github.com/probberechts
+  projects: projects_url
 
-projects_url: http://github.com/probberechts
 
-customize:
-    gravatar:
-        email: 
-    logo:
-        enabled: true
-        width: 50
-        height: 50
-        url: /images/logo.png
-        gravatar: false
-    favicon: 
-      # eg. generate with http://realfavicongenerator.net/
-      desktop:
-        url: /images/favicon.ico
-        gravatar: false
-      android:
-        url: /images/favicon-192x192.png
-        gravator: false
-      apple:
-        url: /images/apple-touch-icon.png
-        gravator: false
-    social_links:
-        github: http://github.com/probberechts/cactus-dark
-        twitter: /
-        facebook: /
-        linkedin: /
-    show_all_posts: false
-    post_count: 5
-    highlight: rainbow
+# Links to your social media accounts.
+# The keys should correspond to Fontawesome icon names 
+# (see https://fontawesome.com/icons?d=gallery&s=brands);
+# only 'mail' is an exception.
+social_links:
+  github: http://github.com/probberechts/cactus-dark
+  twitter: /
+  facebook: /
+  linkedin: /
+  mail: mailto:name@email.com
 
-# RSS
+
+# Customize the overview with the most recent blog posts on the index page.
+# Options:
+#   - show_all_posts: whether to show all available posts.
+#   - post_count: whether to show only the x most recent posts.
+posts_overview:
+  show_all_posts: false
+  post_count: 5
+
+
+##############################################################################
+# Look and Feel
+##############################################################################
+
+# Customize the logo (i.e., the cactus) in the header.
+# Options:
+#   - enabled: whether to show (true) or hide (false) the logo.
+#   - width: width of the logo in pixel units
+#   - height: height of the logo in pixel units
+#   - url: where the logo can be found
+#   - gravatar: whether to use your Gravatar as the logo
+logo:
+  enabled: true
+  width: 50
+  height: 50
+  url: /images/logo.png
+  gravatar: false
+
+# Customize the favicons.
+# Cactus supports a limited set of the three most important icons:
+#   - desktop: The classic favion.ico file.
+#   - android: A 192x192 PNG file.
+#   - apple:  A 180x180 PNG file.
+# These can be generated with http://realfavicongenerator.net/
+# Options:
+#   - url: where the icon can be found
+#   - gravatar: whether to create a favicon from your Gravatar
+favicon: 
+  desktop:
+    url: /images/favicon.ico
+    gravatar: false
+  android:
+    url: /images/favicon-192x192.png
+    gravatar: false
+  apple:
+    url: /images/apple-touch-icon.png
+    gravatar: false
+
+# The color scheme that should be used to highlight codeblocks.
+# See source/css/_highlight for a list of all available color schemes.
+highlight: rainbow
+
+# Set the color scheme.
+# Available color schemes are 'dark', 'light', 'classic' and 'white'.
+# Alternatively, add your own custom color scheme to source/css/_colors.
+colorscheme: dark
+
+# Maximal width of the page in rem units.
+page_width: 48
+
+
+##############################################################################
+# Miscellaneous
+##############################################################################
+
+# Enable or disable the RSS feed.
 rss: false
 
-# Plugins
-plugins:
-    disqus_shortname: # Disqus Comments Shortname
-    google_analytics: UA-86660611-1 # enter the tracking ID for your Google Analytics
+# Turn your web pages into graph objects (see http://ogp.me).
+open_graph: 
+  fb_app_id:
+  fb_admins:
+  twitter_id:
+  google_plus:
 
-# Miscellaneous
-miscellaneous:
-    open_graph: # see http://ogp.me
-        fb_app_id:
-        fb_admins:
-        twitter_id:
-        google_plus:
+
+##############################################################################
+# Plugins
+##############################################################################
+
+# Fill in your Disqus Comments Shortname to enable Disqus comments.
+disqus: 
+  enabled: false
+  shortname: cactus-1
+
+# Fill in your Google Analytics tracking ID to enable Google Analytics.
+google_analytics: 
+  enabled: false
+  id: UA-86660611-1
+
+# Fill in you Gravatar user id / email if you want to use your gravatar as the
+# logo and/or favicons of you website.
+gravatar:
+  email: name@email.com

@@ -1,0 +1,24 @@
+{
+  "asi": false,
+  "bitwise": true,
+  "browser": true,
+  "camelcase": true,
+  "curly": true,
+  "forin": true,
+  "immed": true,
+  "latedef": "nofunc",
+  "maxlen": 120,
+  "newcap": true,
+  "noarg": true,
+  "noempty": true,
+  "nonew": true,
+  "predef": [
+    "$"
+  ],
+  "quotmark": true,
+  "trailing": true,
+  "undef": true,
+  "unused": true,
+
+  "expr": true
+}

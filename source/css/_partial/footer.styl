@@ -1,45 +1,54 @@
 #footer
-  padding-top: 10px
-  padding-bottom: 10px
-  color: #666
-  font-size: 11px
-  max-width: 700px
-  width: 100%
-  margin: 0 auto 1rem auto
+  margin-bottom: 10px
+  color: $color-meta
   vertical-align: top
   text-align: center
+  font-size: 11px
+
   ul
     margin: 0
     padding: 0
     list-style: none
+
   li
     display: inline-block
-    vertical-align: middle
     margin-right: 15px
-    border-right: 1px solid #4a4a4a
+    border-right: 1px solid $color-border
+    vertical-align: middle
+
     a
       margin-right: 15px
+
   li:last-child
-    border-right: 0
     margin-right: 0
+    border-right: 0
+
     a
       margin-right: 0
+
   a
-    color: #666
+    color: $color-meta
+
   a:hover
-    color: #999
+    color: lighten($color-meta, 20%)
+
   .footer-left
     height: 20px
-    line-height: 20px
     vertical-align: middle
+    line-height: 20px
 
 @media (min-width: 39rem)
   #footer
-    padding-top: 20px
-    padding-bottom: 20px
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    align-items: center
+    align-content: center
+    margin-bottom: 20px
+
     .footer-left
-      float: left
+      align-self: flex-start
+      margin-right: 20px
+
     .footer-right
-      float: right
-
-
+      align-self: flex-end

@@ -1,113 +1,131 @@
 #footer-post
+  position: fixed
+  right: 0
   bottom: 0
   left: 0
-  right: 0
-  position: fixed
-  transition: opacity .2s
-  width: 100%
   z-index: 5000000
-  background: lighten($color-background, 2%)
-  border-top: 1px solid #666673
-
+  width: 100%
+  border-top: 1px solid $color-border
+  background: $color-footer-mobile-1
+  transition: opacity .2s
 
   a
+    background: none
     color: inherit
     text-decoration: none
-    background: none
+
   a.icon
     background: none
+
     &:hover
       color: $color-link
 
   #nav-footer
-    margin-left: 1rem
-    margin-right: 1rem
+    padding-right: 1rem
+    padding-left: 1rem
+    background: $color-footer-mobile-2
     text-align: center
+
     a
-      color: $color-accent
-      font-size: 1rem
+      color: $color-accent-1
+      font-size: 1em
+
     a:hover
-      underline(5px, $color-accent)
+      underline(5px, $color-accent-1)
+
     ul
-      list-style-type: none
+      display: table
       margin: 0
       padding: 0
-      display: table
       width: 100%
+      list-style-type: none
+
       li
         display: inline-table
-        width: 20%
         padding: 10px
+        width: 20%
         vertical-align: middle
-  
+
   #actions-footer
-    text-align: center
+    overflow: auto
     margin-top: 1rem
     margin-bottom: 1rem
+    padding-right: 1rem
+    padding-left: 1rem
     width: 100%
+    text-align: center
+    white-space: nowrap
+
     a
-      color: $color-accent
-    ul
-        list-style-type: none
-        margin: 0
-        padding: 0
-        display: table
-        width: 100%
-        li
-          display: table-cell
-          vertical-align: middle
-  
+      display: inline-block
+      padding-left: 1rem
+      color: $color-accent-1
 
   #share-footer
-    margin-left: 1rem
-    margin-right: 1rem
+    padding-right: 1rem
+    padding-left: 1rem
+    background: $color-footer-mobile-2
     text-align: center
+
     ul
-      list-style-type: none
+      display: table
       margin: 0
       padding: 0
-      display: table
       width: 100%
+      list-style-type: none
+
       li
         display: inline-table
-        width: 20%
         padding: 10px
+        width: 20%
         vertical-align: middle
-  
 
   #toc-footer
     clear: both
-    text-align: left
     padding-top: 1rem
+    padding-bottom: 1rem
+    background: $color-footer-mobile-2
+    text-align: left
+
     ol
-      list-style-type: none
+      margin: 0
       padding-left: 20px
+      list-style-type: none
+
       li
         line-height: 30px
+
     a:hover
       color: $color-link
+
     .toc-level-1 > .toc-link
       display: none
+
     .toc-level-2
-      font-size: 0.8rem
       color: $color-text
+      font-size: .8rem
+
       &:before
+        color: $color-accent-1
         content: "#"
-        color: $color-accent
+
     .toc-level-3
-      font-size: 0.7rem
-      color: #b3b3b3
-      color: #666 
+      color: $color-meta
+      font-size: .7rem
       line-height: 15px
+
     .toc-level-4
       display: none
+
     .toc-level-5
       display: none
+
     .toc-level-6
       display: none
+
     .toc-number
       display: none
 
-@media screen and (min-width:500px)
+@media screen and (min-width: 500px)
   #footer-post-container
     display: none

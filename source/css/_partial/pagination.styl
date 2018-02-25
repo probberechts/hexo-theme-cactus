@@ -1,24 +1,23 @@
-.pagination 
+.pagination
   display: inline-block
   margin-top: 2rem
-  text-align: center
   width: 100%
+  text-align: center
 
-  .page-number 
+  .page-number
     color: $color-text
-    font-size: 0.8rem
+    font-size: .8rem
 
-  a 
-    color: $color-text
+  a
     padding: 4px 6px
-    text-decoration: none
     border-radius: 5px
-    background-color: $color-accent
+    // background-color: $color-accent-1
+    background-image: none
+    color: $color-text
+    text-decoration: none
+
+  a:hover
     background-image: none
 
-  a:hover 
-    background-image: none
-
-  a:hover:not(.active) 
-    color: $color-lightest;
-
+  a:hover:not(.active)
+    color: $color-accent-2

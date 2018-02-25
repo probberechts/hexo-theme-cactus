@@ -1,10 +1,10 @@
 <header id="header">
   <a href="<%- url_for("/") %>">
-  <% if (theme.customize.logo && theme.customize.logo.enabled) { %>
-    <% if (theme.customize.gravatar.email && theme.customize.logo.gravatar) { %>
-      <div id="logo" style="background-image: url(<%- gravatar(theme.customize.gravatar.email) %>);"></div>
+  <% if (theme.logo && theme.logo.enabled) { %>
+    <% if (theme.gravatar.email && theme.logo.gravatar) { %>
+      <div id="logo" style="background-image: url(<%- gravatar(theme.gravatar.email) %>);"></div>
     <% } else { %>
-      <div id="logo" style="background-image: url(<%- url_for(theme.customize.logo.url) %>);"></div>
+      <div id="logo" style="background-image: url(<%- url_for(theme.logo.url) %>);"></div>
     <% } %>
   <% } %>
     <div id="title">
@@ -14,10 +14,10 @@
   <div id="nav">
     <ul>
       <li class="icon">
-        <a href="#"><i class="fa fa-bars fa-2x"></i></a>
+        <a href="#"><i class="fas fa-bars fa-2x"></i></a>
       </li>
       <% for (var i in theme.nav) { %> 
-        <li><a href="<%- url_for(theme.nav[i]) %>"><%= __('nav.'+i) %></a></li>
+        <li><a href="<%- url_for(theme.nav[i]) %>"><%= __('nav.'+i).replace("nav.", "") %></a></li>
       <% } %>
     </ul>
   </div>

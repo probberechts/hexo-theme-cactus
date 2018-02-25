@@ -1,0 +1,45 @@
+{
+  "name": "hexo-theme-cactus",
+  "version": "3.0.0",
+  "description": "A responsive, clean and simple theme for Hexo.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "gulp lint --silent",
+    "test": "gulp validate --silent",
+    "clean": "stylus-supremacy format source/css/**/*.styl --options .stylintrc -r"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/probberechts/cactus-dark.git"
+  },
+  "keywords": [
+    "Hexo",
+    "Theme",
+    "Cactus"
+  ],
+  "author": "Pieter Robberechts",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/probberechts/cactus-dark/issues"
+  },
+  "homepage": "https://github.com/probberechts/cactus-dark#readme",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-decompress": "^2.0.2",
+    "gulp-download": "0.0.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-stylint": "^4.0.1",
+    "js-yaml": "^3.10.0",
+    "jshint": "^2.9.5",
+    "jshint-stylish": "^2.2.1",
+    "stylint": "^1.5.9",
+    "stylint-stylish": "^1.4.1",
+    "stylus-supremacy": "^2.9.0"
+  },
+  "dependencies": {
+    "fontawesome5-webfont": "^5.0.4",
+    "jquery": "^3.3.1",
+    "justifiedGallery": "^3.6.5"
+  }
+}
