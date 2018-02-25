@@ -4,7 +4,7 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
 
 :cactus: [Demo](https://probberechts.github.io/hexo-theme-cactus/)
 
-![screenshot](https://cloud.githubusercontent.com/assets/2175271/19885143/62e9269c-a01d-11e6-8e26-e36a36201d88.png)
+![screenshot](https://docs.google.com/uc?id=1K66bccwr4z9TgJev0AzCqbI7BxzVr7md)
 
 ## Summary
 
@@ -22,7 +22,7 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
 ## Features
 
 - Fully responsive
-* Multiple color schemes
+- Multiple color schemes
 - Pick your own code highlighting scheme
 - Configurable navigation menu
 - Support for local search
@@ -78,8 +78,8 @@ This will result in the white color scheme.
 
 ### Color scheme
 
-Currently, this theme is delivered with four color schemes: `dark`, `light`,
-`white` and `classic`. Set your preferred color scheme in the `_config.yml` file.
+Currently, this theme is delivered with four color schemes: [dark](https://probberechts.github.io/hexo-theme-cactus/cactus-dark/public/), [light](https://probberechts.github.io/hexo-theme-cactus/cactus-light/public/),
+[white](https://probberechts.github.io/hexo-theme-cactus/cactus-white/public/) and [classic](https://probberechts.github.io/hexo-theme-cactus/cactus-classic/public/). Set your preferred color scheme in the `_config.yml` file.
 
 ```yml
 colorscheme: light
@@ -246,9 +246,7 @@ Finally, edit the `_config.yml` and add a link to the navigation menu.
 
 ```yml
 nav:
-  ...
   search: /Search/
-  ...
 ```
 
 
