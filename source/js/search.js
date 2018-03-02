@@ -24,13 +24,13 @@ var searchFunc = function(path, searchId, contentId) {
   $.ajax({
     url: path,
     dataType: "xml",
-    success: function( xmlResponse ) {
+    success: function(xmlResponse) {
       // get the contents from search data
-      var datas = $( "entry", xmlResponse ).map(function() {
+      var datas = $("entry", xmlResponse).map(function() {
         return {
-          title: $( "title", this ).text(),
-          content: $("content",this).text(),
-          url: $( "url" , this).text()
+          title: $("title", this).text(),
+          content: $("content", this).text(),
+          url: $("link", this).attr('href')
         };
       }).get();
 
