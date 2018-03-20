@@ -70,7 +70,7 @@ theme_config:
 
 ```yml
 # themes/cactus/_config.yml
-colorscheme: dark 
+colorscheme: dark
 ```
 
 This will result in the white color scheme.
@@ -115,7 +115,7 @@ You have two options for the list of blog posts on the home page:
       post_count: 5
     ```
 
-  - Show all posts 
+  - Show all posts
 
     ```yml
     posts_overview:
@@ -160,7 +160,7 @@ where `NAME` is the name of a [Font Awesome icon](https://fontawesome.com/icons?
 
 ### Language configuration
 
-If you are new to Hexo and internationalization (i18n), please read 
+If you are new to Hexo and internationalization (i18n), please read
 [Hexo documentation - internationalization (i18n) section](https://hexo.io/docs/internationalization.html)
 
 Currently, the theme is delivered with support for:
@@ -172,11 +172,11 @@ Currently, the theme is delivered with support for:
 
 If you would like to use one the languages listed above, simply set `language`
 to the desired language (e.g., `fr`) in `_config.yml`.
-Otherwise, you can follow the steps below (E.g., to add a Japanese (ja) translation): 
+Otherwise, you can follow the steps below (E.g., to add a Japanese (ja) translation):
 
-1. Set `language` to `ja` in Hexo configuration file `_config.yml`  
-2. Create a `ja.yml` file in the `themes/cactus/languages/` folder  
-3. Copy the content of `themes/cactus/languages/default.yml` and paste it it into the `ja.yml` file  
+1. Set `language` to `ja` in Hexo configuration file `_config.yml`
+2. Create a `ja.yml` file in the `themes/cactus/languages/` folder
+3. Copy the content of `themes/cactus/languages/default.yml` and paste it it into the `ja.yml` file
 4. Replace all English strings by their Japanese translation
 
 **Note: Cactus does not support multi-language sites.**
@@ -188,7 +188,7 @@ Set the `rss` field in the `_config.yml` to one of the following values:
 
 1. `rss: false` will totally disable rss (default).
 2. `rss: atom.xml` sets a specific feed link.
-3. `rss:`leave empty to use the [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) plugin. 
+3. `rss:`leave empty to use the [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) plugin.
 
 
 ### Analytics
@@ -196,8 +196,8 @@ Set the `rss` field in the `_config.yml` to one of the following values:
 Add you Google Analytics `tracking_id` to the `_config.yml`.
 
 ```yml
-gooogle_analytics: 
-  enable: true
+google_analytics:
+  enabled: true
   id: 'UA-49627206-1'
 ```
 
@@ -210,7 +210,7 @@ Next, update the `_config.yml` file:
 
 ```yml
 disqus:
-  enable: true
+  enabled: true
   shortname: SITENAME
 ```
 
@@ -228,7 +228,7 @@ highlight: COLORSCHEME_NAME
 
 ### Local search
 
-First, install the [hexo-generate-search](https://www.npmjs.com/package/hexo-generator-search) 
+First, install the [hexo-generate-search](https://www.npmjs.com/package/hexo-generator-search)
 plugin, which will generate a search index file.
 
 ```git
@@ -237,7 +237,7 @@ $ npm install hexo-generator-search --save
 
 Next, create a page to display the search engine:
 
-```sh 
+```sh
 $ hexo new page Search
 ```
 and put `search: true` in the front-matter.
