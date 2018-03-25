@@ -74,8 +74,12 @@
 
 @media screen and (max-width: 480px)
   #header #title
-    padding-top: ($logo-height / 2) - 16
-    padding-bottom: ($logo-height / 2) - 16
+    display: table
+    margin-right: 5rem
+    min-height: $logo-height
+    h1
+      display: table-cell
+      vertical-align: middle
 
   #header #nav
     ul
