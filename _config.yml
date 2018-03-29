@@ -119,6 +119,11 @@ google_analytics:
   enabled: false
   id: UA-86660611-1
 
+# Fill in your Baidu Analytics tracking ID to enable Baidu Analytics.
+baidu_analytics:
+  enabled: false
+  id: 2e6da3c375c8a87f5b664cea6d4cb29c
+
 # Fill in you Gravatar user id / email if you want to use your gravatar as the
 # logo and/or favicons of you website.
 gravatar:

@@ -44,6 +44,18 @@
         ga('send', 'pageview');
     </script>
 <% } %>
+<!-- Baidu Analytics -->
+<% if (theme.baidu_analytics.enabled && theme.baidu_analytics.id){ %>
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?<%= theme.baidu_analytics.id %>";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+<% } %>
 <!-- Disqus Comments -->
 <% if (theme.disqus.enabled && theme.disqus.shortname){ %>
     <script type="text/javascript">
