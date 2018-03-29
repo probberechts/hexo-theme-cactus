@@ -169,6 +169,7 @@ Currently, the theme is delivered with support for:
 - Chinese (Simplified, PRC) (zh-CN)
 - French (fr)
 - Dutch (nl)
+- Spanish (es)
 
 If you would like to use one the languages listed above, simply set `language`
 to the desired language (e.g., `fr`) in `_config.yml`.
@@ -193,12 +194,16 @@ Set the `rss` field in the `_config.yml` to one of the following values:
 
 ### Analytics
 
-Add you Google Analytics `tracking_id` to the `_config.yml`.
+Add you Google Analytics or Baidu Tongji `tracking_id` to the `_config.yml`.
 
 ```yml
 google_analytics:
   enabled: true
   id: 'UA-49627206-1'
+  
+baidu_analytics:
+  enabled: true
+  id: 2e6da3c375c8a87f5b664cea6d4cb29c
 ```
 
 
