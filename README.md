@@ -29,7 +29,7 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
 - Projects list
 - I18n support
 - Disqus integration
-- Google analytics
+- Google analytics / Baidu Tongji
 - Font Awesome icons
 - Simplicity
 
