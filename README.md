@@ -167,10 +167,11 @@ Currently, the theme is delivered with support for:
 
 - English (en), default
 - Chinese (Simplified, PRC) (zh-CN)
-- French (fr)
 - Dutch (nl)
-- Spanish (es)
+- French (fr)
+- Persian (fa)
 - Russian (ru)
+- Spanish (es)
 
 If you would like to use one the languages listed above, simply set `language`
 to the desired language (e.g., `fr`) in `_config.yml`.
