@@ -170,6 +170,7 @@ Currently, the theme is delivered with support for:
 - French (fr)
 - Dutch (nl)
 - Spanish (es)
+- Russian (ru)
 
 If you would like to use one the languages listed above, simply set `language`
 to the desired language (e.g., `fr`) in `_config.yml`.
@@ -200,7 +201,7 @@ Add you Google Analytics or Baidu Tongji `tracking_id` to the `_config.yml`.
 google_analytics:
   enabled: true
   id: 'UA-49627206-1'
-  
+
 baidu_analytics:
   enabled: true
   id: 2e6da3c375c8a87f5b664cea6d4cb29c
