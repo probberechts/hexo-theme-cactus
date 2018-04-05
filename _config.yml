@@ -38,7 +38,6 @@ posts_overview:
   show_all_posts: false
   post_count: 5
 
-
 ##############################################################################
 # Look and Feel
 ##############################################################################
@@ -89,6 +88,8 @@ colorscheme: dark
 # Maximal width of the page in rem units.
 page_width: 48
 
+# Last feature post in home
+feature_post: false
 
 ##############################################################################
 # Miscellaneous

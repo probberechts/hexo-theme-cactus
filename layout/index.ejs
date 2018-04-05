@@ -27,6 +27,28 @@
   <% } %>
 </section>
 
+<% if (theme.feature_post) { %>
+  <section id="feature">
+    <% var feature_post = site.posts.sort('date', 'desc').findOne({feature: true}) %>
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <%- partial('_partial/post/title', { post: feature_post, index: false, class_name: 'posttitle' }) %>
+      <div class="meta">
+        <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span itemprop="name"><% if (feature_post.author) { %><%- feature_post.author %><% } else { %><%- config.title %><% } %></span>
+        </span>
+        <%- partial('_partial/post/date', { post: feature_post, class_name: 'postdate' }) %>
+        <%- partial('_partial/post/tag', { page: feature_post }) %>
+      </div>
+    </header>
+      <%- partial('_partial/post/gallery') %>
+      <div class="content" itemprop="articleBody">
+        <%- feature_post.content %>
+      </div>
+    </article>
+  </section>
+<% } %>
+
 <section id="writing">
   <span class="h1"><a href="<%- url_for("archives") %>"><%= __('index.articles') %></a></span>
   <ul class="post-list">
