@@ -28,3 +28,43 @@
 
   .project-item
     margin-bottom: 5px
+
+//RTL styles
+.rtl
+  font-family: vazir, sans-serif
+  direction: rtl
+    
+  #header
+    li
+      padding-left: 15px
+      border-left: 1px dotted $color-accent-1
+      border-right: 0px
+      margin-right: 0px !important
+      border-right: none !important
+
+    li:last-child
+      margin-right: 15px !important;
+      border-left: 0 !important;
+    #logo 
+      float: right
+
+  #footer
+    li
+      padding-left: 15px
+      border-left: 1px dotted $color-border
+      margin-right: 0px
+      border-right: 0px
+
+    li:last-child
+      margin-right: 15px !important;
+      border-left: 0 !important;
+      
+    #logo 
+      float: right
+
+
+@media (min-width: 480px)
+  .post-list
+    .post-item
+      .meta
+        text-align: right
