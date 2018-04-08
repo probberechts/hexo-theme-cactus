@@ -39,9 +39,9 @@
     <title><%= page.title ? page.title : config.title %></title>
     <!-- styles -->
     <%- css('css/style') %>
-    <!-- persian font -->
+    <!-- persian styles -->
     <% if (theme.direction) { %>
-    <link type="text/css" rel="stylesheet" href="https://cdn.rawgit.com/rastikerdar/vazir-font/v18.0.0/dist/font-face.css">
+      <%- css('css/rtl') %>
     <% } %>
     <!-- rss -->
     <% if (theme.rss === '' && config.feed && config.feed.path) { %>
