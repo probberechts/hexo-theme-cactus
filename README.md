@@ -184,6 +184,14 @@ Otherwise, you can follow the steps below (E.g., to add a Japanese (ja) translat
 
 **Note: Cactus does not support multi-language sites.**
 
+### RTL support
+This theme support RTL languages for Persian and Arabic language.
+If you would like to use RTL layout, change `direction` attribute in `_config.yml` to `rtl`.
+Note that this also will change the font to [Vazir](https://github.com/rastikerdar/vazir-font), wich is a Persian font.
+
+```
+direction: rtl
+```
 
 ### RSS
 
