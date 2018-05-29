@@ -1,0 +1,38 @@
+nav:
+  home: Inici
+  about: Qui som 
+  articles: Articles
+  projects: Projectes
+  search: Buscar
+
+footer:
+  copyright: Copyright
+
+index:
+  find_me_on: Trobem a
+  enum_comma: ','
+  enum_and: i
+  articles: Articles
+  projects: Projectes
+
+post:
+  desktop:
+    previous: Post Anterior
+    next: Post Següent
+    back_to_top: Adalt
+    share: Compartir Post
+  mobile:
+    menu: Menú
+    toc: TOC
+    back_to_top: Cap amunt
+    share: Compartir
+
+search:
+  search: Buscar...
+  no_results: No s'han trobat resultats.
+
+pagination:
+  page: Pàgina %d de %d
+
+comments:
+  no_js: Si us plau, activa JavaScript per poder veure el contingut.
