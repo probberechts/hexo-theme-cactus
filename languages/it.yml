@@ -18,10 +18,10 @@ index:
 
 post:
   desktop:
-    previous: Post precedente
-    next: Post successivo
+    previous: Articolo precedente
+    next: Articolo successivo
     back_to_top: Torna all'inizio
-    share: Condividi post
+    share: Condividi articolo
   mobile:
     menu: Menu
     toc: TOC
@@ -36,4 +36,4 @@ pagination:
   page: Pagina %d di %d
 
 comments:
-  no_js: Abilita javscript per vedere i commenti.
+  no_js: Abilita javascript per vedere i commenti.
