@@ -1,0 +1,16 @@
+[submodule "demos/cactus-dark/themes/hexo-theme-cactus"]
+	path = demos/cactus-dark/themes/hexo-theme-cactus
+	url = https://github.com/probberechts/hexo-theme-cactus.git
+	branch = master
+[submodule "demos/cactus-classic/themes/hexo-theme-cactus"]
+	path = demos/cactus-classic/themes/hexo-theme-cactus
+	url = https://github.com/probberechts/hexo-theme-cactus.git
+	branch = master
+[submodule "demos/cactus-light/themes/hexo-theme-cactus"]
+	path = demos/cactus-light/themes/hexo-theme-cactus
+	url = https://github.com/probberechts/hexo-theme-cactus.git
+	branch = master
+[submodule "demos/cactus-white/themes/hexo-theme-cactus"]
+	path = demos/cactus-white/themes/hexo-theme-cactus
+	url = https://github.com/probberechts/hexo-theme-cactus.git
+	branch = master

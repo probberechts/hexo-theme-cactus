@@ -1,0 +1,27 @@
+[
+    {
+       "name":"Hexo",
+       "url":"https://hexo.io/",
+       "desc":"A fast, simple & powerful blog framework"
+    },
+    {
+       "name":"Font Awesome",
+       "url":"http://fontawesome.io/",
+       "desc":"The iconic font and CSS toolkit"
+    },
+    {
+       "name":"Bootstrap",
+       "url":"http://getbootstrap.com/",
+       "desc":"The most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web."
+    },
+    {
+       "name":"Python",
+       "url":"https://www.python.org/",
+       "desc":"Python is a programming language that lets you work quickly and integrate systems more effectively. "
+    },
+    {
+       "name":"D3.js",
+       "url":"https://d3js.org/",
+       "desc":"A JavaScript library for manipulating documents based on data. "
+    }
+ ]

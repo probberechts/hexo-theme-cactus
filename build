@@ -1,0 +1,25 @@
+#!/bin/bash
+
+
+git submodule update --recursive --remote
+
+rm -rf dist
+mkdir dist
+
+declare -a themes=("cactus-dark" "cactus-white" "cactus-light" "cactus-classic")
+for theme in "${themes[@]}"
+do
+  echo "Generating $theme"
+  pushd demos/$theme
+  hexo clean
+  hexo generate
+  popd
+  mkdir -p dist/$theme
+  cp -r demos/$theme/public dist/$theme/
+done
+
+cp index.html dist/
+cp -r css dist/
+cp -r images dist/
+
+echo "Done!"

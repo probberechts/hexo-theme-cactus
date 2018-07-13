@@ -1,0 +1,138 @@
+*{
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+:before,:after{
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box
+}
+
+html {
+  height:100%;
+  border-top: 2px solid #c9cacc;
+}
+
+body {
+  height:100%;
+  background: #1d1f21;
+  color: #c9cacc;
+  font-size:16px;
+  font-weight: 400;
+  line-height:30px;
+  font-family: "Menlo", "Meslo LG", monospace;
+  text-rendering: geometricPrecision;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  padding:0; 
+  margin:0;
+}
+
+a,a:active,a:focus,input:focus{
+  text-decoration:none!important;
+  outline:0
+}
+
+input{
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  -webkit-border-radius:0!important;
+  -moz-border-radius:0!important;
+  border-radius:0!important
+}
+
+.bg-cover{
+  position:absolute;
+  left:0;top:0;width:100%;height:100%;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+  z-index:0;
+}
+
+.bg-cover::after{
+content:"";
+position:absolute;
+left:0;top:0;width:100%;height:100%;
+background:-moz-linear-gradient(270deg,rgba(29,31,40,0.75) 0%,rgba(29,31,40,0.95) 100%);
+background:-webkit-linear-gradient(270deg,rgba(29,31,40,0.75) 0%,rgba(29,31,40,0.95) 100%);
+background:-o-linear-gradient(270deg,rgba(29,31,40,0.75) 0%,rgba(29,31,40,0.95) 100%);
+background:-ms-linear-gradient(270deg,rgba(29,31,40,0.75) 0%,rgba(29,31,40,0.95) 100%);
+background:linear-gradient(180deg,rgba(29,31,40,0.75) 0%,rgba(29,31,40,0.95) 100%)
+}
+
+div[class^="sven-char"]{
+-webkit-backface-visibility:hidden;
+-moz-backface-visibility:hidden;
+backface-visibility:hidden;
+-webkit-perspective:1000px;
+-moz-perspective:1000px;
+perspective:1000px;
+outline:1px solid transparent
+}
+
+.abs-center{position:absolute;top:50%;left:50%;-ms-transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
+.mt-0{margin-top:0}
+.content-wrapper{position:relative;overflow:hidden;width:100%;height:100%;text-align:center;z-index:1}
+.content-wrapper::before{content:'';display:inline-block;height:100%;margin-right:-.25em;vertical-align:middle}
+.v-center{position:relative;display:inline-block;width:86%;text-align:left;vertical-align:middle}
+.main-content{}
+p{font-size:1em;line-height:1.875em;margin:0;padding:0 0 .9375em}
+h3{margin-bottom:.714em;padding:0;font-size:1.333em;line-height:1.429em}
+p a{color:#2bbc8a}
+ul{padding:0;margin:0;font-size:.75em}
+ul li{position:relative;display:inline;padding-bottom:.1875em;margin-right:.75em}
+li a{
+  color:#A3A3A3;
+  -webkit-transition:color .5s;
+  -moz-transition:color .5s;
+  -ms-transition:color .5s;
+  -o-transition:color .5s;
+  transition:color .5s;
+  cursor:pointer;
+  border-radius: 5px;
+  padding:.5em 1em;font-weight:700;text-transform:uppercase
+}
+li a:hover{border: solid 5px;}
+
+li#dark a{
+  border-color: #2bbc8a;
+  background-color: #1d1f21;
+  color: #c9cacc;
+}
+
+li#white a{
+  border-color: #2bbc8a;
+  background-color: #FFFFFF;
+  color: #383838;
+}
+
+li#light a{
+  border-color: #d44375;
+  background-color: #e2e0de;
+  color: #363533;
+}
+
+li#classic a{
+  border-color: #cc2a41;
+  background-color: #fafafa;
+  color: #22272a;
+}
+
+.footer{position:absolute;left:0;right:0;bottom:2em;margin:0
+auto;width:86%;font-size:.438em;line-height:1.875em;text-transform:uppercase;letter-spacing:.0625em;z-index:10;}
+.footer {color:#707070}
+.footer a{color:#707070}
+.footer span{display:inline-block;font-weight:700;border-bottom:1px dotted}
+.footer a:hover span{color:#d44375;border-bottom:1px dotted transparent}
+.layout-center .v-center,.layout-center .footer{text-align:center}
+.layout-center .main-content{margin:0 auto}
+@media only screen and (min-width : 768px){body{font-size:22px;line-height:48px}.main-content{width:80%}}
+@media only screen and (min-width : 1200px){body{font-size:26px;line-height:48px}}
+@media only screen and (min-width : 1824px){body{font-size:32px;line-height:60px}}
