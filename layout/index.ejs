@@ -17,9 +17,9 @@
             <i class="fab fa-<%= link %>"></i><!--
       ---></a><!--
     ---><% } %><!--
-    ---><%= ( nb_links > 0 && i < nb_links-1 ? 
-            ( i == nb_links-2 ? ' '+__('index.enum_and')+' ' 
-            : __('index.enum_comma')+' ' ) 
+    ---><%= ( nb_links > 0 && i < nb_links-1 ?
+            ( i == nb_links-2 ? ' '+__('index.enum_and')+' '
+            : __('index.enum_comma')+' ' )
             : '.' ) %>
         <% i+=1 %>
       <% } %>
@@ -57,5 +57,14 @@
       </li>
     <% } %>
   </ul>
+</section>
+<% } %>
+
+<% if (theme.tags_overview.show_all_tags && site.tags.length) { %>
+<section id="tags">
+  <span class="h1"><%= __('index.all_tags') %></a></span>
+    <div class="widget tagcloud">
+      <%- tagcloud() %>
+    </div>
 </section>
 <% } %>
