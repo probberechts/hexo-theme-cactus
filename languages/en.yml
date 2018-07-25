@@ -14,7 +14,8 @@ index:
   enum_and: and
   articles: Writing
   projects: Projects
-  all_tags: Tags
+  topics: Topics
+  most_recent: Most recent
 
 post:
   desktop:

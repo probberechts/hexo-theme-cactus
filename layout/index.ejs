@@ -29,6 +29,13 @@
 
 <section id="writing">
   <span class="h1"><a href="<%- url_for("archives") %>"><%= __('index.articles') %></a></span>
+  <% if (theme.tags_overview && site.tags.length) { %>
+  <span class="h2"><%= __('index.topics') %></span>
+  <span class="widget tagcloud">
+    <%- tagcloud(theme.tags_overview) %>
+  </span>
+  <span class="h2"><%= __('index.most_recent') %></span>
+  <% } %>
   <ul class="post-list">
     <% if (theme.posts_overview.show_all_posts) { %>
       <% var show_posts = page.posts.sort('date', 'desc') %>
@@ -57,14 +64,5 @@
       </li>
     <% } %>
   </ul>
-</section>
-<% } %>
-
-<% if (theme.tags_overview.show_all_tags && site.tags.length) { %>
-<section id="tags">
-  <span class="h1"><%= __('index.all_tags') %></a></span>
-    <div class="widget tagcloud">
-      <%- tagcloud() %>
-    </div>
 </section>
 <% } %>

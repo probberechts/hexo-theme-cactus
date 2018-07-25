@@ -32,10 +32,8 @@ social_links:
   mail: mailto:name@email.com
 
 # Customize the overview with displaying a tagcloud on the index page.
-# Options:
-#   - show_all_tags: whether to enable the tagcloud.
-tags_overview:
-  show_all_tags: true
+# Options: https://hexo.io/docs/helpers.html#tagcloud
+tags_overview: true
 
 # Customize the overview with the most recent blog posts on the index page.
 # Options:
