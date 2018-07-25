@@ -100,7 +100,7 @@ gulp.task('validate:languages', function(cb) {
   }
 });
 
-gulp.task('lib', ['lib:clean', 'lib:jQuery', 'lib:fontAwesome', 'lib:mesloFont', 'lib:justifiedGallery']);
-gulp.task('lint', ['lint:js', 'lint:stylus']);
-gulp.task('validate', ['validate:config', 'validate:languages']);
-gulp.task('default', [ 'lint', 'validate' ]);
+gulp.task('lib', gulp.parallel('lib:clean', 'lib:jQuery', 'lib:fontAwesome', 'lib:mesloFont', 'lib:justifiedGallery'));
+gulp.task('lint', gulp.parallel('lint:js', 'lint:stylus'));
+gulp.task('validate', gulp.parallel('validate:config', 'validate:languages'));
+gulp.task('default', gulp.parallel('lint', 'validate'));
