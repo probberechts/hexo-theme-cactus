@@ -25,20 +25,21 @@
   "homepage": "https://github.com/probberechts/cactus-dark#readme",
   "devDependencies": {
     "del": "*",
-    "gulp": "^4.*",
+    "gulp": "^4.0.0",
     "gulp-decompress": "*",
     "gulp-download": "*",
     "gulp-jshint": "*",
     "gulp-stylint": "*",
     "js-yaml": "*",
-    "jshint": "*",
+    "jshint": "^2.9.6",
     "jshint-stylish": "*",
     "stylint": "*",
     "stylint-stylish": "*",
-    "stylus-supremacy": "*"
+    "stylus-supremacy": "^2.12.2"
   },
   "dependencies": {
-    "fontawesome5-webfont": "^5.0.4",
+    "@fortawesome/fontawesome-free": "*",
+    "vazir-font": "*",
     "jquery": "^3.3.1",
     "justifiedGallery": "^3.6.5"
   }
