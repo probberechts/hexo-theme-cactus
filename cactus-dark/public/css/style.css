@@ -450,6 +450,7 @@ body {
   flex-direction: column;
   background-color: #1d1f21;
   color: #c9cacc;
+  font-display: swap;
   font-weight: 400;
   font-size: 14px;
   font-family: "Menlo", "Meslo LG", monospace;
@@ -1324,6 +1325,29 @@ article .content .caption {
   display: none;
   padding-bottom: 0.5em;
   color: #c9cacc;
+}
+#tag-cloud .tag-cloud-title {
+  color: #666;
+}
+#tag-cloud .tag-cloud-tags {
+  clear: both;
+  text-align: center;
+}
+#tag-cloud .tag-cloud-tags a {
+  display: inline-block;
+  margin: 10px;
+}
+#categories .category-list-title {
+  color: #666;
+}
+#categories .category-list .category-list-item .category-list-count {
+  color: #666;
+}
+#categories .category-list .category-list-item .category-list-count:before {
+  content: " (";
+}
+#categories .category-list .category-list-item .category-list-count:after {
+  content: ")";
 }
 .highlight {
   background: #474949;
