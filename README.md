@@ -55,10 +55,10 @@ You can (and should) modify a couple of settings. An overview of all settings
 can be found in  [_config.yml](_config.yml). The most important ones are
 discussed below.
 
-There are two possible methods to override these variables. As a first option,
+There are two possible methods to override the defaults. As a first option,
 you could fork the theme and maintain a custom branch with your settings.
 Alternatively, you can configure it from your site's primary configuration
-file. Therefore, define you custom settings under the `theme_config` variable.
+file. Therefore, define your custom settings under the `theme_config` variable.
 For example:
 
 ```yml
@@ -73,7 +73,7 @@ theme_config:
 colorscheme: dark
 ```
 
-This will result in the white color scheme.
+This will override the default black colorscheme in `themes/cactus/_config.yml`.
 
 
 ### Color scheme
@@ -240,6 +240,39 @@ Pick one of [the available colorschemes](https://github.com/probberechts/hexo-th
 highlight: COLORSCHEME_NAME
 ```
 
+### Tags and categories
+Tags and categories can be included in the front-matter of your posts. For example:
+
+```markdown
+title: Tags and Categories
+date: 2017-12-24 23:29:53
+tags:
+- Foo
+- Bar
+categories: 
+- Baz
+---
+
+This post contains 2 tags and 1 category.
+```
+
+You can create a page with a tag cloud by running:
+
+```sh
+$ hexo new page tags
+```
+
+Next, add `type: tags` to the front-matter of `source/tags/index.md`. You can also
+add a tag cloud to the home page by setting the `tags_overview` option to `true`.
+
+Similarly, you can create a page with an overview of all categories by running:
+
+```sh
+$ hexo new page categories
+```
+
+and adding `type: categories` to the front-matter of `source/categories/index.md`. 
+
 
 ### Local search
 
@@ -253,9 +286,15 @@ $ npm install hexo-generator-search --save
 Next, create a page to display the search engine:
 
 ```sh
-$ hexo new page Search
+$ hexo new page search
 ```
-and put `search: true` in the front-matter.
+and put `type: search` in the front-matter.
+
+```markdown
+title: Search
+type: search
+---
+```
 
 Finally, edit the `_config.yml` and add a link to the navigation menu.
 

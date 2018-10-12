@@ -1,9 +1,40 @@
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <% if (page.search) { %>
-    <%- partial('_partial/search') %>
-  <% } %>
   <%- partial('_partial/post/gallery') %>
   <div class="content" itemprop="articleBody">
-    <%- page.content %>
+      <% if (page.search || page.type === "search") { %>
+        <%- partial('_partial/search') %>
+      <% } else if (page.type === "tags") { %>
+          <div id="tag-cloud">
+            <div class="tag-cloud-title">
+                <% var visibleTags = 0 %>
+                <% site.tags.each(function(tag){ %>
+                  <% if (tag.length) { %>
+                    <% visibleTags += 1 %>
+                  <% } %>
+                <% }) %>
+                <%- _p('counter.tag_cloud', visibleTags) %>
+            </div>
+            <div class="tag-cloud-tags">
+              <%- tagcloud({min_font: 12, max_font: 30, amount: 300}) %>
+            </div>
+          </div>
+        <% } else if (page.type === 'categories') { %>
+          <div id="categories">
+            <div class="category-list-title">
+                <% var visibleCategories = 0 %>
+                <% site.categories.each(function(cat){ %>
+                  <% if (cat.length) { %>
+                    <% visibleCategories += 1 %>
+                  <% } %>
+                <% }) %>
+                <%- _p('counter.categories', visibleCategories) %>
+            </div>
+            <div class="category-list">
+              <%- list_categories() %>
+            </div>
+          </div>
+        <% } else { %>
+          <%- page.content %>
+        <% } %>
   </div>
 </article>

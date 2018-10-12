@@ -3,7 +3,7 @@
 <%- js('lib/justified-gallery/js/jquery.justifiedGallery.min.js') %>
 <%- js('js/main') %>
 <!-- search -->
-<% if (config.search && page.search){ %>
+<% if (config.search && (page.search || page.type === "search")){ %>
   <%- js('js/search.js') %>
   <script type="text/javascript">
     var inputArea = document.querySelector("#search-input");
