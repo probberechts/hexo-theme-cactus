@@ -17,15 +17,14 @@
   font-weight: 300;
 }
 .rtl {
-  font-family: vazir, sans-serif;
+  font-family: Vazir, sans-serif;
   direction: rtl;
 }
 .rtl #nav li {
-  padding-left: 15px;
-  border-left: 1px dotted $color-accent-1;
-  border-right: 0px;
   margin-right: 0px !important;
-  border-right: none !important;
+  padding-left: 15px;
+  border-right: 0px !important;
+  border-left: 1px dotted $color-accent-1;
 }
 .rtl #nav li:last-child {
   margin-right: 15px !important;
@@ -35,10 +34,10 @@
   float: right;
 }
 .rtl #footer li {
-  padding-left: 15px;
-  border-left: 1px dotted $color-border;
   margin-right: 0px;
+  padding-left: 15px;
   border-right: 0px;
+  border-left: 1px dotted $color-border;
 }
 .rtl #footer li:last-child {
   margin-right: 15px !important;

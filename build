@@ -13,6 +13,7 @@ do
   pushd demos/$theme
   hexo clean
   hexo generate
+  cp -r ../source/assets public/assets
   popd
   mkdir -p dist/$theme
   cp -r demos/$theme/public dist/$theme/
