@@ -316,8 +316,8 @@
   padding-right: 4rem;
   padding-left: 4rem;
 }
-.content h1,
-.content .h1 {
+body h1,
+body .h1 {
   display: block;
   margin-top: 3rem;
   margin-bottom: 1rem;
@@ -329,8 +329,8 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
-.content h2,
-.content .h2 {
+body h2,
+body .h2 {
   position: relative;
   display: block;
   margin-top: 2rem;
@@ -341,15 +341,15 @@
   font-weight: bold;
   font-size: 1rem;
 }
-.content h3 {
+body h3 {
   color: #111;
   text-decoration: underline;
   font-weight: bold;
   font-size: 0.9rem;
 }
-.content h4,
-.content h5,
-.content h6 {
+body h4,
+body h5,
+body h6 {
   display: inline;
   border-bottom: 1px dashed #666;
   color: #666;
@@ -357,75 +357,75 @@
   font-weight: normal;
   font-size: 0.9rem;
 }
-.content h3,
-.content h4,
-.content h5,
-.content h6 {
+body h3,
+body h4,
+body h5,
+body h6 {
   margin-top: 0.9rem;
   margin-bottom: 0.5rem;
 }
-.content hr {
+body hr {
   border: 1px dashed #666;
 }
-.content strong {
+body strong {
   font-weight: bold;
 }
-.content em,
-.content cite {
+body em,
+body cite {
   font-style: italic;
 }
-.content sup,
-.content sub {
+body sup,
+body sub {
   position: relative;
   vertical-align: baseline;
   font-size: 0.75em;
   line-height: 0;
 }
-.content sup {
+body sup {
   top: -0.5em;
 }
-.content sub {
+body sub {
   bottom: -0.2em;
 }
-.content small {
+body small {
   font-size: 0.85em;
 }
-.content acronym,
-.content abbr {
+body acronym,
+body abbr {
   border-bottom: 1px dotted;
 }
-.content ul,
-.content ol,
-.content dl {
+body ul,
+body ol,
+body dl {
   line-height: 1.725;
 }
-.content ul ul,
-.content ol ul,
-.content ul ol,
-.content ol ol {
+body ul ul,
+body ol ul,
+body ul ol,
+body ol ol {
   margin-top: 0;
   margin-bottom: 0;
 }
-.content ol {
+body ol {
   list-style: decimal;
 }
-.content dt {
+body dt {
   font-weight: bold;
 }
-.content table {
+body table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
   font-size: 12px;
 }
-.content th {
+body th {
   padding: 8px;
   border-bottom: 1px dashed $color-code-border;
   color: #111;
   font-weight: bold;
   font-size: 13px;
 }
-.content td {
+body td {
   padding: 9px 8px 0;
   border-bottom: none;
 }
@@ -440,14 +440,15 @@
   box-sizing: border-box;
 }
 html {
+  margin: 0;
+  padding: 0;
   height: 100%;
   border-top: 2px solid #363533;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 body {
-  display: flex;
-  flex-direction: column;
+  height: 100%;
   background-color: #e2e0de;
   color: #363533;
   font-display: swap;
@@ -456,11 +457,15 @@ body {
   font-family: "Menlo", "Meslo LG", monospace;
   line-height: 1.725;
   text-rendering: geometricPrecision;
+  flex: 1;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
 .content {
-  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 .content p {
   hyphens: auto;
@@ -557,7 +562,7 @@ body {
   }
 }
 #header {
-  margin: 0 auto 3rem;
+  margin: 0 auto 2rem;
   width: 100%;
 }
 #header h1,
@@ -652,7 +657,7 @@ body {
   }
   #header #nav ul li.icon {
     position: absolute;
-    top: 55px;
+    top: 77px;
     right: 1rem;
     display: inline-block;
   }
@@ -1202,7 +1207,10 @@ article .content .caption {
   margin-top: 4rem;
 }
 #footer {
+  position: absolute;
+  bottom: 0;
   margin-bottom: 10px;
+  width: 100%;
   color: #666;
   vertical-align: top;
   text-align: center;
