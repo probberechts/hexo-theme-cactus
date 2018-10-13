@@ -1239,6 +1239,8 @@ article .content .caption {
 }
 #footer a {
   color: #666;
+  text-decoration: underline;
+  background-image: none;
 }
 #footer a:hover {
   color: #858585;
