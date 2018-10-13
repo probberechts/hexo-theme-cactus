@@ -50,7 +50,7 @@
 
 <body class="max-width mx-auto px3 ltr">
     
-    <div class="content index my4">
+    <div class="content index py4">
         
           <header id="header">
   <a href="/hexo-theme-cactus/cactus-white/public/">
@@ -99,9 +99,8 @@
   </div>
 </article>
 
-    </div>
-    
-    <footer id="footer">
+        
+        <footer id="footer">
   <div class="footer-left">
     Copyright &copy; 2018 Pieter Robberechts
   </div>
@@ -122,6 +121,7 @@
   </div>
 </footer>
 
+    </div>
 </body>
 </html>
 <!-- styles -->
@@ -133,6 +133,35 @@
 <script src="/hexo-theme-cactus/cactus-white/public/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
 <script src="/hexo-theme-cactus/cactus-white/public/js/main.js"></script>
 <!-- search -->
+
+  <script src="/hexo-theme-cactus/cactus-white/public/js/search.js"></script>
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input");
+    var $resultArea = $("#search-result");
+
+    inputArea.onfocus = function() {
+      var search_path = "search.xml";
+      if (search_path.length == 0) {
+        search_path = "search.xml";
+      }
+      var path = "/hexo-theme-cactus/cactus-white/public/" + search_path;
+      searchFunc(path, 'search-input', 'search-result');
+    }
+
+    inputArea.onkeydown = function(){
+        if(event.keyCode==13){
+            return false
+        }
+    }
+
+    $resultArea.bind("DOMNodeRemoved DOMNodeInserted", function(e) {
+        if (!$(e.target).text()) {
+            $(".search-no-result").show(200);
+        } else {
+            $(".search-no-result").hide();
+        }
+    })
+  </script>
 
 <!-- Google Analytics -->
 
