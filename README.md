@@ -46,8 +46,23 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
     # theme: landscape
     theme: cactus
     ```
+    See below for more information on how to customize this theme.
+    
+3. Create pages and articles with the `hexo new [layout] <title>` command.
+    For example, to create an "about me" page, run:
+    ```sh
+    $ hexo new page about
+    ```
+    This will create a new file in `source/about/index.md`
+    Similary, you can create a new article with
+    ```sh
+    $ hexo new post "hello world"
+    ```
+    and add some interesting content in `source/_posts/hello-world.md`.
+    
+4. Run: `hexo generate` and `hexo server`
 
-3. Run: `hexo generate` and `hexo server`
+5. [Publish your blog](https://hexo.io/docs/deployment)!
 
 
 ## Configuration
