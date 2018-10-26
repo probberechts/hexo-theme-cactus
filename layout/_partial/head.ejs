@@ -1,3 +1,13 @@
+<%
+var title = page.title ? page.title : config.title;
+if (page.category) title = page.category;
+if (page.tag) title = page.tag;
+if (page.archive){
+  if (page.year) title = page.year + (page.month ? '/' + page.month : '');
+  else title = __('Writing');
+}
+%>
+
 <head>
     <!-- so meta -->
     <meta charset="utf-8">
@@ -36,7 +46,7 @@
         <% } %>
     <% } %>
     <!-- title -->
-    <title><%= page.title ? page.title : config.title %></title>
+    <title><%= title %></title>
     <!-- styles -->
     <%- css('css/style') %>
     <!-- persian styles -->
