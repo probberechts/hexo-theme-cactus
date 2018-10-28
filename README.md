@@ -181,9 +181,12 @@ If you are new to Hexo and internationalization (i18n), please read
 Currently, the theme is delivered with support for:
 
 - English (en), default
+- Brazilian Portuguese (pt-br)
+- Catalan (ca)
 - Chinese (Simplified, PRC) (zh-CN)
 - Dutch (nl)
 - French (fr)
+- Italian (it)
 - Persian (fa)
 - Russian (ru)
 - Spanish (es)
