@@ -3,12 +3,17 @@
     <%= __('footer.copyright') %> &copy; <%= new Date().getFullYear() %> <%= config.author || config.title %>
   </div>
   <div class="footer-right">
-    <nav>
-      <ul>
-        <% for (var i in theme.nav) { %> 
-          <li><a href="<%- url_for(theme.nav[i]) %>"><%= __('nav.'+i).replace("nav.", "") %></a></li>
-        <% } %>
-      </ul>
-    </nav>
+    <!-- 备案号 -->
+    <% if (theme.record.enabled && theme.record.number) { %>
+      <%= theme.record.number %>
+    <% } else { %>
+      <nav>
+        <ul>
+          <% for (var i in theme.nav) { %> 
+            <li><a href="<%- url_for(theme.nav[i]) %>"><%= __('nav.'+i).replace("nav.", "") %></a></li>
+          <% } %>
+        </ul>
+      </nav>
+    <%} %>
   </div>
 </footer>
