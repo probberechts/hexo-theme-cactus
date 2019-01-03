@@ -1,5 +1,16 @@
 <% if (post.date) { %>
     <div class="<%= class_name %>">
+      <% if (is_post()) { %>
         <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, config.date_format) %></time>
+        <% if (theme.post.show_updated && post.date !== post.updated) { %>
+        (Updated: <time datetime="<%= date_xml(post.updated) %>" itemprop="dateModified"><%= date(post.updated, config.date_format) %></time>)
+        <% } %>
+      <% } else { %>
+        <% if (theme.posts_overview.sort_updated) { %>
+          <time datetime="<%= date_xml(post.updated) %>" itemprop="dateModified"><%= date(post.updated, config.date_format) %></time>
+        <% } else { %>
+          <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, config.date_format) %></time>
+        <% } %>
+      <% } %>
     </div>
 <% } %>

@@ -39,10 +39,23 @@ tags_overview: false
 # Options:
 #   - show_all_posts: whether to show all available posts.
 #   - post_count: whether to show only the x most recent posts.
+#   - sort_updated: sort posts by last modification date instead of creation date.
 posts_overview:
   show_all_posts: false
   post_count: 5
+  sort_updated: false
 
+# Customize the archive view.
+# Options:
+#   - sort_updated: sort posts by last modification date instead of creation date.
+archive:
+  sort_updated: false
+
+# Customize the article view.
+# Options:
+#   - show_updated: show the last modification date.
+post:
+  show_updated: false
 
 ##############################################################################
 # Look and Feel
