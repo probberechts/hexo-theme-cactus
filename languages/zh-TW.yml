@@ -1,0 +1,38 @@
+nav:
+  home: 首頁
+  about: 關於
+  articles: 歸檔
+  projects: 專案
+  search: 搜尋
+
+footer:
+  copyright: Copyright
+
+index:
+  find_me_on: Find me on
+  enum_comma: ','
+  enum_and: and
+  articles: 文章
+  projects: 項目
+
+post:
+  desktop:
+    previous: 上一篇
+    next: 下一篇
+    back_to_top: 返回頂部
+    share: 分享文章
+  mobile:
+    menu: 選單 
+    toc: 目錄
+    back_to_top: 返回頂部
+    share: 分享
+
+search:
+  search: 搜尋...
+  no_results: 抱歉，沒有符合您搜尋條件的結果。請換其它關鍵詞再試。
+
+pagination:
+  page: 頁面 %d / %d
+
+comments:
+  no_js: 加載留言需要在瀏覽器啟用 JavaScript 。
