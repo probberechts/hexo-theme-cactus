@@ -39,7 +39,7 @@ tag_cloud:
   zero: 目前還沒有標籤
 
 pagination:
-  page: %d / %d
+  page: 第 %d 頁，共 %d 頁
 
 counter:
   tag_cloud:
