@@ -3,15 +3,17 @@ nav:
   about: 关于
   articles: 归档
   projects: 项目
+  tag: 标签
+  category: 分类
   search: 搜索
 
 footer:
   copyright: Copyright
 
 index:
-  find_me_on: Find me on
-  enum_comma: ','
-  enum_and: and
+  find_me_on: 在这里找到我：
+  enum_comma: ' '
+  enum_and: ' '
   articles: 文章
   projects: 项目
 
@@ -32,7 +34,7 @@ search:
   no_results: 抱歉，没有符合您搜索条件的结果。请换其它关键词再试。
 
 pagination:
-  page: Page %d of %d
+  page: 第 %d 页，共 %d 页
 
 comments:
   no_js: 加载评论需要在浏览器启用 JavaScript 脚本支持。
