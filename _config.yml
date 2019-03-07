@@ -48,6 +48,8 @@ posts_overview:
 # Customize the archive view.
 # Options:
 #   - sort_updated: sort posts by last modification date instead of creation date.
+# Note: this does not work together with pagination, since the pagination
+# plugin will sort pages by date of creation.
 archive:
   sort_updated: false
 
