@@ -326,7 +326,7 @@ Finally, edit the `_config.yml` and add a link to the navigation menu.
 
 ```yml
 nav:
-  search: /Search/
+  search: /search/
 ```
 
 
