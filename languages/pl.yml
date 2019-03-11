@@ -1,0 +1,61 @@
+nav:
+  home: Strona główna
+  about: O mnie
+  articles: Artykuły
+  tag: Tagi
+  category: Kategorie
+  projects: Projekty
+  search: Wyszukiwanie
+
+footer:
+  copyright: Prawa autorskie
+
+index:
+  find_me_on: Znajdź mnie na
+  enum_comma: ','
+  enum_and: i
+  articles: Artykuły
+  projects: Projekty
+  topics: Tematy
+  most_recent: Najnowsze
+
+post:
+  desktop:
+    previous: Poprzedni post
+    next: Następny post
+    back_to_top: Powrót do góry
+    share: Udostępnij post
+  mobile:
+    menu: Menu
+    toc: TOC
+    back_to_top: Powrót do góry
+    share: Udostępnij
+
+search:
+  search: Wyszukaj...
+  no_results: Nic nie znaleziono.
+
+tag_cloud:
+  zero: Brak tagów
+
+pagination:
+  page: Strona %d z %d
+
+counter:
+  tag_cloud:
+    zero: Brak tagów
+    one: ""
+    other: ""
+
+  categories:
+    zero: Brak kategorii
+    one: ""
+    other: ""
+
+  archive_posts:
+    zero: Brak postów.
+    one: ""
+    other: ""
+
+comments:
+  no_js: Proszę włączyć obsługę JavaScript, żeby zobaczyć komentarze.

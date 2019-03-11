@@ -5,17 +5,17 @@
     <% if (is_post()) { %>
       <%- partial('_partial/post/actions_desktop') %>
     <% } %>
-    <div class="content index my4">
+    <div class="content index py4">
         <% if (!is_post()) { %>
           <%- partial('_partial/header') %>
         <% } %>
         <%- body %>
+        <% if (is_post()) { %>
+          <%- partial('_partial/post/actions_mobile') %>
+        <% } %>
+        <%- partial('_partial/footer') %>
     </div>
-    <% if (is_post()) { %>
-      <%- partial('_partial/post/actions_mobile') %>
-    <% } %>
-    <%- partial('_partial/footer') %>
+    <%- partial('_partial/styles') %>
+    <%- partial('_partial/scripts') %>
 </body>
 </html>
-<%- partial('_partial/styles') %>
-<%- partial('_partial/scripts') %>

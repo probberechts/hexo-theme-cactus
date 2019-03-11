@@ -11,14 +11,14 @@ var yaml = require('js-yaml');
 
 
 gulp.task('lib:clean',function(){
-  return del.sync([ './source/lib/*' ]);
+  return del([ './source/lib/*' ]);
 })
 
 gulp.task('lib:fontAwesome',function(){
   return gulp.src([
-    'node_modules/fontawesome5-webfont/webfonts/*',
-    'node_modules/fontawesome5-webfont/css/fontawesome-all.min.css'
-  ], {base: 'node_modules/fontawesome5-webfont'})
+    'node_modules/@fortawesome/fontawesome-free/webfonts/*',
+    'node_modules/@fortawesome/fontawesome-free/css/all.min.css'
+  ], {base: 'node_modules/@fortawesome/fontawesome-free'})
     .pipe(gulp.dest('./source/lib/font-awesome'))
 })
 
@@ -30,6 +30,14 @@ gulp.task('lib:mesloFont', function () {
     }))
     .pipe(gulp.dest('./source/lib/meslo-LG'));
 });
+
+
+gulp.task('lib:vazirFont',function(){
+  return gulp.src([
+    'node_modules/vazir-font/dist/*',
+  ], {base: 'node_modules/vazir-font/dist'})
+    .pipe(gulp.dest('./source/lib/vazir-font'))
+})
 
 gulp.task('lib:justifiedGallery',function(){
   return gulp.src([
@@ -100,7 +108,9 @@ gulp.task('validate:languages', function(cb) {
   }
 });
 
-gulp.task('lib', ['lib:clean', 'lib:jQuery', 'lib:fontAwesome', 'lib:mesloFont', 'lib:justifiedGallery']);
-gulp.task('lint', ['lint:js', 'lint:stylus']);
-gulp.task('validate', ['validate:config', 'validate:languages']);
-gulp.task('default', [ 'lint', 'validate' ]);
+gulp.task('lib', gulp.series(
+  'lib:clean', 'lib:jQuery', 'lib:fontAwesome', 'lib:mesloFont',
+  'lib:vazirFont', 'lib:justifiedGallery'));
+gulp.task('lint', gulp.parallel('lint:js', 'lint:stylus'));
+gulp.task('validate', gulp.parallel('validate:config', 'validate:languages'));
+gulp.task('default', gulp.parallel('lint', 'validate'));

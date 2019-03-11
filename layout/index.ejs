@@ -17,9 +17,9 @@
             <i class="fab fa-<%= link %>"></i><!--
       ---></a><!--
     ---><% } %><!--
-    ---><%= ( nb_links > 0 && i < nb_links-1 ? 
-            ( i == nb_links-2 ? ' '+__('index.enum_and')+' ' 
-            : __('index.enum_comma')+' ' ) 
+    ---><%= ( nb_links > 0 && i < nb_links-1 ?
+            ( i == nb_links-2 ? ' '+__('index.enum_and')+' '
+            : __('index.enum_comma')+' ' )
             : '.' ) %>
         <% i+=1 %>
       <% } %>
@@ -29,11 +29,19 @@
 
 <section id="writing">
   <span class="h1"><a href="<%- url_for("archives") %>"><%= __('index.articles') %></a></span>
+  <% if (theme.tags_overview && site.tags.length) { %>
+  <span class="h2"><%= __('index.topics') %></span>
+  <span class="widget tagcloud">
+    <%- tagcloud(theme.tags_overview) %>
+  </span>
+  <span class="h2"><%= __('index.most_recent') %></span>
+  <% } %>
   <ul class="post-list">
+    <% var field_sort = theme.posts_overview.sort_updated ? 'updated' : 'date' %>
     <% if (theme.posts_overview.show_all_posts) { %>
-      <% var show_posts = page.posts.sort('date', 'desc') %>
+      <% var show_posts = page.posts.sort(field_sort, 'desc') %>
     <% } else { %>
-      <% var show_posts = site.posts.sort('date', 'desc').limit(theme.posts_overview.post_count || 5) %>
+      <% var show_posts = site.posts.sort(field_sort, 'desc').limit(theme.posts_overview.post_count || 5) %>
     <% } %>
     <% show_posts.each(function(post, i){ %>
       <li class="post-item">
@@ -42,7 +50,7 @@
       </li>
     <% }); %>
   </ul>
-  <% if (theme.show_all_posts) { %>
+  <% if (theme.posts_overview.show_all_posts) { %>
     <%- partial('_partial/pagination') %>
   <% } %>
 </section>

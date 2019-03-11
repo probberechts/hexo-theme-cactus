@@ -2,8 +2,9 @@
   <ul class="post-list">
     <% var year = 0 %>
     <% var change = false %>
-    <% page.posts.sort('date', 'desc').each(function(post) { %>
-      <% var itemYear = date(post.date, 'YYYY') - 0 %>
+    <% var field_sort = theme.archive.sort_updated ? 'updated' : 'date' %>
+    <% page.posts.sort(field_sort, 'desc').each(function(post) { %>
+      <% var itemYear = date(post[field_sort], 'YYYY') - 0 %>
       <% change = year !== itemYear %>
       <% year = change ? itemYear : year %>
       <% if (change) { %>

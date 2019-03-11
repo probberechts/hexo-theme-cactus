@@ -11,28 +11,36 @@ global-reset()
   box-sizing: border-box
 
 html
+  margin: 0
+  padding: 0
   height: 100%
   border-top: 2px solid $color-text
   -webkit-text-size-adjust: 100%
   -ms-text-size-adjust: 100%
 
 body
-  display: flex
-  flex-direction: column
+  margin: 0
+  height: 100%
   background-color: $color-background
   color: $color-text
+  font-display: swap // @stylint ignore
   font-weight: 400
   font-size: $font-size
   font-family: $font-family-body
   line-height: $line-height
   text-rendering: geometricPrecision
+  flex: 1
 
   antialias()
 
-.content
-  flex: 1
-
   @extend $base-style
+
+.content
+  position: relative
+  display: flex
+  flex-direction: column
+  min-height: 100%
+  overflow-wrap: break-word
 
   p
     hyphens(auto)
@@ -63,13 +71,15 @@ body
   h1 a:hover, .h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover
     underline(6px, $color-link)
 
-  h6 a
-    background: none
-    color: inherit
-    text-decoration: none
+  h6
+    a
+      background: none
+      color: inherit
+      text-decoration: none
 
-  h6 a:hover
-    underline(6px, $color-link)
+  h6
+    a:hover
+      underline(6px, $color-link)
 
 @media (min-width: 540px)
   .image-wrap
@@ -110,6 +120,8 @@ body
 @import "_partial/footer"
 @import "_partial/pagination"
 @import "_partial/search"
+@import "_partial/tags"
+@import "_partial/categories"
 // Code
 @import "_highlight/" + $highlight
 
