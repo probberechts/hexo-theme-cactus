@@ -14,21 +14,21 @@
     <%- meta(page) %>
     <% if (theme.favicon) { %>
         <% if (theme.favicon.desktop) { %>
-          <% if (theme.gravatar.email && theme.favicon.desktop.gravatar) { %>
+          <% if (theme.gravatar && theme.gravatar.email && theme.favicon.desktop.gravatar) { %>
               <link rel="shortcut icon" href="<%= gravatar(theme.gravatar.email, 16) %>">
           <% } else { %>
               <link rel="shortcut icon" href="<%= url_for(theme.favicon.desktop.url) %>">
           <% } %>
         <% } %>
         <% if (theme.favicon.android) { %>
-          <% if (theme.gravatar.email && theme.favicon.android.gravatar) { %>
+          <% if (theme.gravatar && theme.gravatar.email && theme.favicon.android.gravatar) { %>
             <link rel="icon" type="image/png" href="<%= gravatar(theme.gravatar.email, 192) %>" sizes="192x192">
           <% } else { %>
             <link rel="icon" type="image/png" href="<%= url_for(theme.favicon.android.url) %>" sizes="192x192">
           <% } %>
         <% } %>
         <% if (theme.favicon.apple) { %>
-          <% if (theme.gravatar.email && theme.favicon.apple.gravatar) { %>
+          <% if (theme.gravatar && theme.gravatar.email && theme.favicon.apple.gravatar) { %>
             <link rel="apple-touch-icon" sizes="180x180" href="<%= gravatar(theme.gravatar.email, 180) %>">
           <% } else { %>
             <link rel="apple-touch-icon" sizes="180x180" href="<%= url_for(theme.favicon.apple.url) %>">
