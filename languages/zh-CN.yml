@@ -16,6 +16,8 @@ index:
   enum_and: ' '
   articles: 文章
   projects: 项目
+  topics: 标签
+  most_recent: 最新的文章
 
 post:
   desktop:
