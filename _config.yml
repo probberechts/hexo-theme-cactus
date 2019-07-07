@@ -17,7 +17,7 @@ nav:
   home: /
   about: /about/
   articles: /archives/
-  projects: projects_url
+  projects: https://github.com/ninjaspl0it
 
 
 # Links to your social media accounts.
@@ -136,7 +136,7 @@ disqus:
 
 # Fill in your Google Analytics tracking ID to enable Google Analytics.
 google_analytics:
-  enabled: true 
+  enabled: true
   id: UA-143416476-1
 
 # Fill in your Baidu Analytics tracking ID to enable Baidu Analytics.
