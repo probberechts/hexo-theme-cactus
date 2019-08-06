@@ -1,7 +1,26 @@
 <!-- jquery -->
 <%- js('lib/jquery/jquery.min') %>
 <%- js('lib/justified-gallery/js/jquery.justifiedGallery.min.js') %>
+<!-- clipboard -->
+<% if (is_post()){ %>
+  <%- js('lib/clipboard/clipboard.min') %>
+  <script type="text/javascript">
+  $(function(){
+    var btn = '<i class="btn-copy far fa-clone"></i>';
+    $(".highlight .code pre").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+    });
+    clip.on('success', function(e) {
+      e.clearSelection();
+    })
+  })
+  </script>
+<% } %>
 <%- js('js/main') %>
+
 <!-- search -->
 <% if (config.search && (page.search || page.type === "search")){ %>
   <%- js('js/search.js') %>
