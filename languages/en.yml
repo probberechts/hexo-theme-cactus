@@ -59,3 +59,7 @@ counter:
 
 comments:
   no_js: Please enable JavaScript to view the comments.
+
+tooltip:
+  copy_tip: Copy to clipboard!
+  copied: Copied!
