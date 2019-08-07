@@ -40,3 +40,7 @@ pagination:
 
 comments:
   no_js: 加载评论需要在浏览器启用 JavaScript 脚本支持。
+
+tooltip:
+  copy_tip: 复制到粘贴板!
+  copied: 复制成功!
