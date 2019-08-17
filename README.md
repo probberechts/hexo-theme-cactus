@@ -237,6 +237,10 @@ baidu_analytics:
 
 ### Comments
 
+Choose Disqus or Livere as your comments system.
+
+#### Disqus
+
 First, create a site on Disqus: [https://disqus.com/admin/create/](http://disqus.com/admin/create/).
 
 Next, update the `_config.yml` file:
@@ -249,6 +253,23 @@ disqus:
 
 where `SITENAME` is the name you gave your site on Disqus.
 
+#### Livere
+
+Disqus is prohibited in some countries (e.g. China). If your Disqus does not work, consider to use Livere as a replacer.
+
+To implement this, firstly, create a site on Livere: [https://www.livere.com/apply](https://www.livere.com/apply).
+
+**Notice: only livere CITY version is supported.**
+
+Then, update the `_config.yml` file:
+
+```yml
+livere:
+  enabled: true
+  datauid: YOUR-DATA-UID
+```
+
+Replace `YOUR-DATA-UID` with the `data-uid` (a string in the quotation mark) shown in your LiveRe install code.
 
 ### Code Highlighting
 

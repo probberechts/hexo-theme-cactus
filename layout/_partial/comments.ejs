@@ -1,6 +1,16 @@
+<!--Disqus-->
 <% if(page.comments && theme.disqus.enabled){ %>
     <div class="blog-post-comments">
         <div id="disqus_thread">
+            <noscript><%= __('comments.no_js') %></noscript>
+        </div>
+    </div>
+<% } %>
+
+<!--Livere-->
+<% if(page.comments && theme.livere.enabled){ %>
+    <div class="blog-post-comments">
+        <div id="lv-container" data-id="city" data-uid="<%= theme.livere.datauid %>">
             <noscript><%= __('comments.no_js') %></noscript>
         </div>
     </div>

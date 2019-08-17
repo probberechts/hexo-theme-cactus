@@ -134,6 +134,11 @@ disqus:
   enabled: false
   shortname: cactus-1
 
+# Fill in your Livere Comments data-uid to enable Livere (City Version ONLY) comments.
+livere:
+  enabled: false
+  datauid: YOUR-DATA-UID
+
 # Fill in your Google Analytics tracking ID to enable Google Analytics.
 google_analytics:
   enabled: false
