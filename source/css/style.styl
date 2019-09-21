@@ -3,7 +3,7 @@
 @import "_util"
 @import "_mixins"
 @import "_extend"
-@import "_fonts"
+@import "../lib/FiraCode_2/fira_code"
 
 global-reset()
 
@@ -49,15 +49,16 @@ body
     hyphens(manual)
 
   a
-    color: $color-text
+    color: #0366d6
     text-decoration: none
+    // background-image: none !important
 
-    underline(5px, $color-text)
-
-    &:hover
-      background-image: linear-gradient(transparent, transparent 4px, $color-link 4px, $color-link)
-
+  a:hover
+    //background-image: linear-gradient(transparent, transparent 4px, $color-link 4px, $color-link)
+    text-decoration: underline
+    text-decoration-color: #0366d6
   a.icon
+    color: $color-text
     background: none
 
     &:hover
@@ -148,12 +149,76 @@ code
   border-radius: 2px
   -webkit-border-radius: 2px
 
+p
+  code
+    padding: .2em .4em
+    margin: 0
+    font-weight: 500
+    font-family: $font-family-mono
+    /* font-size: 85%; */
+    background-color: rgba(27,31,35,.05)
+    //border-radius: 3px;
+    //padding: 0 5px
+    //border: 1px dotted $color-border
+    border-radius: 4px
+    -webkit-border-radius: 4px
+
+table tr:nth-child(2n){background: #f6f8fa;}
+
+td
+  code
+    padding: .2em .4em
+    margin: 0
+    font-weight: 500
+    font-family: $font-family-mono
+    /* font-size: 85%; */
+    background-color: rgba(27,31,35,.05)
+    //border-radius: 3px;
+    //padding: 0 5px
+    //border: 1px dotted $color-border
+    border-radius: 4px
+    -webkit-border-radius: 4px
+
+pre
+  border: $color-border
+  padding: .2em .4em;
+  background-color: rgba(27,31,35,.05);
+  code
+    padding-left: 1em
+    // margin: 0;
+    font-weight: 500;
+    overflow-x: auto
+    margin: 1rem 0
+    // padding: 10px 15px
+    border-radius: 4px
+    // background: $color-background-code
+    font-family: $font-family-mono
+    // color: $color-accent-3
+    -webkit-border-radius: 4px
+
+
+table
+  font-size: 14px !important
+  font-weight: 400;
+  font-family: $font-family-mono
+  tr
+    td:not(.gutter):not(.code),th:not(.gutter):not(.code)
+      border: 1px solid #dfe2e5;
+
 .highlight
+  padding: .2em .4em;
+  // margin: 0;
+  font-weight: 500;
+  background-color: rgba(27,31,35,.05);
+  // border-radius: 3px;
+  //background-color: #f6f8fa !important
+  // padding: 0.5em
+
   overflow-x: auto
   margin: 1rem 0
-  padding: 10px 15px
+  // padding: 10px 15px
   border-radius: 4px
-  background: $color-background-code
+  // background: $color-background-code
   font-family: $font-family-mono
   // color: $color-accent-3
   -webkit-border-radius: 4px
@@ -200,6 +265,7 @@ code
     background: none
 
   table
+    font-weight: 500
     width: auto
 
   td.gutter

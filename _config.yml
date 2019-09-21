@@ -1,39 +1,37 @@
 ##############################################################################
-# Content
+# 主题配置文件
 ##############################################################################
 
-# Link to a page that gives an overview of all your projects.
-# This can be an external link (e.g., to you GitHub profile) or to another
-# page within your website.
-projects_url: http://github.com/probberechts
+# 一个用来展示你的个人项目的链接.
+# 他可以是你的 GitHub 主页地址或者其他一些你希望展示的地址
+projects_url: http://github.com/xuthus5
 
-# Set the page direction to RTL or LTR. default is LTR. (if you set it 'rtl', the 'vazir' font will be loaded.)
+# 请不要修改这里,除非你希望支持阿拉伯语或波斯文. (使用 rtl 来支持这些阿拉伯国家的字体.)
 direction: ltr
-# Configure the navigation menu.
-# A pair 'Key: url' will result in a link to 'url' with the name 'Key' in the
-# navigation menu. Optionally, you can add translations for the 'Key' in
-# languages/*.yml
+# 配置你的导航菜单.
+# 按照 'Key: url' 来配置
+# 如果你希望使用中文来替换 Key 请到 languages/*.yml 中指定 Key 对应的翻译
 nav:
   home: /
   about: /about/
   articles: /archives/
-  projects: projects_url
+  projects: https://github.com/xuthus5
+  search: /search/
+  tag: /tags/
+  category: /categories/
 
 
-# Links to your social media accounts.
-# The keys should correspond to Fontawesome icon names
-# (see https://fontawesome.com/icons?d=gallery&s=brands);
-# only 'mail' is an exception.
+# 在首页显示的，用于连接到你社交媒体的链接.
+# 你可以手动指定被 Fontawesome icon 支持的图标
+# (查看 https://fontawesome.com/icons?d=gallery&s=brands);
+# 注意:仅仅 'mail' 是被主题定义的图标.
 social_links:
-  github: http://github.com/probberechts/cactus-dark
-  twitter: /
-  facebook: /
-  linkedin: /
-  mail: mailto:name@email.com
+  github: http://github.com/xuthus5
+  mail: mailto:xuthus5@gmail.com
 
 # Customize the overview with displaying a tagcloud on the index page.
 # Options: https://hexo.io/docs/helpers.html#tagcloud
-tags_overview: false
+tags_overview: true
 
 # Customize the overview with the most recent blog posts on the index page.
 # Options:
@@ -42,7 +40,7 @@ tags_overview: false
 #   - sort_updated: sort posts by last modification date instead of creation date.
 posts_overview:
   show_all_posts: false
-  post_count: 5
+  post_count: 20
   sort_updated: false
 
 # Customize the archive view.
@@ -57,7 +55,7 @@ archive:
 # Options:
 #   - show_updated: show the last modification date.
 post:
-  show_updated: false
+  show_updated: true
 
 ##############################################################################
 # Look and Feel
@@ -74,7 +72,7 @@ logo:
   enabled: true
   width: 50
   height: 50
-  url: /images/logo.png
+  url: /images/Photo_0411_1a.jpg
   gravatar: false
 
 # Customize the favicons.
@@ -104,7 +102,7 @@ favicon:
 # Set the color scheme.
 # Available color schemes are 'dark', 'light', 'classic' and 'white'.
 # Alternatively, add your own custom color scheme to source/css/_colors.
-colorscheme: dark
+colorscheme: white
 
 # Maximal width of the page in rem units.
 page_width: 48
@@ -125,26 +123,7 @@ open_graph:
   google_plus:
 
 
-##############################################################################
-# Plugins
-##############################################################################
-
-# Fill in your Disqus Comments Shortname to enable Disqus comments.
-disqus:
-  enabled: false
-  shortname: cactus-1
-
-# Fill in your Google Analytics tracking ID to enable Google Analytics.
-google_analytics:
-  enabled: false
-  id: UA-86660611-1
-
-# Fill in your Baidu Analytics tracking ID to enable Baidu Analytics.
-baidu_analytics:
-  enabled: false
-  id: 2e6da3c375c8a87f5b664cea6d4cb29c
-
 # Fill in you Gravatar user id / email if you want to use your gravatar as the
 # logo and/or favicons of you website.
 gravatar:
-  email: name@email.com
+  email: xuthus5@gmail.com

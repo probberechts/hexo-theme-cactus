@@ -1,128 +1,92 @@
-# Cactus
+# Cactus-CN
 
-A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal website.
+[Cactus](https://github.com/probberechts/hexo-theme-cactus)(仙人掌)是一个为[Hexo](https://hexo.io)开发的响应式个人网站主题,拥有清简的样式。我在采纳它作为我的博客主题时,感觉它在支持中文字体方面略显不足，有十分明显的锯齿感，于是在此主题的基础上，修改了些许样式，以符合个人审美。
+:cactus: [演示](https://probberechts.github.io/hexo-theme-cactus/)
 
-:cactus: [Demo](https://probberechts.github.io/hexo-theme-cactus/)
+## 使用说明
 
-![screenshot](https://docs.google.com/uc?id=1K66bccwr4z9TgJev0AzCqbI7BxzVr7md)
+- [特征](#特征)
+- [安装](#安装)
+- [配置](#配置)
+- [版权](#版权)
 
-## Summary
+## 特征
 
-- [General](#general)
-- [Features](#features)
-- [Install](#install)
-- [Configuration](#configuration)
-- [License](#license)
+- 中文字体增强
+- 修正发布文章未指定作者时作者项指向博客名称
+- 加强代码高亮对比度
+- 加强行级代码块样式
+- 加强表格样式
+- 删除Disqus功能
+- 删除谷歌分析/百度统计
 
-## General
-
-- **Version** : 3.0
-- **Compatibility** : Hexo 3 or later
-
-## Features
-
-- Fully responsive
-- Multiple color schemes
-- Pick your own code highlighting scheme
-- Configurable navigation menu
-- Support for local search
-- Projects list
-- I18n support
-- Disqus integration
-- Google analytics / Baidu Tongji
-- Font Awesome icons
-- Simplicity
-
-## Install
-1. In the `root` directory:
+## 安装
+1. 在博客的根目录下操作:
 
     ```git
-    $ git clone https://github.com/probberechts/hexo-theme-cactus.git themes/cactus
+    $ git clone https://github.com/xuthus5/hexo-theme-cactus-cn.git themes/cactus
     ```
 
-2. Change the `theme` property in the `config.yml` file.
+2. 修改根目录下的 `config.yml` 文件的 `theme` 选项.
 
     ```yml
     # theme: landscape
     theme: cactus
     ```
-    See below for more information on how to customize this theme.
     
-3. Create pages and articles with the `hexo new [layout] <title>` command.
-    For example, to create an "about me" page, run:
+3. 创建 `关于我` 页面，请运行:
     ```sh
     $ hexo new page about
     ```
-    This will create a new file in `source/about/index.md`
-    Similary, you can create a new article with
+    文件将被创建在 `source/about/index.md`
+    下, 我认为这是必要的操作，它是对你个人的介绍，网站导航默认情况下也将引用它。
+    
+4. 创建一篇文章
+   
     ```sh
     $ hexo new post "hello world"
     ```
-    and add some interesting content in `source/_posts/hello-world.md`.
+    创建的文章将被创建在 `source/_posts/hello-world.md` 下.
     
-4. Run: `hexo generate` and `hexo server`
+5. 运行: `hexo generate` 或者 `hexo server`
 
-5. [Publish your blog](https://hexo.io/docs/deployment)!
-
-
-## Configuration
-You can (and should) modify a couple of settings. An overview of all settings
-can be found in  [_config.yml](_config.yml). The most important ones are
-discussed below.
-
-There are two possible methods to override the defaults. As a first option,
-you could fork the theme and maintain a custom branch with your settings.
-Alternatively, you can configure it from your site's primary configuration
-file. Therefore, define your custom settings under the `theme_config` variable.
-For example:
-
-```yml
-# _config.yml
-theme_config:
-  colorscheme: white
-```
+6. [如何发表你的博客](https://hexo.io/docs/deployment)!
 
 
-```yml
-# themes/cactus/_config.yml
-colorscheme: dark
-```
+## 配置
+下面讨论几个比较重要的选项，这些选项在相关的`_config.yml`中都会被找到.
 
-This will override the default black colorscheme in `themes/cactus/_config.yml`.
+1. 在根目录下的 `_config.yml` 中指定主题:
 
+    ```yml
+    # _config.yml
+    theme_config:
+      colorscheme: white
+    ```
 
-### Color scheme
+2. 在主题的 `_config.yml` 下指定主题色彩方案，有4套方案分别是，white、classic、dark、light，建议white，本主题只做了white适配
 
-Currently, this theme is delivered with four color schemes: [dark](https://probberechts.github.io/hexo-theme-cactus/cactus-dark/public/), [light](https://probberechts.github.io/hexo-theme-cactus/cactus-light/public/),
-[white](https://probberechts.github.io/hexo-theme-cactus/cactus-white/public/) and [classic](https://probberechts.github.io/hexo-theme-cactus/cactus-classic/public/). Set your preferred color scheme in the `_config.yml` file.
+    ```yml
+    # themes/cactus/_config.yml
+    colorscheme: white
+    ```
+    
+    你可以在 `themes/cactus/source/css/_colors`下自定义颜色方案.
+    
+3. 项目自定义导航选项，在根目录下的 `_config.yml`文件中:
 
-```yml
-colorscheme: light
-```
+    ```yml
+    nav:
+      Home: /
+      About: /about/
+      Writing: /archives/
+      Projects: http://github.com/probberechts
+      LINK_NAME: URL
+    ```
 
-Alternatively, you can easily create your own color scheme by creating a new
-file in `source/css/_colors`.
+4. 内容分页
 
-
-### Navigation
-
-Setup the navigation menu in the `_config.yml`:
-
-```yml
-nav:
-  Home: /
-  About: /about/
-  Writing: /archives/
-  Projects: http://github.com/probberechts
-  LINK_NAME: URL
-```
-
-
-### Blog posts list on home page
-
-You have two options for the list of blog posts on the home page:
-
-  - Show only the 5 most recent posts (default)
+  - 仅显示制定数目的文章 (默认选项)
 
     ```yml
     posts_overview:
@@ -130,205 +94,141 @@ You have two options for the list of blog posts on the home page:
       post_count: 5
     ```
 
-  - Show all posts
+  - 显示所有文章
 
     ```yml
     posts_overview:
       show_all_posts: true
     ```
 
+5. 个人项目清单
 
-### Projects list
+   手动创建文件 `source/_data/projects.json` 按照如下格式写入内容，即可在首页展示你的项目
 
-Create a projects file `source/_data/projects.json` to show a list of your projects on the index page.
+    ```json
+    [
+        {
+           "name":"Hexo",
+           "url":"https://hexo.io/",
+           "desc":"A fast, simple & powerful blog framework"
+        },
+        {
+           "name":"Font Awesome",
+           "url":"http://fontawesome.io/",
+           "desc":"The iconic font and CSS toolkit"
+        }
+    ]
+    ```
 
-```json
-[
-    {
-       "name":"Hexo",
-       "url":"https://hexo.io/",
-       "desc":"A fast, simple & powerful blog framework"
-    },
-    {
-       "name":"Font Awesome",
-       "url":"http://fontawesome.io/",
-       "desc":"The iconic font and CSS toolkit"
-    }
-]
-```
+6. 社交媒体链接
 
+   Cactus可以在首页自动添加指向您的社交媒体帐户的链接。更新主题下的 `_config.yml`:
 
-### Social media links
+    ```yml
+    social_links:
+      github: your-github-url
+      twitter: your-twitter-url
+      NAME: your-NAME-url
+    ```
 
-Cactus can automatically add links to your social media accounts.
-Therefore, update the theme's `_config.yml`:
+​	你可以自定义 `NAME` 只要它在 [Font Awesome icon](https://fontawesome.com/icons?d=gallery&s=brands) 中存在，就有可能被你使用。
 
-```yml
-social_links:
-  github: your-github-url
-  twitter: your-twitter-url
-  NAME: your-NAME-url
-```
+7. 多语言配置
 
-where `NAME` is the name of a [Font Awesome icon](https://fontawesome.com/icons?d=gallery&s=brands).
+   目前主题提供的语言支持如下:
 
+    - 英语 (en), 默认
+    - 巴西-葡萄牙语 (pt-br)
+    - 加泰罗尼亚语 (ca)
+    - 简体中文 (zh-CN)
+    - 荷兰语 (nl)
+    - 法语 (fr)
+    - 意大利语 (it)
+    - 波斯语 (fa)
+    - 俄罗斯语 (ru)
+    - 西班牙语 (es)
+   
+   如果您想使用上面列出的语言之一，只需设置`language` 为所需的语言（例如`fr`）`_config.yml`。否则，您可以按照以下步骤操作（例如，添加日语（ja）翻译）：
+   
+   1. 设置`language`为`ja`Hexo配置文件`_config.yml`
+   
+   2. `ja.yml`在`themes/cactus/languages/`文件夹中创建一个文件
+   
+   3. 复制内容`themes/cactus/languages/default.yml`并将其粘贴到`ja.yml`文件中
+   
+   4. 用日语翻译替换所有英文字符串
+   
+   **注意: Cactus 不支持多语言站点.**
 
-### Language configuration
+8. RSS
 
-If you are new to Hexo and internationalization (i18n), please read
-[Hexo documentation - internationalization (i18n) section](https://hexo.io/docs/internationalization.html)
+   将`rss`字段设置为`_config.yml`以下值之一：
 
-Currently, the theme is delivered with support for:
+   1. `rss: false` 将完全禁用rss（默认）。
 
-- English (en), default
-- Brazilian Portuguese (pt-br)
-- Catalan (ca)
-- Chinese (Simplified, PRC) (zh-CN)
-- Dutch (nl)
-- French (fr)
-- Italian (it)
-- Persian (fa)
-- Russian (ru)
-- Spanish (es)
+   2. `rss: atom.xml` 设置特定的Feed链接。
 
-If you would like to use one the languages listed above, simply set `language`
-to the desired language (e.g., `fr`) in `_config.yml`.
-Otherwise, you can follow the steps below (E.g., to add a Japanese (ja) translation):
+   3. `rss:`留空以使用[hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed)插件。
 
-1. Set `language` to `ja` in Hexo configuration file `_config.yml`
-2. Create a `ja.yml` file in the `themes/cactus/languages/` folder
-3. Copy the content of `themes/cactus/languages/default.yml` and paste it it into the `ja.yml` file
-4. Replace all English strings by their Japanese translation
+9. 代码高亮
 
-**Note: Cactus does not support multi-language sites.**
+   选择一个[可用的colorschemes](https://github.com/probberechts/hexo-theme-cactus/tree/master/source/css/_highlight)(默认github-gist)并将其添加到`_config.yml`：
 
-### RTL support
-This theme support RTL languages for Persian and Arabic language.
-If you would like to use RTL layout, change `direction` attribute in `_config.yml` to `rtl`.
-Note that this also will change the font to [Vazir](https://github.com/rastikerdar/vazir-font), wich is a Persian font.
+    ```yml
+    highlight: COLORSCHEME_NAME
+    ```
 
-```
-direction: rtl
-```
+10. 标签与分类
 
-### RSS
+	标签和分类需要被包含在文章的前端:
 
-Set the `rss` field in the `_config.yml` to one of the following values:
+    ```markdown
+    title: 标签与分类
+    date: 2017-12-24 23:29:53
+    tags:
+    - Foo
+    - Bar
+    categories: 
+    - Baz
+    ---
 
-1. `rss: false` will totally disable rss (default).
-2. `rss: atom.xml` sets a specific feed link.
-3. `rss:`leave empty to use the [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) plugin.
+    This post contains 2 tags and 1 category.
+    ```
 
+11. 本地搜索
 
-### Analytics
+    首先，安装[hexo-generate-search](https://www.npmjs.com/package/hexo-generator-search) 插件，它将生成一个搜索索引文件。
 
-Add you Google Analytics or Baidu Tongji `tracking_id` to the `_config.yml`.
+    ```git
+    $ npm install hexo-generator-search --save
+    ```
+    
+    接下来，创建一个显示搜索引擎的页面：
 
-```yml
-google_analytics:
-  enabled: true
-  id: 'UA-49627206-1'
+    ```shell
+    $ hexo new page search
+    ```
+	指定该页面的 `type: search` .
 
-baidu_analytics:
-  enabled: true
-  id: 2e6da3c375c8a87f5b664cea6d4cb29c
-```
+    ```markdown
+    title: Search
+    type: search
+    ---
+    ```
+    
+    最后，编辑`_config.yml`并添加导航菜单的链接。
 
-
-### Comments
-
-First, create a site on Disqus: [https://disqus.com/admin/create/](http://disqus.com/admin/create/).
-
-Next, update the `_config.yml` file:
-
-```yml
-disqus:
-  enabled: true
-  shortname: SITENAME
-```
-
-where `SITENAME` is the name you gave your site on Disqus.
-
-
-### Code Highlighting
-
-Pick one of [the available colorschemes](https://github.com/probberechts/hexo-theme-cactus/tree/master/source/css/_highlight) and add it to the `_config.yml`:
-
-```yml
-highlight: COLORSCHEME_NAME
-```
-
-### Tags and categories
-Tags and categories can be included in the front-matter of your posts. For example:
-
-```markdown
-title: Tags and Categories
-date: 2017-12-24 23:29:53
-tags:
-- Foo
-- Bar
-categories: 
-- Baz
----
-
-This post contains 2 tags and 1 category.
-```
-
-You can create a page with a tag cloud by running:
-
-```sh
-$ hexo new page tags
-```
-
-Next, add `type: tags` to the front-matter of `source/tags/index.md`. You can also
-add a tag cloud to the home page by setting the `tags_overview` option to `true`.
-
-Similarly, you can create a page with an overview of all categories by running:
-
-```sh
-$ hexo new page categories
-```
-
-and adding `type: categories` to the front-matter of `source/categories/index.md`. 
-
-Finally, don't forget to create a link to these pages, for example in the navigation menu:
-
-```yml
-nav:
-  tags: /tags/
-  categories: /categories/
-```
+    ```yaml
+    nav:
+      search: /search/
+    ```
 
 
-### Local search
+## 版权
+声明：本作基于hexo-theme-cactus进行局部美化
 
-First, install the [hexo-generate-search](https://www.npmjs.com/package/hexo-generator-search)
-plugin, which will generate a search index file.
+使用字体:
 
-```git
-$ npm install hexo-generator-search --save
-```
+​	[FiraCode](https://github.com/tonsky/FiraCode) 
 
-Next, create a page to display the search engine:
-
-```sh
-$ hexo new page search
-```
-and put `type: search` in the front-matter.
-
-```markdown
-title: Search
-type: search
----
-```
-
-Finally, edit the `_config.yml` and add a link to the navigation menu.
-
-```yml
-nav:
-  search: /search/
-```
-
-
-## License
-MIT
+​	[SourceHanSansCN](https://github.com/adobe-fonts/source-han-sans)
