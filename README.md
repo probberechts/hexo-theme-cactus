@@ -1,19 +1,7 @@
----
-title: 增强cactus对中文和markdown样式的支持
-date: 2019-09-22 15:11:16
-tags:
-    - cactus
-    - markdown
-    - hexo
-categories:
-    - hexo
----
-
 # Cactus-CN
 
 [Cactus](https://github.com/probberechts/hexo-theme-cactus)(仙人掌)是一个为[Hexo](https://hexo.io)开发的响应式个人网站主题,拥有清简的样式。我在采纳它作为我的博客主题时,感觉它在支持中文字体方面略显不足，有十分明显的锯齿感，于是在此主题的基础上，修改了些许样式，以符合个人审美。相信你对hexo有所了解,我将主题的配置文件项都给翻译了一遍,按照提示来就行了。
 
-:cactus: [项目地址](https://github.com/xuthus5/hexo-theme-cactus)
 :cactus: [修改版演示](https://xuthus5.github.io/hexo-theme-cactus/)
 :cactus: [原版演示](https://probberechts.github.io/hexo-theme-cactus/cactus-white/public/)
 
@@ -203,7 +191,7 @@ categories:
     ---
     title: tags
     date: 2019-09-22 14:58:00
-type: tags
+    type: tags
     ---
     ```
     
