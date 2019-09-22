@@ -1,7 +1,8 @@
 # Cactus-CN
 
 [Cactus](https://github.com/probberechts/hexo-theme-cactus)(仙人掌)是一个为[Hexo](https://hexo.io)开发的响应式个人网站主题,拥有清简的样式。我在采纳它作为我的博客主题时,感觉它在支持中文字体方面略显不足，有十分明显的锯齿感，于是在此主题的基础上，修改了些许样式，以符合个人审美。
-:cactus: [演示](https://probberechts.github.io/hexo-theme-cactus/)
+:cactus: [修改版演示](https://xuthus5.github.io/hexo-theme-cactus/)
+:cactus: [原版演示](https://probberechts.github.io/hexo-theme-cactus/)
 
 ## 使用说明
 
@@ -24,7 +25,7 @@
 1. 在博客的根目录下操作:
 
     ```git
-    $ git clone https://github.com/xuthus5/hexo-theme-cactus-cn.git themes/cactus
+    $ git clone https://github.com/xuthus5/hexo-theme-cactus.git themes/cactus
     ```
 
 2. 修改根目录下的 `config.yml` 文件的 `theme` 选项.

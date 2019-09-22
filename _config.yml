@@ -29,45 +29,44 @@ social_links:
   github: http://github.com/xuthus5
   mail: mailto:xuthus5@gmail.com
 
-# Customize the overview with displaying a tagcloud on the index page.
-# Options: https://hexo.io/docs/helpers.html#tagcloud
-tags_overview: true
+# 是否在首页显示标签云,标签云将会在文章列表的上面显示.
+# 详细: https://hexo.io/docs/helpers.html#tagcloud
+tags_overview: false
 
-# Customize the overview with the most recent blog posts on the index page.
-# Options:
-#   - show_all_posts: whether to show all available posts.
-#   - post_count: whether to show only the x most recent posts.
-#   - sort_updated: sort posts by last modification date instead of creation date.
+# 在首页显示文章列表的相关配置.
+# 选项:
+#   - show_all_posts: 在首页显示所有文章.
+#   - post_count: 每页显示指定数量的文章.
+#   - sort_updated: 按上次修改日期而不是创建日期对文章排序.
 posts_overview:
   show_all_posts: false
   post_count: 20
   sort_updated: false
 
-# Customize the archive view.
-# Options:
-#   - sort_updated: sort posts by last modification date instead of creation date.
-# Note: this does not work together with pagination, since the pagination
-# plugin will sort pages by date of creation.
+# 文章归档展示.
+# 选项:
+#   - sort_updated: 按上次修改日期而不是创建日期对文章排序.
+# 注意: 该选项不能与分页一起工作，因为分页插件按创建日期对页面进行排序.
 archive:
   sort_updated: false
 
-# Customize the article view.
-# Options:
-#   - show_updated: show the last modification date.
+# 自定义文章显示.
+# 选项:
+#   - show_updated: 在文章页面显示最后修改文章日期.
 post:
   show_updated: true
 
 ##############################################################################
-# Look and Feel
+# 感官配置项
 ##############################################################################
 
-# Customize the logo (i.e., the cactus) in the header.
-# Options:
-#   - enabled: whether to show (true) or hide (false) the logo.
-#   - width: width of the logo in pixel units
-#   - height: height of the logo in pixel units
-#   - url: where the logo can be found
-#   - gravatar: whether to use your Gravatar as the logo
+# 网站头部的logo配置.
+# 选项:
+#   - enabled: 显示或者隐藏logo.
+#   - width: 显示logo的宽度(px作为单位)
+#   - height: 显示logo的高度(px作为单位)
+#   - url: logo文件的位置
+#   - gravatar: 是否使用你的 Gravatar 作为logo
 logo:
   enabled: true
   width: 50
@@ -75,7 +74,7 @@ logo:
   url: /images/Photo_0411_1a.jpg
   gravatar: false
 
-# Customize the favicons.
+# 自定义 favicons.
 # Cactus supports a limited set of the three most important icons:
 #   - desktop: The classic favion.ico file.
 #   - android: A 192x192 PNG file.
@@ -95,35 +94,27 @@ favicon:
     url: /images/apple-touch-icon.png
     gravatar: false
 
-# The color scheme that should be used to highlight codeblocks.
-# See source/css/_highlight for a list of all available color schemes.
-# highlight: rainbow
+# 使用 highlight 来高亮代码块.
+# 默认github-gist,自定义请查看 source/css/_highlight 支持的配色.
+highlight: github-gist
 
-# Set the color scheme.
-# Available color schemes are 'dark', 'light', 'classic' and 'white'.
-# Alternatively, add your own custom color scheme to source/css/_colors.
+# 设置主题配色.
+# 支持 'dark', 'light', 'classic' 和 'white'.
+# 自定义在 source/css/_colors 下进行,建议使用white.
 colorscheme: white
 
-# Maximal width of the page in rem units.
+# 页面布局最大宽度,不建议修改(rem作为单位).
 page_width: 48
 
 
 ##############################################################################
-# Miscellaneous
+# 杂项
 ##############################################################################
 
-# Enable or disable the RSS feed.
+# 是否开启 RSS 订阅.
 rss: false
 
-# Turn your web pages into graph objects (see http://ogp.me).
-open_graph:
-  fb_app_id:
-  fb_admins:
-  twitter_id:
-  google_plus:
 
-
-# Fill in you Gravatar user id / email if you want to use your gravatar as the
-# logo and/or favicons of you website.
+# 请设置你的 Gravatar 用户 id 或者 email 如果你使用 gravatar 作为 logo 或者 favicons 在你的网站上.
 gravatar:
   email: xuthus5@gmail.com
