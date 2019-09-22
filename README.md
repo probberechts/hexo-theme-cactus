@@ -1,6 +1,7 @@
 # Cactus-CN
 
 [Cactus](https://github.com/probberechts/hexo-theme-cactus)(仙人掌)是一个为[Hexo](https://hexo.io)开发的响应式个人网站主题,拥有清简的样式。我在采纳它作为我的博客主题时,感觉它在支持中文字体方面略显不足，有十分明显的锯齿感，于是在此主题的基础上，修改了些许样式，以符合个人审美。
+
 :cactus: [修改版演示](https://xuthus5.github.io/hexo-theme-cactus/)
 :cactus: [原版演示](https://probberechts.github.io/hexo-theme-cactus/)
 
@@ -136,31 +137,16 @@
 
 7. 多语言配置
 
-   目前主题提供的语言支持如下:
+   目前主题提供的语言支持在 `languages/*` 下,如果您想使用上面列出的语言之一，只需将配置文件语言项`language` 设置为所需的语言(例如`fr`)。如果你希望添加额外的语言翻译支持（例如，添加日语（ja）翻译支持）：
 
-    - 英语 (en), 默认
-    - 巴西-葡萄牙语 (pt-br)
-    - 加泰罗尼亚语 (ca)
-    - 简体中文 (zh-CN)
-    - 荷兰语 (nl)
-    - 法语 (fr)
-    - 意大利语 (it)
-    - 波斯语 (fa)
-    - 俄罗斯语 (ru)
-    - 西班牙语 (es)
+   1. 配置文件`_config.yml` 设置语言项 `language`为`ja`
    
-   如果您想使用上面列出的语言之一，只需设置`language` 为所需的语言（例如`fr`）`_config.yml`。否则，您可以按照以下步骤操作（例如，添加日语（ja）翻译）：
-   
-   1. 设置`language`为`ja`Hexo配置文件`_config.yml`
-   
-   2. `ja.yml`在`themes/cactus/languages/`文件夹中创建一个文件
-   
+   2. 在`themes/cactus/languages/` 中创建一个文件 `ja.yml`
    3. 复制内容`themes/cactus/languages/default.yml`并将其粘贴到`ja.yml`文件中
-   
    4. 用日语翻译替换所有英文字符串
    
    **注意: Cactus 不支持多语言站点.**
-
+   
 8. RSS
 
    将`rss`字段设置为`_config.yml`以下值之一：
@@ -195,28 +181,56 @@
 
     This post contains 2 tags and 1 category.
     ```
+    
+11. 标签页
 
-11. 本地搜索
+    首先创建页面 `tags`
+
+    ```bash
+    hexo new page tags
+    ```
+    
+    然后修改页面的 `type` 值为 `tags`
+
+    ```yaml
+    ---
+    title: tags
+	date: 2019-09-22 14:58:00
+type: tags
+    ---
+    ```
+    
+12. 分类页
+
+    首先创建页面 `categories`
+
+    ```yaml
+    hexo new page categories
+    ```
+
+    然后修改页面 `type` 值为 `categories`
+
+13. 本地搜索
 
     首先，安装[hexo-generate-search](https://www.npmjs.com/package/hexo-generator-search) 插件，它将生成一个搜索索引文件。
 
     ```git
     $ npm install hexo-generator-search --save
     ```
-    
+
     接下来，创建一个显示搜索引擎的页面：
 
     ```shell
     $ hexo new page search
     ```
-	指定该页面的 `type: search` .
+    指定该页面的 `type: search` .
 
     ```markdown
     title: Search
     type: search
     ---
     ```
-    
+
     最后，编辑`_config.yml`并添加导航菜单的链接。
 
     ```yaml
