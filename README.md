@@ -1,9 +1,21 @@
+---
+title: 增强cactus对中文和markdown样式的支持
+date: 2019-09-22 15:11:16
+tags:
+    - cactus
+    - markdown
+    - hexo
+categories:
+    - hexo
+---
+
 # Cactus-CN
 
-[Cactus](https://github.com/probberechts/hexo-theme-cactus)(仙人掌)是一个为[Hexo](https://hexo.io)开发的响应式个人网站主题,拥有清简的样式。我在采纳它作为我的博客主题时,感觉它在支持中文字体方面略显不足，有十分明显的锯齿感，于是在此主题的基础上，修改了些许样式，以符合个人审美。
+[Cactus](https://github.com/probberechts/hexo-theme-cactus)(仙人掌)是一个为[Hexo](https://hexo.io)开发的响应式个人网站主题,拥有清简的样式。我在采纳它作为我的博客主题时,感觉它在支持中文字体方面略显不足，有十分明显的锯齿感，于是在此主题的基础上，修改了些许样式，以符合个人审美。相信你对hexo有所了解,我将主题的配置文件项都给翻译了一遍,按照提示来就行了。
 
+:cactus: [项目地址](https://github.com/xuthus5/hexo-theme-cactus)
 :cactus: [修改版演示](https://xuthus5.github.io/hexo-theme-cactus/)
-:cactus: [原版演示](https://probberechts.github.io/hexo-theme-cactus/)
+:cactus: [原版演示](https://probberechts.github.io/hexo-theme-cactus/cactus-white/public/)
 
 ## 使用说明
 
@@ -72,7 +84,6 @@
     # themes/cactus/_config.yml
     colorscheme: white
     ```
-    
     你可以在 `themes/cactus/source/css/_colors`下自定义颜色方案.
     
 3. 项目自定义导航选项，在根目录下的 `_config.yml`文件中:
@@ -132,8 +143,7 @@
       twitter: your-twitter-url
       NAME: your-NAME-url
     ```
-
-​	你可以自定义 `NAME` 只要它在 [Font Awesome icon](https://fontawesome.com/icons?d=gallery&s=brands) 中存在，就有可能被你使用。
+​   你可以自定义 `NAME` 只要它在 [Font Awesome icon](https://fontawesome.com/icons?d=gallery&s=brands) 中存在，就有可能被你使用。
 
 7. 多语言配置
 
@@ -167,7 +177,7 @@
 
 10. 标签与分类
 
-	标签和分类需要被包含在文章的前端:
+    标签和分类需要被包含在文章的前端:
 
     ```markdown
     title: 标签与分类
@@ -185,17 +195,14 @@
 11. 标签页
 
     首先创建页面 `tags`
-
     ```bash
     hexo new page tags
     ```
-    
     然后修改页面的 `type` 值为 `tags`
-
     ```yaml
     ---
     title: tags
-	date: 2019-09-22 14:58:00
+    date: 2019-09-22 14:58:00
 type: tags
     ---
     ```
@@ -207,7 +214,6 @@ type: tags
     ```yaml
     hexo new page categories
     ```
-
     然后修改页面 `type` 值为 `categories`
 
 13. 本地搜索
@@ -244,6 +250,6 @@ type: tags
 
 使用字体:
 
-​	[FiraCode](https://github.com/tonsky/FiraCode) 
+​   [FiraCode](https://github.com/tonsky/FiraCode) 
 
-​	[SourceHanSansCN](https://github.com/adobe-fonts/source-han-sans)
+​   [SourceHanSansCN](https://github.com/adobe-fonts/source-han-sans)

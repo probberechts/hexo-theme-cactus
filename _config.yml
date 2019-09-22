@@ -6,6 +6,10 @@
 # 他可以是你的 GitHub 主页地址或者其他一些你希望展示的地址
 projects_url: http://github.com/xuthus5
 
+# 新用于显示备案信息的选项
+# 格式 icp: 京ICP备12345678号
+icp:
+
 # 请不要修改这里,除非你希望支持阿拉伯语或波斯文. (使用 rtl 来支持这些阿拉伯国家的字体.)
 direction: ltr
 # 配置你的导航菜单.
