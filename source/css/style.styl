@@ -204,12 +204,18 @@ table
   tr
     td:not(.gutter):not(.code),th:not(.gutter):not(.code)
       border: 1px solid #dfe2e5;
+    .gutter
+      float: left;
+      width: 3em;
+      background: #505050;
+      text-align: right;
+      color: #ddffee;
 
 .highlight
-  padding: .2em .4em;
   // margin: 0;
   font-weight: 500;
-  background-color: rgba(27,31,35,.05);
+  background: #3c3c3c;
+  //background-color: rgba(27,31,35,.05);
   // border-radius: 3px;
   //background-color: #f6f8fa !important
   // padding: 0.5em
@@ -261,6 +267,7 @@ table
 
   pre
     padding: 0
+    margin: 0 5px 10px 0
     border: none
     background: none
 

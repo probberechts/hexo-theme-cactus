@@ -13,7 +13,7 @@ footer:
 index:
   find_me_on: 在这里找到我：
   enum_comma: ' '
-  enum_and: ' '
+  enum_and: 和
   articles: 文章
   projects: 项目
   topics: 标签
