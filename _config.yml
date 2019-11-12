@@ -2,13 +2,9 @@
 # 主题配置文件
 ##############################################################################
 
-# 一个用来展示你的个人项目的链接.
-# 他可以是你的 GitHub 主页地址或者其他一些你希望展示的地址
-projects_url: http://github.com/xuthus5
-
 # 新用于显示备案信息的选项
 # 格式 icp: 京ICP备12345678号
-icp:
+icp: 湘ICP备17005082号
 
 # 请不要修改这里,除非你希望支持阿拉伯语或波斯文. (使用 rtl 来支持这些阿拉伯国家的字体.)
 direction: ltr
@@ -17,20 +13,20 @@ direction: ltr
 # 如果你希望使用中文来替换 Key 请到 languages/*.yml 中指定 Key 对应的翻译
 nav:
   home: /
-  about: /about/
   articles: /archives/
-  projects: https://github.com/xuthus5
+  # category: /categories/
+  # tag: /tags/
+  about: /about/
   search: /search/
-  tag: /tags/
-  category: /categories/
 
 
 # 在首页显示的，用于连接到你社交媒体的链接.
 # 你可以手动指定被 Fontawesome icon 支持的图标
 # (查看 https://fontawesome.com/icons?d=gallery&s=brands);
-# 注意:仅仅 'mail' 是被主题定义的图标.
+# 注意:仅仅 'gitee' 和 'mail' 是被主题强制定义的图标.
 social_links:
-  github: http://github.com/xuthus5
+  gitee: https://gitee.com/xuthus5
+  github: https://github.com/xuthus5
   mail: mailto:xuthus5@gmail.com
 
 # 是否在首页显示标签云,标签云将会在文章列表的上面显示.
@@ -99,8 +95,8 @@ favicon:
     gravatar: false
 
 # 使用 highlight 来高亮代码块.
-# 默认github-gist,自定义请查看 source/css/_highlight 支持的配色.
-highlight: github-gist
+# 默认xuthus配色,xuthus配色基于github-gist样式修改,自定义请查看 source/css/_highlight 支持的配色.
+highlight: xuthus
 
 # 设置主题配色.
 # 支持 'dark', 'light', 'classic' 和 'white'.

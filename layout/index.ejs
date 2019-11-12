@@ -10,9 +10,13 @@
       <% for(var link in theme.social_links) { %>
         <% if (link == 'mail') { %>
           <a class="icon" target="_blank" href="<%- url_for(theme.social_links[link]) %>">
-            <i class="fas fa-envelope"></i><!--
+            <span class="icon-envelop"></span><!--
       ---></a><!--
-      ---><% } else { %>
+      ---><% } else if (link == 'gitee') { %>
+          <a class="icon" target="_blank" href="<%- url_for(theme.social_links[link]) %>">
+            <span class="icon-embed2"></span><!--
+      ---></a><!--
+    ---><% } else { %>
           <a class="icon" target="_blank" href="<%- url_for(theme.social_links[link]) %>">
             <i class="fab fa-<%= link %>"></i><!--
       ---></a><!--
