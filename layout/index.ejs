@@ -10,15 +10,15 @@
       <% for(var link in theme.social_links) { %>
         <% if (link == 'mail') { %>
           <a class="icon" target="_blank" href="<%- url_for(theme.social_links[link]) %>">
-            <span class="icon-envelop"></span><!--
+            <i class="fa fa-envelope"></i><!--
       ---></a><!--
       ---><% } else if (link == 'gitee') { %>
           <a class="icon" target="_blank" href="<%- url_for(theme.social_links[link]) %>">
-            <span class="icon-embed2"></span><!--
+            <i class="fa fa-code" aria-hidden="true"></i><!--
       ---></a><!--
     ---><% } else { %>
           <a class="icon" target="_blank" href="<%- url_for(theme.social_links[link]) %>">
-            <i class="fab fa-<%= link %>"></i><!--
+            <i class="fab fa-<%= link %>" aria-hidden="true"></i><!--
       ---></a><!--
     ---><% } %><!--
     ---><%= ( nb_links > 0 && i < nb_links-1 ?
