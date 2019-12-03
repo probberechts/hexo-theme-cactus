@@ -11,7 +11,7 @@
     btn += '<i class="far fa-clone"></i>';
     btn += '</span>'; 
     // mount it!
-    $(".highlight .code pre").before(btn);
+    $(".highlight table").before(btn);
     var clip = new ClipboardJS('.btn-copy', {
       target: function(trigger) {
         return trigger.nextElementSibling;
