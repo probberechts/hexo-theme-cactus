@@ -24,7 +24,7 @@
   margin-right: 0px !important;
   padding-left: 15px;
   border-right: 0px !important;
-  border-left: 1px dotted $color-accent-1;
+  border-left: 1px dotted;
 }
 .rtl #nav li:last-child {
   margin-right: 15px !important;
@@ -32,12 +32,14 @@
 }
 .rtl #header #logo {
   float: right;
+  margin-right: 0;
+  margin-left: 20px;
 }
 .rtl #footer li {
   margin-right: 0px;
   padding-left: 15px;
   border-right: 0px;
-  border-left: 1px dotted $color-border;
+  border-left: 1px dotted;
 }
 .rtl #footer li:last-child {
   margin-right: 15px !important;
@@ -49,8 +51,23 @@
 .rtl article .content h2:before {
   right: -1rem;
 }
-@media (min-width: 480px) {
-  .post-list .post-item .meta {
-    text-align: right;
+.rtl .post-list .post-item .meta {
+  margin-left: 16px;
+  margin-right: inherit;
+}
+@media screen and (min-width: 480px) {
+  .rtl .post-list .post-item .meta {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 480px) {
+  .rtl #header #title {
+    margin-left: 5rem;
+    margin-right: 0;
+  }
+  .rtl #header #nav ul li {
+    left: 1rem;
+    right: auto;
+    border: 0;
   }
 }

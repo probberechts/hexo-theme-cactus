@@ -351,10 +351,9 @@ body h4,
 body h5,
 body h6 {
   display: inline;
-  border-bottom: 1px dashed #ccc;
-  color: #ccc;
   text-decoration: none;
-  font-weight: normal;
+  color: #ccc;
+  font-weight: bold;
   font-size: 0.9rem;
 }
 body h3,
@@ -365,8 +364,11 @@ body h6 {
   margin-bottom: 0.5rem;
 }
 body hr {
-  border: 1px dashed #ccc;
+  border: 0.5px dashed #ccc;
+  opacity: 0.5;
   margin: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 body strong {
   font-weight: bold;
@@ -429,7 +431,7 @@ body th {
   font-size: 13px;
 }
 body td {
-  padding: 9px 8px 0;
+  padding: 0 8px;
   border-bottom: none;
 }
 @font-face {
@@ -615,7 +617,7 @@ body {
 }
 #header #nav ul a {
   margin-right: 15px;
-  color: color-accent-1;
+  color: #2bbc8a;
 }
 #header #nav ul a:hover {
   background-image: linear-gradient(transparent, transparent 5px, #2bbc8a 5px, #2bbc8a);
@@ -626,7 +628,8 @@ body {
 #header #nav ul li {
   display: inline-block;
   margin-right: 15px;
-  border-right: 1px dotted #2bbc8a;
+  border-right: 1px dotted;
+  border-color: #2bbc8a;
   vertical-align: middle;
 }
 #header #nav ul .icon {
@@ -756,7 +759,7 @@ body {
 }
 #header-post #nav ul a {
   margin-right: 15px;
-  color: color-accent-1;
+  color: #2bbc8a;
 }
 #header-post #nav ul a:hover {
   background-image: linear-gradient(transparent, transparent 5px, #2bbc8a 5px, #2bbc8a);
@@ -1158,7 +1161,7 @@ article .content .caption {
   position: relative;
   display: block;
   margin-top: 0.5em;
-  color: color-grey;
+  color: #666;
   text-align: center;
   font-size: 0.9em;
 }
@@ -1238,7 +1241,8 @@ article .content .caption {
 #footer li {
   display: inline-block;
   margin-right: 15px;
-  border-right: 1px solid #666;
+  border-right: 1px solid;
+  border-color: #666;
   vertical-align: middle;
 }
 #footer li a {
@@ -1360,6 +1364,107 @@ article .content .caption {
 #tag-cloud .tag-cloud-tags a {
   display: inline-block;
   margin: 10px;
+}
+.tooltipped {
+  position: relative;
+}
+.tooltipped::after {
+  position: absolute;
+  z-index: 1000000;
+  display: none;
+  padding: 0.2em 0.5em;
+  -webkit-font-smoothing: subpixel-antialiased;
+  color: #1d1f21;
+  font-display: swap;
+  font-weight: 400;
+  font-size: 11.200000000000001px;
+  font-family: "Menlo", "Meslo LG", monospace;
+  line-height: 1.725;
+  text-rendering: geometricPrecision;
+  text-align: center;
+  word-wrap: break-word;
+  white-space: pre;
+  content: attr(aria-label);
+  background: #c9cacc;
+  border-radius: 3px;
+  opacity: 0;
+}
+.tooltipped::before {
+  position: absolute;
+  z-index: 1000001;
+  display: none;
+  width: 0;
+  height: 0;
+  color: #c9cacc;
+  pointer-events: none;
+  content: '';
+  border: 6px solid transparent;
+  opacity: 0;
+}
+.tooltipped:hover::before,
+.tooltipped:active::before,
+.tooltipped:focus::before,
+.tooltipped:hover::after,
+.tooltipped:active::after,
+.tooltipped:focus::after {
+  display: inline-block;
+  text-decoration: none;
+  animation-name: tooltip-appear;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+.tooltipped-s::after,
+.tooltipped-sw::after {
+  top: 100%;
+  right: 50%;
+  margin-top: 6px;
+}
+.tooltipped-s::before,
+.tooltipped-sw::before {
+  top: auto;
+  right: 50%;
+  bottom: -7px;
+  margin-right: -6px;
+  border-bottom-color: #c9cacc;
+}
+.tooltipped-sw::after {
+  margin-right: -16px;
+}
+.tooltipped-s::after {
+  transform: translateX(50%);
+}
+@-moz-keyframes tooltip-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes tooltip-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes tooltip-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes tooltip-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 #categories .category-list-title {
   color: #666;
@@ -1493,7 +1598,21 @@ code {
 .highlight figcaption:after {
   clear: both;
 }
+.highlight:hover .btn-copy {
+  opacity: 1;
+}
+.highlight .btn-copy {
+  font-size: 1.2rem;
+  position: absolute;
+  right: 20px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+.highlight .btn-copy:hover {
+  color: #2bbc8a;
+}
 .highlight pre {
+  margin: 0;
   padding: 0;
   border: none;
   background: none;
@@ -1503,6 +1622,7 @@ code {
 }
 .highlight td.gutter {
   text-align: right;
+  opacity: 0.2;
 }
 .highlight .line {
   height: 22px;
