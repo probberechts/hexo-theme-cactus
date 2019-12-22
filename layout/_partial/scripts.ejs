@@ -11,10 +11,10 @@
     btn += '<i class="far fa-clone"></i>';
     btn += '</span>'; 
     // mount it!
-    $(".highlight .code pre").before(btn);
+    $(".highlight table").before(btn);
     var clip = new ClipboardJS('.btn-copy', {
-      target: function(trigger) {
-        return trigger.nextElementSibling;
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
       }
     });
     clip.on('success', function(e) {
