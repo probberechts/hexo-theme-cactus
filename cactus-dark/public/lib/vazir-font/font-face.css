@@ -20,6 +20,16 @@
 
 @font-face {
   font-family: Vazir;
+  src: url('Vazir-Thin.eot');
+  src: url('Vazir-Thin.eot?#iefix') format('embedded-opentype'),
+       url('Vazir-Thin.woff2') format('woff2'),
+       url('Vazir-Thin.woff') format('woff'),
+       url('Vazir-Thin.ttf') format('truetype');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: Vazir;
   src: url('Vazir-Light.eot');
   src: url('Vazir-Light.eot?#iefix') format('embedded-opentype'),
        url('Vazir-Light.woff2') format('woff2'),
@@ -36,16 +46,6 @@
        url('Vazir-Medium.woff') format('woff'),
        url('Vazir-Medium.ttf') format('truetype');
   font-weight: 500;
-}
-
-@font-face {
-  font-family: Vazir;
-  src: url('Vazir-Thin.eot');
-  src: url('Vazir-Thin.eot?#iefix') format('embedded-opentype'),
-       url('Vazir-Thin.woff2') format('woff2'),
-       url('Vazir-Thin.woff') format('woff'),
-       url('Vazir-Thin.ttf') format('truetype');
-  font-weight: 100;
 }
 
 @font-face {

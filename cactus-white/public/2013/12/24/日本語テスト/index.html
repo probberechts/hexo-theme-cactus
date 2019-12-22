@@ -98,6 +98,7 @@
   <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://probberechts.github.io/2013/12/24/日本語テスト/&title=日本語テスト"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://digg.com/submit?url=http://probberechts.github.io/2013/12/24/日本語テスト/&title=日本語テスト"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://probberechts.github.io/2013/12/24/日本語テスト/&name=日本語テスト&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://probberechts.github.io/2013/12/24/日本語テスト/&t=日本語テスト"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -197,6 +198,7 @@
   <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://probberechts.github.io/2013/12/24/日本語テスト/&title=日本語テスト"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://digg.com/submit?url=http://probberechts.github.io/2013/12/24/日本語テスト/&title=日本語テスト"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://probberechts.github.io/2013/12/24/日本語テスト/&name=日本語テスト&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://probberechts.github.io/2013/12/24/日本語テスト/&t=日本語テスト"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -241,6 +243,29 @@
     <!-- jquery -->
 <script src="/hexo-theme-cactus/cactus-white/public/lib/jquery/jquery.min.js"></script>
 <script src="/hexo-theme-cactus/cactus-white/public/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<!-- clipboard -->
+
+  <script src="/hexo-theme-cactus/cactus-white/public/lib/clipboard/clipboard.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
 <script src="/hexo-theme-cactus/cactus-white/public/js/main.js"></script>
 <!-- search -->
 
