@@ -52,6 +52,11 @@ gulp.task('lib:jQuery',function(){
     .pipe(gulp.dest('./source/lib/jquery'))
 })
 
+gulp.task('lib:clipboard',function(){
+  return gulp.src(['node_modules/clipboard/dist/clipboard.min.js'])
+    .pipe(gulp.dest('./source/lib/clipboard'))
+})
+
 gulp.task('lint:js', function() {
   return gulp.src([
     './source/js/**/*.js',
@@ -109,7 +114,7 @@ gulp.task('validate:languages', function(cb) {
 });
 
 gulp.task('lib', gulp.series(
-  'lib:clean', 'lib:jQuery', 'lib:fontAwesome', 'lib:mesloFont',
+  'lib:clean', 'lib:jQuery', 'lib:clipboard', 'lib:fontAwesome', 'lib:mesloFont',
   'lib:vazirFont', 'lib:justifiedGallery'));
 gulp.task('lint', gulp.parallel('lint:js', 'lint:stylus'));
 gulp.task('validate', gulp.parallel('validate:config', 'validate:languages'));
