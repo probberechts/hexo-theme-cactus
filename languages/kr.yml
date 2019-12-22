@@ -39,7 +39,7 @@ tag_cloud:
   zero: 태그가 없습니다.
 
 pagination:
-  page: 총 %쪽 중 %쪽
+  page: 총 %d 중 %d
 
 counter:
   tag_cloud:
