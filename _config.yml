@@ -76,6 +76,9 @@ logo:
   height: 50
   url: /images/logo.png
   gravatar: false
+# Whether to grayout (true) the logo or keep original (false)
+# if true (by default), there will be a hover effect on header
+logo-grayout: true
 
 # Customize the favicons.
 # Cactus supports a limited set of the three most important icons:
