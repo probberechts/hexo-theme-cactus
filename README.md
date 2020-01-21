@@ -103,6 +103,13 @@ colorscheme: light
 Alternatively, you can easily create your own color scheme by creating a new
 file in `source/css/_colors`.
 
+### Logo
+
+By default there is a grayout effect on logo. You can turn it off by add `logo-grayout` option in the `_config.yml`:
+
+```yml
+logo-grayout: false
+```
 
 ### Navigation
 
