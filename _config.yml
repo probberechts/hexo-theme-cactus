@@ -15,8 +15,8 @@ direction: ltr
 # languages/*.yml
 nav:
   home: /
-  about: /about/
   articles: /archives/
+  about: /about/
 # projects: projects_url
 
 
