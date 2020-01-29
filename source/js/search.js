@@ -139,15 +139,18 @@ var searchFunc = function(path, searchId, contentId) {
             resultList.push(searchResult);
           }
         });
-        resultList.sort(function(a, b) {
-            return b.rank - a.rank;
-        });
-        var result ="<ul class=\"search-result-list\">";
-        for (var i = 0; i < resultList.length; i++) {
-          result += resultList[i].str;
+		
+        if (resultList.length) {
+          resultList.sort(function(a, b) {
+              return b.rank - a.rank;
+          });
+          var result ="<ul class=\"search-result-list\">";
+          for (var i = 0; i < resultList.length; i++) {
+            result += resultList[i].str;
+          }
+          result += "</ul>";
+          $resultContent.innerHTML = result;
         }
-        result += "</ul>";
-        $resultContent.innerHTML = result;
       });
     }
   });
