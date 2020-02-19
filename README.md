@@ -1,9 +1,10 @@
 # Cactus-CN
 
-[Cactus](https://github.com/probberechts/hexo-theme-cactus)(仙人掌)是一个为[Hexo](https://hexo.io)开发的响应式个人网站主题,拥有清简的样式。我在采纳它作为我的博客主题时,感觉它在支持中文字体方面略显不足，有十分明显的锯齿感，于是在此主题的基础上，修改了些许样式，以符合个人审美。相信你对hexo有所了解,我将主题的配置文件项都给翻译了一遍,按照提示来就行了。
+[Cactus](https://github.com/probberechts/hexo-theme-cactus)(仙人掌)是一个为[Hexo](https://hexo.io)开发的主题,拥有清简的样式,但在支持中文字体方面略显不足,锯齿感明显,无有代码块和表格样式,在此主题的基础上,我对其进行些许增强和改进,包括在代码块和表格样式,以及符合国情的备案号指定。
 
-:cactus: [修改版演示](https://xuthus5.github.io/hexo-theme-cactus/)
+:cactus: [项目源地址](https://github.com/xuthus5/hexo-theme-cactus)
 :cactus: [原版演示](https://probberechts.github.io/hexo-theme-cactus/cactus-white/public/)
+:cactus: [修改版演示](https://xuthus.cc)
 
 ## 使用说明
 
@@ -14,13 +15,14 @@
 
 ## 特征
 
-- 中文字体增强
-- 修正发布文章未指定作者时作者项指向博客名称
-- 加强代码高亮对比度
-- 加强行级代码块样式
-- 加强表格样式
-- 删除Disqus功能
-- 删除谷歌分析/百度统计
+- 增强:中文字体
+- 增强:代码高亮对比度
+- 增强:行级代码块样式
+- 增强:表格样式
+- 添加:指定网站备案号
+- 修正:发布文章未指定作者,作者项指向博客名称
+- 删除:Disqus功能
+- 删除:谷歌分析/百度统计
 
 ## 安装
 1. 在博客的根目录下操作:
@@ -131,7 +133,7 @@
       twitter: your-twitter-url
       NAME: your-NAME-url
     ```
-​   你可以自定义 `NAME` 只要它在 [Font Awesome icon](https://fontawesome.com/icons?d=gallery&s=brands) 中存在，就有可能被你使用。
+   你可以自定义 `NAME` 只要它在 [Font Awesome icon](https://fontawesome.com/icons?d=gallery&s=brands) 中存在，就有可能被你使用。
 
 7. 多语言配置
 
@@ -235,9 +237,8 @@
 
 ## 版权
 声明：本作基于hexo-theme-cactus进行局部美化
-
 使用字体:
 
-​   [FiraCode](https://github.com/tonsky/FiraCode) 
+   [FiraCode@2](https://github.com/tonsky/FiraCode) 
 
-​   [SourceHanSansCN](https://github.com/adobe-fonts/source-han-sans)
+   [Noto Sans SC](https://fonts.google.com/specimen/Noto+Sans+SC)
