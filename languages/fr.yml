@@ -1,9 +1,9 @@
 nav:
   home: Accueil
   about: A propos
-  articles: Articles
+  articles: Archives
   projects: Projets
-  search: Chercher
+  search: Rechercher
 
 footer:
   copyright: Copyright
@@ -19,20 +19,20 @@ post:
   desktop:
     previous: Article précédent
     next: Article suivant
-    back_to_top: Retour au début
-    share: Partager cette article
+    back_to_top: Retour en haut
+    share: Partager
   mobile:
     menu: Menu
-    toc: Table des matière
+    toc: Sections
     back_to_top: Début
     share: Partager
 
 search:
-  search: chercher...
+  search: rechercher...
   no_results: Aucun résultat trouvé.
 
 pagination:
-  page: Page %d de %d
+  page: Page %d sur %d
 
 comments:
   no_js: Veuillez activer JavaScript pour voir les réactions.
