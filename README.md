@@ -62,7 +62,7 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
     
 4. Run: `hexo generate` and `hexo server`
 
-5. [Publish your blog](https://hexo.io/docs/deployment)!
+5. [Publish your blog](https://hexo.io/docs/one-command-deployment.html)!
 
 
 ## Configuration
