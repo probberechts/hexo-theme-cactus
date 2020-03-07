@@ -34,10 +34,6 @@
     <%- css('css/style') %>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@2/distr/fira_code.css" rel="stylesheet">
-    <!-- persian styles -->
-    <% if (theme.direction) { %>
-      <%- css('css/rtl') %>
-    <% } %>
     <!-- rss -->
     <% if (theme.rss === '' && config.feed && config.feed.path) { %>
       <% theme.rss = config.feed.path %>

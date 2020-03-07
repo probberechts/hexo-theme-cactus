@@ -30,6 +30,14 @@ body
   text-rendering: geometricPrecision
   flex: 1
 
+  h3
+    text-decoration: none
+    font-size: .95rem
+
+  h4
+    text-decoration: none
+    font-size: .9rem
+
   antialias()
 
   @extend $base-style
@@ -40,6 +48,26 @@ body
   flex-direction: column
   min-height: 100%
   overflow-wrap: break-word
+
+  #projects
+    margin-bottom: 2rem
+    height: 100%
+
+  article.post
+    margin-bottom: 2rem
+
+  #footer
+    .footer-custom
+      width:100%
+      text-align: center
+      margin-top: 5px
+      height: 40px
+
+    .img-response
+      width: 64px
+      height: 32px
+      line-height: 40px
+      vertical-align:middle
 
   p
     hyphens(auto)

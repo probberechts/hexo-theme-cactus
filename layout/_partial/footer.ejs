@@ -13,4 +13,13 @@
       </ul>
     </nav>
   </div>
+  
+  <div class="footer-custom">
+    Framework by <a href="https://hexo.io" target="_blank">Hexo</a> & Theme by <a href="https://github.com/xuthus5/hexo-theme-cactus" target="_blank">Cactus-CN</a> & CDN provided by
+    <% if (theme.logo.cdn.img) { %> 
+      <a href="<%- theme.logo.cdn.site %>" target="_blank">
+        <img class="img-response" src="<%- theme.logo.cdn.img %>" alt="cdn image">
+      </a>
+    <% } %>
+  </div>
 </footer>

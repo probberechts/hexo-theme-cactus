@@ -43,18 +43,27 @@
     vertical-align: middle
     //line-height: 20px
 
-@media (min-width: 39rem)
+@media (min-width: 367px)
   #footer
     display: flex
     flex-flow: row wrap
     justify-content: space-between
     align-items: center
     align-content: center
-    margin-bottom: 20px
+    margin: auto
 
     .footer-left
       align-self: flex-start
+      flex-basis: auto
+      flex-grow: 1
+      flex-shrink: 1
       margin-right: 20px
+      text-overflow: ellipsis
+      overflow: hidden
+      white-space: nowrap
 
     .footer-right
       align-self: flex-end
+      flex-basis: auto
+      flex-grow: 1
+      flex-shrink: 1

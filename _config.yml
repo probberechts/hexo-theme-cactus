@@ -67,12 +67,16 @@ post:
 #   - height: 显示logo的高度(px作为单位)
 #   - url: logo文件的位置
 #   - gravatar: 是否使用你的 Gravatar 作为logo
+#   - cdn: 是否在网站底部使用 CDN 厂商的logo
 logo:
   enabled: true
   width: 50
   height: 50
   url: /images/Photo_0411_1a.jpg
   gravatar: false
+  cdn:
+    img: /images/upyun.png
+    site: https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral
 
 # 自定义 favicons.
 # Cactus supports a limited set of the three most important icons:
