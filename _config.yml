@@ -2,9 +2,9 @@
 # 主题配置文件
 ##############################################################################
 
-# 新用于显示备案信息的选项
+# 用于显示备案信息的选项
 # 格式 icp: 京ICP备12345678号
-icp: 湘ICP备17005082号
+icp: 京ICP备12345678号
 
 # 请不要修改这里,除非你希望支持阿拉伯语或波斯文. (使用 rtl 来支持这些阿拉伯国家的字体.)
 direction: ltr
@@ -25,9 +25,9 @@ nav:
 # (查看 https://fontawesome.com/icons?d=gallery&s=brands);
 # 注意:仅仅 'gitee' 和 'mail' 是被主题强制定义的图标.
 social_links:
-  gitee: https://gitee.com/xuthus5
-  github: https://github.com/xuthus5
-  mail: mailto:xuthus5@gmail.com
+  gitee: https://gitee.com/abc
+  github: https://github.com/abc
+  mail: mailto:abc@gmail.com
 
 # 是否在首页显示标签云,标签云将会在文章列表的上面显示.
 # 详细: https://hexo.io/docs/helpers.html#tagcloud
@@ -100,7 +100,7 @@ favicon:
 
 # 使用 highlight 来高亮代码块.
 # 默认xuthus配色,xuthus配色基于github-gist样式修改,自定义请查看 source/css/_highlight 支持的配色.
-highlight: xuthus
+highlight: atom-one-dark
 
 # 设置主题配色.
 # 支持 'dark', 'light', 'classic' 和 'white'.
@@ -118,7 +118,30 @@ page_width: 48
 # 是否开启 RSS 订阅.
 rss: false
 
-
 # 请设置你的 Gravatar 用户 id 或者 email 如果你使用 gravatar 作为 logo 或者 favicons 在你的网站上.
 gravatar:
-  email: xuthus5@gmail.com
+  email: abc@gmail.com
+
+# valine评论
+# - appId/appKey: 从LeanCloud的应用中得到的appId/appKey.
+# - notify: 评论回复邮件提醒
+# - verify: 验证码服务
+# - avatar: Gravatar 头像展示方式
+# - placeholder: 评论框占位提示符
+# - guest_info: 评论者相关属性 不建议修改
+# - pageSize: 评论列表分页，每页条数
+# - visitor: 文章访问量统计
+# - lang: 多语言支持 zh-cn / en
+# https://valine.js.org/
+valine:
+  enabled: true
+  appId: xxxxx
+  appKey: xxxxx
+  notify: true
+  verify: false
+  avatar: mm
+  placeholder: Just go go
+  guest_info: nick,mail,link
+  pageSize: 10
+  visitor: false
+  lang: zh-cn
