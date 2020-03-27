@@ -59,6 +59,12 @@ archive:
 post:
   show_updated: false
 
+# Customize the copyright years
+# Note: if start_year/end_year not provided, will use current year.
+copyright:
+  start_year: 2016
+  end_year:
+
 ##############################################################################
 # Look and Feel
 ##############################################################################
