@@ -172,6 +172,16 @@ social_links:
 
 where `NAME` is the name of a [Font Awesome icon](https://fontawesome.com/icons?d=gallery&s=brands).
 
+### Copyright years
+
+By default, Cactus will use current year in your copyright year information.
+If there is a need to customize, please update `_config.yml`:
+
+```yml
+copyright:
+  start_year: 2016
+  end_year:
+```
 
 ### Language configuration
 
