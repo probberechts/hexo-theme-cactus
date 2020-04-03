@@ -1,7 +1,7 @@
 # Cactus-CN
 
-[Cactus](https://github.com/probberechts/hexo-theme-cactus)(仙人掌)是一个为[Hexo](https://hexo.io)开发的响应式个人网站主题,拥有清简的样式。我在采纳它作为我的博客主题时,感觉它在支持中文字体方面略显不足，有十分明显的锯齿感，于是在此主题的基础上，修改了些许样式，以符合个人审美。
-:cactus: [修改版演示](https://xuthus5.github.io/hexo-theme-cactus/)
+[Cactus](https://github.com/probberechts/hexo-theme-cactus)(仙人掌)是一个为[Hexo](https://hexo.io)开发的响应式个人网站主题,拥有清简的样式。在采纳它作为博客主题时,它在支持中文字体方面略显不足，锯齿感明显，在此主题的基础上，修改了些许样式，以符合个人审美。
+:cactus: [修改版演示](https://xuthus.cc)
 :cactus: [原版演示](https://probberechts.github.io/hexo-theme-cactus/)
 
 ## 使用说明
@@ -173,10 +173,28 @@
 
 9. 代码高亮
 
-   选择一个[可用的colorschemes](https://github.com/probberechts/hexo-theme-cactus/tree/master/source/css/_highlight)(默认github-gist)并将其添加到`_config.yml`：
+   代码高亮插件默认`highlight` 选择一个[可用的colorschemes](https://github.com/probberechts/hexo-theme-cactus/tree/master/source/css/_highlight)(默认github-gist)并将其添加到`_config.yml`：
 
     ```yml
     highlight: COLORSCHEME_NAME
+    ```
+
+    你仍然可以使用prism 请跟随如下操作 安装完 [hexo-prism-plugin](https://github.com/ele828/hexo-prism-plugin) 插件
+
+    ```bash
+    npm i -S hexo-prism-plugin
+    ```
+
+    安装完毕后，在**网站配置文件**做如下配置：
+    ```yaml
+    highlight:
+      enable: false
+
+    prism_plugin:
+      mode: 'preprocess'    # realtime/preprocess
+      theme: 'tomorrow'
+      line_number: false    # default false
+      custom_css:
     ```
 
 10. 标签与分类

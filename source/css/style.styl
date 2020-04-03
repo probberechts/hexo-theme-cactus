@@ -50,11 +50,29 @@ body
   overflow-wrap: break-word
 
   #projects
-    margin-bottom: 2rem
+    margin-bottom: 1.5rem
     height: 100%
 
   article.post
     margin-bottom: 2rem
+    pre
+      code
+        font-display: swap
+        // font-weight: 400
+        font-size: $font-size
+        font-family: $font-family-body
+        margin: 0
+    ol,ul
+      li
+        code
+          padding: .1rem .4rem
+          margin: 0
+          font-weight: 500
+          font-family: $font-family-mono
+          background-color: rgba(200,200,200,.3)
+          border-radius: 4px
+          border-style: none
+          -webkit-border-radius: 4px
 
   #footer
     .footer-custom

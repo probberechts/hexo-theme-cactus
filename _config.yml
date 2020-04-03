@@ -4,7 +4,20 @@
 
 # 用于显示备案信息的选项
 # 格式 icp: 京ICP备12345678号
-icp: 京ICP备12345678号
+icp: 
+  enabled: true
+  url: http://www.beian.miit.gov.cn/
+  text: 京ICP备12345678号
+
+# 是否在网站底部展示 CDN 厂商的信息
+# - image:厂商LOGO 选项不为空时 默认优先图片信息
+# - text: 厂商名称 只有image选项为空 才显示text
+# - site: 厂商地址
+cdn:
+  enabled: false
+  text: 又拍云
+  # image: /images/upyun.png
+  site: https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral
 
 # 请不要修改这里,除非你希望支持阿拉伯语或波斯文. (使用 rtl 来支持这些阿拉伯国家的字体.)
 direction: ltr
@@ -14,8 +27,8 @@ direction: ltr
 nav:
   home: /
   articles: /archives/
-  # category: /categories/
-  # tag: /tags/
+  category: /categories/
+  tag: /tags/
   about: /about/
   search: /search/
 
@@ -24,10 +37,14 @@ nav:
 # 你可以手动指定被 Fontawesome icon 支持的图标
 # (查看 https://fontawesome.com/icons?d=gallery&s=brands);
 # 注意:仅仅 'gitee' 和 'mail' 是被主题强制定义的图标.
+# - qq: 修改uin参数为自己的QQ帐号
+# - wechat: 二维码图片地址
 social_links:
-  gitee: https://gitee.com/abc
-  github: https://github.com/abc
-  mail: mailto:abc@gmail.com
+  gitee: https://gitee.com/xuthus5
+  github: https://github.com/xuthus5
+  mail: mailto:xuthus5@gmail.com
+  # qq: tencent://message/?uin=
+  # weixin: 
 
 # 是否在首页显示标签云,标签云将会在文章列表的上面显示.
 # 详细: https://hexo.io/docs/helpers.html#tagcloud
@@ -67,16 +84,12 @@ post:
 #   - height: 显示logo的高度(px作为单位)
 #   - url: logo文件的位置
 #   - gravatar: 是否使用你的 Gravatar 作为logo
-#   - cdn: 是否在网站底部使用 CDN 厂商的logo
 logo:
   enabled: true
   width: 50
   height: 50
   url: /images/Photo_0411_1a.jpg
   gravatar: false
-  cdn:
-    img: /images/upyun.png
-    site: https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral
 
 # 自定义 favicons.
 # Cactus supports a limited set of the three most important icons:
@@ -120,7 +133,7 @@ rss: false
 
 # 请设置你的 Gravatar 用户 id 或者 email 如果你使用 gravatar 作为 logo 或者 favicons 在你的网站上.
 gravatar:
-  email: abc@gmail.com
+  email: xuthus5@gmail.com
 
 # valine评论
 # - appId/appKey: 从LeanCloud的应用中得到的appId/appKey.
@@ -134,9 +147,9 @@ gravatar:
 # - lang: 多语言支持 zh-cn / en
 # https://valine.js.org/
 valine:
-  enabled: true
-  appId: xxxxx
-  appKey: xxxxx
+  enabled: false
+  appId: xxxxxxxx
+  appKey: xxxxxxxx
   notify: true
   verify: false
   avatar: mm
