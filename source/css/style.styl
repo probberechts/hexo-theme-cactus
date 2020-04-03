@@ -18,17 +18,17 @@ html
   -ms-text-size-adjust: 100%
 
 body
+  flex: 1
   margin: 0
   height: 100%
   background-color: $color-background
   color: $color-text
-  font-display: swap // @stylint ignore
   font-weight: 400
   font-size: $font-size
   font-family: $font-family-body
   line-height: $line-height
+  font-display: swap // @stylint ignore
   text-rendering: geometricPrecision
-  flex: 1
 
   h3
     text-decoration: none
@@ -39,7 +39,6 @@ body
     font-size: .9rem
 
   antialias()
-
   @extend $base-style
 
 .content
@@ -55,37 +54,41 @@ body
 
   article.post
     margin-bottom: 2rem
+
     pre
       code
-        font-display: swap
-        // font-weight: 400
+        margin: 0
         font-size: $font-size
         font-family: $font-family-body
-        margin: 0
-    ol,ul
+        font-display: swap
+
+      ::-webkit-scrollbar
+        width: 0
+        height: 0
+
+    ol, ul
       li
         code
-          padding: .1rem .4rem
           margin: 0
+          padding: .1rem .4rem
+          border-style: none
+          border-radius: 4px
           font-weight: 500
           font-family: $font-family-mono
-          background-color: rgba(200,200,200,.3)
-          border-radius: 4px
-          border-style: none
           -webkit-border-radius: 4px
 
   #footer
     .footer-custom
-      width:100%
-      text-align: center
       margin-top: 5px
+      width: 100%
       height: 40px
+      text-align: center
 
     .img-response
       width: 64px
       height: 32px
+      vertical-align: middle
       line-height: 40px
-      vertical-align:middle
 
   p
     hyphens(auto)
@@ -96,15 +99,14 @@ body
   a
     color: #0366d6
     text-decoration: none
-    // background-image: none !important
 
   a:hover
-    //background-image: linear-gradient(transparent, transparent 4px, $color-link 4px, $color-link)
     text-decoration: underline
     text-decoration-color: #0366d6
+
   a.icon
-    color: $color-text
     background: none
+    color: $color-text
 
     &:hover
       color: $color-link
@@ -169,7 +171,6 @@ body
 @import "_partial/tags"
 @import "_partial/tooltip"
 @import "_partial/categories"
-// Code
 @import "_highlight/" + $highlight
 
 pre
@@ -196,85 +197,71 @@ code
 
 p
   code
-    padding: .1rem .4rem
     margin: 0
+    padding: .1rem .4rem
+    border-style: none
+    border-radius: 4px
+    background-color: rgba(200, 200, 200, .3)
     font-weight: 500
     font-family: $font-family-mono
-    background-color: rgba(200,200,200,.3)
-    border-radius: 4px
-    border-style: none
     -webkit-border-radius: 4px
 
-table tr:nth-child(2n){background: #f6f8fa;}
+table tr:nth-child(2n)
+  background: #f6f8fa
 
 td
   code
-    padding: .2em .4em
     margin: 0
+    padding: .2em .4em
+    border-radius: 4px
+    background-color: rgba(27, 31, 35, .05)
     font-weight: 500
     font-family: $font-family-mono
-    /* font-size: 85%; */
-    background-color: rgba(27,31,35,.05)
-    //border-radius: 3px;
-    //padding: 0 5px
-    //border: 1px dotted $color-border
-    border-radius: 4px
     -webkit-border-radius: 4px
 
 pre
+  padding: .2em .4em
   border: $color-border
-  padding: .2em .4em;
-  background-color: rgba(27,31,35,.05);
+  background-color: rgba(27, 31, 35, .05)
+
   code
-    padding-left: 1em
-    // margin: 0;
-    font-weight: 500;
     overflow-x: auto
     margin: 1rem 0
-    // padding: 10px 15px
+    padding-left: 1em
     border-radius: 4px
-    // background: $color-background-code
+    font-weight: 500
     font-family: $font-family-mono
-    // color: $color-accent-3
     -webkit-border-radius: 4px
 
-
 table
+  font-weight: 400
   font-size: 16px !important
-  font-weight: 400;
   font-family: $font-family-mono
+
   tr
-    td:not(.gutter):not(.code),th:not(.gutter):not(.code)
-      border: 1px solid #dfe2e5;
+    td:not(.gutter):not(.code), th:not(.gutter):not(.code)
+      border: 1px solid #dfe2e5
+
     .gutter
-      float: left;
-      width: 3em;
-      background: #505050;
-      text-align: right;
-      color: #ddffee;
+      float: left
+      width: 3em
+      background: #505050
+      color: #ddffee
+      text-align: right
+
     .code
       pre
         .line
           .meta + .bash
-            color: #969896;
-
+            color: #969896
 
 .highlight
-  // margin: 0;
-  font-weight: 500;
-  background: #3c3c3c;
-  //background-color: rgba(27,31,35,.05);
-  // border-radius: 3px;
-  //background-color: #f6f8fa !important
-  // padding: 0.5em
-
   overflow-x: auto
   margin: 1rem 0
-  // padding: 10px 15px
   border-radius: 4px
-  // background: $color-background-code
+  background: #3c3c3c
+  font-weight: 500
   font-family: $font-family-mono
-  // color: $color-accent-3
   -webkit-border-radius: 4px
 
   figcaption
@@ -300,28 +287,29 @@ table
     &:after
       clear: both
 
-  &:hover 
+  &:hover
     .btn-copy
       opacity: 1
 
   .btn-copy
-    font-size: 1.2rem
     position: absolute
     right: 20px
+    font-size: 1.2rem
     opacity: 0
-    transition: opacity 0.2s ease-in
+    transition: opacity .2s ease-in
+
     &:hover
       color: $color-accent-1
 
   pre
-    padding: 0
     margin: 0 5px 10px 0
+    padding: 0
     border: none
     background: none
 
   table
-    font-weight: 500
     width: auto
+    font-weight: 500
 
   td.gutter
     text-align: right
