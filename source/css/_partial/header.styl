@@ -42,10 +42,11 @@
       margin: 0
       padding: 0
       list-style-type: none
-      line-height: 15px
+      line-height: 1rem
+      letter-spacing: -999px
 
       a
-        margin-right: 15px
+        margin: 0 1rem
         color: $color-accent-1
 
       a:hover
@@ -53,9 +54,9 @@
 
       li
         display: inline-block
-        margin-right: 15px
         border-right: 1px dotted $color-accent-1
         vertical-align: middle
+        letter-spacing: 0
 
       .icon
         display: none
@@ -66,6 +67,9 @@
 
         a
           margin-right: 0
+
+      li:nth-child(2) a
+        margin: 0 1rem 0 0
 
 #header:hover
   #logo

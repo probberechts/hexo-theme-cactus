@@ -2,25 +2,44 @@
 # 主题配置文件
 ##############################################################################
 
-# 用于显示备案信息的选项
-# 格式 icp: 京ICP备12345678号
-icp: 
+##############################################################################
+# 头部配置项
+##############################################################################
+
+# 网站头部的logo配置.
+# 选项:
+#   - enabled: 显示或者隐藏logo.
+#   - width: 显示logo的宽度(px作为单位)
+#   - height: 显示logo的高度(px作为单位)
+#   - url: logo文件的位置
+#   - gravatar: 是否使用你的 Gravatar 作为logo
+logo:
   enabled: true
-  url: http://www.beian.miit.gov.cn/
-  text: 京ICP备12345678号
+  width: 50
+  height: 50
+  url: /images/Photo_0411_1a.jpg
+  gravatar: false
 
-# 是否在网站底部展示 CDN 厂商的信息
-# - image:厂商LOGO 选项不为空时 默认优先图片信息
-# - text: 厂商名称 只有image选项为空 才显示text
-# - site: 厂商地址
-cdn:
-  enabled: false
-  text: 又拍云
-  # image: /images/upyun.png
-  site: https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral
+# 自定义 favicons.
+# 支持对桌面、安卓、苹果三种设备的 icons 配置:
+#   - desktop: 经典 favion.ico 文件.
+#   - android: 一个 192x192 的PNG文件.
+#   - apple:  一个 180x180 的PNG文件.
+# 你可以从这个网站生成 http://realfavicongenerator.net/
+# 选项:
+#   - url: icon 的地址
+#   - gravatar: 从你的 Gravatar 创建一个favicon
+favicon:
+  desktop:
+    url: /images/favicon.ico
+    gravatar: false
+  android:
+    url: /images/favicon-192x192.png
+    gravatar: false
+  apple:
+    url: /images/apple-touch-icon.png
+    gravatar: false
 
-# 请不要修改这里,除非你希望支持阿拉伯语或波斯文. (使用 rtl 来支持这些阿拉伯国家的字体.)
-direction: ltr
 # 配置你的导航菜单.
 # 按照 'Key: url' 来配置
 # 如果你希望使用中文来替换 Key 请到 languages/*.yml 中指定 Key 对应的翻译
@@ -31,7 +50,6 @@ nav:
   tag: /tags/
   about: /about/
   search: /search/
-
 
 # 在首页显示的，用于连接到你社交媒体的链接.
 # 你可以手动指定被 Fontawesome icon 支持的图标
@@ -73,43 +91,22 @@ archive:
 post:
   show_updated: true
 
+# 页面布局最大宽度,不建议修改(rem作为单位).
+page_width: 48
+
+
 ##############################################################################
-# 感官配置项
+# 杂项
 ##############################################################################
 
-# 网站头部的logo配置.
-# 选项:
-#   - enabled: 显示或者隐藏logo.
-#   - width: 显示logo的宽度(px作为单位)
-#   - height: 显示logo的高度(px作为单位)
-#   - url: logo文件的位置
-#   - gravatar: 是否使用你的 Gravatar 作为logo
-logo:
-  enabled: true
-  width: 50
-  height: 50
-  url: /images/Photo_0411_1a.jpg
-  gravatar: false
+# 个人项目Projects地址 首页 Projects 将会引导至该页面
+projects_url: https://github.com/xuthus5
 
-# 自定义 favicons.
-# Cactus supports a limited set of the three most important icons:
-#   - desktop: The classic favion.ico file.
-#   - android: A 192x192 PNG file.
-#   - apple:  A 180x180 PNG file.
-# These can be generated with http://realfavicongenerator.net/
-# Options:
-#   - url: where the icon can be found
-#   - gravatar: whether to create a favicon from your Gravatar
-favicon:
-  desktop:
-    url: /images/favicon.ico
-    gravatar: false
-  android:
-    url: /images/favicon-192x192.png
-    gravatar: false
-  apple:
-    url: /images/apple-touch-icon.png
-    gravatar: false
+# 链接Links地址 首页 Links 将会引导至该页面
+# links_url: https://github.com/xuthus5
+
+# 是否开启 RSS 订阅.
+rss: false
 
 # 使用 highlight 来高亮代码块.
 # 默认xuthus配色,xuthus配色基于github-gist样式修改,自定义请查看 source/css/_highlight 支持的配色.
@@ -120,18 +117,8 @@ highlight: atom-one-dark
 # 自定义在 source/css/_colors 下进行,建议使用white.
 colorscheme: white
 
-# 页面布局最大宽度,不建议修改(rem作为单位).
-page_width: 48
-
-
-##############################################################################
-# 杂项
-##############################################################################
-
-# 是否开启 RSS 订阅.
-rss: false
-
 # 请设置你的 Gravatar 用户 id 或者 email 如果你使用 gravatar 作为 logo 或者 favicons 在你的网站上.
+# 网址 http://cn.gravatar.com/
 gravatar:
   email: xuthus5@gmail.com
 
@@ -147,9 +134,9 @@ gravatar:
 # - lang: 多语言支持 zh-cn / en
 # https://valine.js.org/
 valine:
-  enabled: false
-  appId: xxxxxxxx
-  appKey: xxxxxxxx
+  enabled: true
+  appId: sVBw4AmJkXaJhXn2gcALUY3z-gzGzoHsz
+  appKey: Bajkin9zR59iuKcqQ26TPQcw
   notify: true
   verify: false
   avatar: mm
@@ -158,3 +145,24 @@ valine:
   pageSize: 10
   visitor: false
   lang: zh-cn
+
+##############################################################################
+# 底部配置项
+##############################################################################
+
+# 用于显示备案信息的选项
+# 格式 icp: 京ICP备12345678号
+icp: 
+  enabled: true
+  url: http://www.beian.miit.gov.cn/
+  text: 湘ICP备17005082号
+
+# 是否在网站底部展示 CDN 厂商的信息
+# - image:厂商LOGO 选项不为空时 默认优先图片信息
+# - text: 厂商名称 只有image选项为空 才显示text
+# - site: 厂商地址
+cdn:
+  enabled: true
+  text: 又拍云
+  # image: /images/upyun.png
+  site: https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral

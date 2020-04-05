@@ -1,33 +1,40 @@
 <section id="about">
   <% if (config.description) { %>
-    <%- markdown(config.description) %>
+  <%- markdown(config.description) %>
   <% } %>
   <% if (theme.social_links) { %>
-    <p>
-      <%= __('index.find_me_on') %>
-      <% var nb_links = Object.keys(theme.social_links).length %>
-      <% var i = 0 %>
-      <% for(var link in theme.social_links) { %>
-        <% if (link == 'mail') { %>
-          <a class="icon" target="_blank" href="<%- url_for(theme.social_links[link]) %>">
-            <i class="fa fa-envelope"></i><!--
-      ---></a><!--
+  <p>
+    <%= __('index.find_me_on') %>
+    <% var nb_links = Object.keys(theme.social_links).length %>
+    <% var i = 0 %>
+    <% for(var link in theme.social_links) { %>
+    <% if (link == 'mail') { %>
+    <a class="icon" target="_blank" href="<%- url_for(theme.social_links[link]) %>">
+      <i class="fa fa-envelope"></i>
+      <!--
+      ---></a>
+    <!--
       ---><% } else if (link == 'gitee') { %>
-          <a class="icon" target="_blank" href="<%- url_for(theme.social_links[link]) %>">
-            <i class="fa fa-code" aria-hidden="true"></i><!--
-      ---></a><!--
+    <a class="icon" target="_blank" href="<%- url_for(theme.social_links[link]) %>">
+      <i class="fa fa-code" aria-hidden="true"></i>
+      <!--
+      ---></a>
+    <!--
     ---><% } else { %>
-          <a class="icon" target="_blank" href="<%- url_for(theme.social_links[link]) %>">
-            <i class="fab fa-<%= link %>" aria-hidden="true"></i><!--
-      ---></a><!--
-    ---><% } %><!--
+    <a class="icon" target="_blank" href="<%- url_for(theme.social_links[link]) %>">
+      <i class="fab fa-<%= link %>" aria-hidden="true"></i>
+      <!--
+      ---></a>
+    <!--
+    ---><% } %>
+    <!--
     ---><%= ( nb_links > 0 && i < nb_links-1 ?
             ( i == nb_links-2 ? ' '+__('index.enum_and')+' '
             : __('index.enum_comma')+' ' )
             : '.' ) %>
-        <% i+=1 %>
-      <% } %>
-    </p>
+    <% i+=1 %>
+    <% } %>
+  </p>
   <% } %>
 </section>
 
@@ -43,30 +50,44 @@
   <ul class="post-list">
     <% var field_sort = theme.posts_overview.sort_updated ? 'updated' : 'date' %>
     <% if (theme.posts_overview.show_all_posts) { %>
-      <% var show_posts = page.posts.sort(field_sort, 'desc') %>
+    <% var show_posts = page.posts.sort(field_sort, 'desc') %>
     <% } else { %>
-      <% var show_posts = site.posts.sort(field_sort, 'desc').limit(theme.posts_overview.post_count || 5) %>
+    <% var show_posts = site.posts.sort(field_sort, 'desc').limit(theme.posts_overview.post_count || 5) %>
     <% } %>
     <% show_posts.each(function(post, i){ %>
-      <li class="post-item">
-        <%- partial('_partial/post/date', { post: post, class_name: 'meta' }) %>
-        <span><%- partial('_partial/post/title', { post: post, index: true, class_name: '' }) %></span>
-      </li>
+    <li class="post-item">
+      <%- partial('_partial/post/date', { post: post, class_name: 'meta' }) %>
+      <span><%- partial('_partial/post/title', { post: post, index: true, class_name: '' }) %></span>
+    </li>
     <% }); %>
   </ul>
   <% if (theme.posts_overview.show_all_posts) { %>
-    <%- partial('_partial/pagination') %>
+  <%- partial('_partial/pagination') %>
   <% } %>
 </section>
+
+<% if (site.data.links) { %>
+<section id="links">
+  <span class="h1"><a href="<%- url_for(theme.links_url) %>"><%= __('index.links') %></a></span>
+  <ul class="link-list">
+    <% for(var obj in site.data.links){ %>
+    <li class="link-item">
+      <a href="<%= site.data.links[obj].url %>" title="<%= site.data.links[obj].desc %>"><%= site.data.links[obj].name %></a>
+    </li>
+    <% } %>
+  </ul>
+</section>
+<% } %>
 
 <% if (site.data.projects) { %>
 <section id="projects">
   <span class="h1"><a href="<%- url_for(theme.projects_url) %>"><%= __('index.projects') %></a></span>
   <ul class="project-list">
     <% for(var obj in site.data.projects){ %>
-      <li class="project-item">
-        <a href="<%= site.data.projects[obj].url %>"><%= site.data.projects[obj].name %></a>: <%- markdown(site.data.projects[obj].desc) %>
-      </li>
+    <li class="project-item">
+      <a href="<%= site.data.projects[obj].url %>"><%= site.data.projects[obj].name %></a>:
+      <%- markdown(site.data.projects[obj].desc) %>
+    </li>
     <% } %>
   </ul>
 </section>

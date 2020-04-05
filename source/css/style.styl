@@ -27,7 +27,7 @@ body
   font-size: $font-size
   font-family: $font-family-body
   line-height: $line-height
-  font-display: swap // @stylint ignore
+  font-display: swap
   text-rendering: geometricPrecision
 
   h3
@@ -48,10 +48,38 @@ body
   min-height: 100%
   overflow-wrap: break-word
 
+  // 首页项目样式
   #projects
     margin-bottom: 1.5rem
     height: 100%
 
+  // 首页链接样式
+  #links
+    ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+      letter-spacing: -999px
+      line-height: 1rem
+
+      li
+        display: inline-block
+        margin-bottom: .8rem
+        border-right: 1px dotted #2bbc8a
+        vertical-align: middle
+        letter-spacing: 0
+
+        a
+          margin: 0 1rem
+
+      li:last-child
+        margin-right: 0
+        border-right: 0
+
+        a
+          margin-right: 0
+
+  // 文章样式
   article.post
     margin-bottom: 2rem
 
@@ -67,6 +95,7 @@ body
         height: 0
 
     ol, ul
+      margin: 0
       li
         code
           margin: 0
@@ -77,6 +106,7 @@ body
           font-family: $font-family-mono
           -webkit-border-radius: 4px
 
+  // 底部样式
   #footer
     .footer-custom
       margin-top: 5px
