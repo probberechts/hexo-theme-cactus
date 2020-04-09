@@ -3,29 +3,29 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <%- meta(page) %>
     <% if (theme.favicon) { %>
         <% if (theme.favicon.desktop) { %>
-          <% if (theme.gravatar && theme.gravatar.email && theme.favicon.desktop.gravatar) { %>
-              <link rel="shortcut icon" href="<%= gravatar(theme.gravatar.email, 16) %>">
-          <% } else { %>
-              <link rel="shortcut icon" href="<%= url_for(theme.favicon.desktop.url) %>">
-          <% } %>
+            <% if (theme.gravatar && theme.gravatar.email && theme.favicon.desktop.gravatar) { %>
+                <link rel="shortcut icon" href="<%= gravatar(theme.gravatar.email, 16) %>">
+            <% } else { %>
+                <link rel="shortcut icon" href="<%= url_for(theme.favicon.desktop.url) %>">
+            <% } %>
         <% } %>
         <% if (theme.favicon.android) { %>
-          <% if (theme.gravatar && theme.gravatar.email && theme.favicon.android.gravatar) { %>
-            <link rel="icon" type="image/png" href="<%= gravatar(theme.gravatar.email, 192) %>" sizes="192x192">
-          <% } else { %>
-            <link rel="icon" type="image/png" href="<%= url_for(theme.favicon.android.url) %>" sizes="192x192">
-          <% } %>
+            <% if (theme.gravatar && theme.gravatar.email && theme.favicon.android.gravatar) { %>
+                <link rel="icon" type="image/png" href="<%= gravatar(theme.gravatar.email, 192) %>" sizes="192x192">
+            <% } else { %>
+                <link rel="icon" type="image/png" href="<%= url_for(theme.favicon.android.url) %>" sizes="192x192">
+            <% } %>
         <% } %>
         <% if (theme.favicon.apple) { %>
-          <% if (theme.gravatar && theme.gravatar.email && theme.favicon.apple.gravatar) { %>
-            <link rel="apple-touch-icon" sizes="180x180" href="<%= gravatar(theme.gravatar.email, 180) %>">
-          <% } else { %>
-            <link rel="apple-touch-icon" sizes="180x180" href="<%= url_for(theme.favicon.apple.url) %>">
-          <% } %>
+            <% if (theme.gravatar && theme.gravatar.email && theme.favicon.apple.gravatar) { %>
+                <link rel="apple-touch-icon" sizes="180x180" href="<%= gravatar(theme.gravatar.email, 180) %>">
+            <% } else { %>
+                <link rel="apple-touch-icon" sizes="180x180" href="<%= url_for(theme.favicon.apple.url) %>">
+            <% } %>
         <% } %>
     <% } %>
     <!-- title -->
@@ -36,9 +36,9 @@
     <link href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@2/distr/fira_code.css" rel="stylesheet">
     <!-- rss -->
     <% if (theme.rss === '' && config.feed && config.feed.path) { %>
-      <% theme.rss = config.feed.path %>
+        <% theme.rss = config.feed.path %>
     <% } %>
     <% if (theme.rss) { %>
-      <link rel="alternate" href="<%= url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml" />
+        <link rel="alternate" href="<%= url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml"/>
     <% } %>
 </head>

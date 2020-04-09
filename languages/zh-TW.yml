@@ -11,7 +11,7 @@ footer:
   copyright: Copyright
 
 index:
-  find_me_on: 出沒地 
+  find_me_on: 出沒地
   enum_comma: ','
   enum_and: 和
   articles: 文章
@@ -22,7 +22,7 @@ index:
 post:
   desktop:
     previous: 上一篇
-    next: 下一篇 
+    next: 下一篇
     back_to_top: 回到頁首
     share: 分享
   mobile:

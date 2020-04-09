@@ -1,31 +1,33 @@
 <footer id="footer">
-  <div class="footer-left">
-    <%= __('footer.copyright') %> &copy; <%= new Date().getFullYear() %> <i class="fas fa-heart"></i> <%= config.author || config.title %>
-    <% if (theme.icp.enabled && theme.icp.text) { %>
-    <a href="<%- theme.icp.url %>" target="_blank"><%= __(theme.icp.text) %></a>
-    <% } %>
-  </div>
-  <!-- <div class="footer-right">
+    <div class="footer-left">
+        <%= __('footer.copyright') %> &copy; <%= new Date().getFullYear() %> <i class="fas fa-heart"></i>
+        <%= config.author || config.title %>
+        <% if (theme.icp.enabled && theme.icp.text) { %>
+            <a href="<%- theme.icp.url %>" target="_blank"><%= __(theme.icp.text) %></a>
+        <% } %>
+    </div>
+    <!-- <div class="footer-right">
     <nav>
       <ul>
         <% for (var i in theme.nav) { %>
-        <li><a href="<%- url_for(theme.nav[i]) %>"><%= __('nav.'+i).replace("nav.", "") %></a></li>
+        <li><a href="<%- url_for(theme.nav[i]) %>"><%= __('nav.' + i).replace("nav.", "") %></a></li>
         <% } %>
       </ul>
     </nav>
   </div> -->
 
-  <div class="footer-custom">
-    Framework by <a href="https://hexo.io" target="_blank">Hexo</a> & Theme by <a
-      href="https://github.com/xuthus5/hexo-theme-cactus" target="_blank">Cactus-CN</a><% if (theme.cdn.enabled) { %> &
-    CDN provided by
-    <a href="<%- theme.cdn.site %>" target="_blank">
-      <% if (theme.cdn.image) { %>
-      <img class="img-response" src="<%- theme.cdn.image %>" alt="cdn image">
-      <% } else { %>
-      <%- theme.cdn.text %>
-      <% } %>
-    </a>
-    <% } %>
-  </div>
+    <div class="footer-custom">
+        Framework by <a href="https://hexo.io" target="_blank">Hexo</a> & Theme by <a
+                href="https://github.com/xuthus5/hexo-theme-cactus" target="_blank">Cactus-CN</a>
+        <% if (theme.cdn.enabled) { %> &
+        CDN provided by
+        <a href="<%- theme.cdn.site %>" target="_blank">
+            <% if (theme.cdn.image) { %>
+                <img class="img-response" src="<%- theme.cdn.image %>" alt="cdn image">
+            <% } else { %>
+                <%- theme.cdn.text %>
+            <% } %>
+        </a>
+        <% } %>
+    </div>
 </footer>

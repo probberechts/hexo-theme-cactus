@@ -3,62 +3,62 @@
 <%- js('https://cdn.staticfile.org/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js') %>
 <!-- clipboard -->
 <% if (is_post()){ %>
-  <%- js('https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js') %>
-  <script type="text/javascript">
-  $(function() {
-    // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"<%= __('tooltip.copy_tip') %>\">";
-    btn += '<i class="far fa-clone"></i>';
-    btn += '</span>'; 
-    // mount it!
-    $(".highlight .code pre").before(btn);
-    var clip = new ClipboardJS('.btn-copy', {
-      target: function(trigger) {
-        return trigger.nextElementSibling;
-      }
-    });
-    clip.on('success', function(e) {
-      e.trigger.setAttribute('aria-label', "<%= __('tooltip.copied') %>");
-      e.clearSelection();
-    })
-  })
-  </script>
+    <%- js('https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js') %>
+    <script type="text/javascript">
+        $(function () {
+            // copy-btn HTML
+            var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"<%= __('tooltip.copy_tip') %>\">";
+            btn += '<i class="far fa-clone"></i>';
+            btn += '</span>';
+            // mount it!
+            $(".highlight .code pre").before(btn);
+            var clip = new ClipboardJS('.btn-copy', {
+                target: function (trigger) {
+                    return trigger.nextElementSibling;
+                }
+            });
+            clip.on('success', function (e) {
+                e.trigger.setAttribute('aria-label', "<%= __('tooltip.copied') %>");
+                e.clearSelection();
+            })
+        })
+    </script>
 <% } %>
 <%- js('js/main') %>
 <!-- search -->
 <% if (config.search && (page.search || page.type === "search")){ %>
-  <%- js('js/search.js') %>
-  <script type="text/javascript">
-  $(function() {
+    <%- js('js/search.js') %>
+    <script type="text/javascript">
+        $(function () {
 
-    var $inputArea = $("input#search-input");
-    var $resultArea = document.querySelector("div#search-result");
+            var $inputArea = $("input#search-input");
+            var $resultArea = document.querySelector("div#search-result");
 
-    $inputArea.focus(function() {
-      var search_path = "<%= config.search.path %>";
-      if (search_path.length == 0) {
-        search_path = "search.xml";
-      }
-      var path = "<%= config.root %>" + search_path;
-      searchFunc(path, 'search-input', 'search-result');
-    });
+            $inputArea.focus(function () {
+                var search_path = "<%= config.search.path %>";
+                if (search_path.length == 0) {
+                    search_path = "search.xml";
+                }
+                var path = "<%= config.root %>" + search_path;
+                searchFunc(path, 'search-input', 'search-result');
+            });
 
-    $inputArea.keydown(function(e) {
-      if (e.which == 13) {
-        e.preventDefault();
-      }
-    });
+            $inputArea.keydown(function (e) {
+                if (e.which == 13) {
+                    e.preventDefault();
+                }
+            });
 
-    var observer = new MutationObserver(function(mutationsList, observer) {
-      if (mutationsList[0].addedNodes) {
-        $(".search-no-result").show(200);
-      } else {
-        $(".search-no-result").hide();
-      }
-    });
+            var observer = new MutationObserver(function (mutationsList, observer) {
+                if (mutationsList[0].addedNodes) {
+                    $(".search-no-result").show(200);
+                } else {
+                    $(".search-no-result").hide();
+                }
+            });
 
-    observer.observe($resultArea, { childList: true });
+            observer.observe($resultArea, {childList: true});
 
-  });
-  </script>
+        });
+    </script>
 <% } %>

@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html<%= config.language ? " lang=" + config.language.substring(0, 2) : ""%>>
+<html<%= config.language ? " lang=" + config.language.substring(0, 2) : "" %>>
 <%- partial('_partial/head') %>
+
 <body class="max-width mx-auto px3 ltr">
-    <% if (is_post()) { %>
-      <%- partial('_partial/post/actions_desktop') %>
+<% if (is_post()) { %>
+    <%- partial('_partial/post/actions_desktop') %>
+<% } %>
+<div class="content index py4">
+    <% if (!is_post()) { %>
+        <%- partial('_partial/header') %>
     <% } %>
-    <div class="content index py4">
-        <% if (!is_post()) { %>
-          <%- partial('_partial/header') %>
-        <% } %>
-        <%- body %>
-        <% if (is_post()) { %>
-          <%- partial('_partial/post/actions_mobile') %>
-        <% } %>
-        <%- partial('_partial/footer') %>
-    </div>
-    <%- partial('_partial/styles') %>
-    <%- partial('_partial/scripts') %>
+    <%- body %>
+    <% if (is_post()) { %>
+        <%- partial('_partial/post/actions_mobile') %>
+    <% } %>
+    <%- partial('_partial/footer') %>
+</div>
+<%- partial('_partial/styles') %>
+<%- partial('_partial/scripts') %>
 </body>
+
 </html>

@@ -49,11 +49,13 @@ body
   overflow-wrap: break-word
 
   // 首页项目样式
+
   #projects
     margin-bottom: 1.5rem
     height: 100%
 
   // 首页链接样式
+
   #links
     ul
       margin: 0
@@ -80,8 +82,12 @@ body
           margin-right: 0
 
   // 文章样式
+
   article.post
     margin-bottom: 2rem
+
+  article.page
+    margin-bottom: 3rem
 
     pre
       code
@@ -96,6 +102,7 @@ body
 
     ol, ul
       margin: 0
+
       li
         code
           margin: 0
@@ -107,6 +114,7 @@ body
           -webkit-border-radius: 4px
 
   // 底部样式
+
   #footer
     .footer-custom
       margin-top: 5px
@@ -205,20 +213,26 @@ body
 
 pre
   overflow-x: auto
-  padding: 10px 15px
-  padding-bottom: 0
-  border: 1px dotted $color-border
-  border-radius: 4px
   font-size: 16px
-  font-family: $font-family-mono
   line-height: 26px
+  padding: .2em .4em
+  border: $color-border
+  background-color: rgba(27, 31, 35, .05)
   -webkit-border-radius: 4px
 
-  code
-    display: block
-    padding: 0
-    border: none
+  ::-webkit-scrollbar
+    display: none
 
+
+  code
+    overflow-x: auto
+    padding-left: 1em
+    border-radius: 4px
+    font-weight: 500
+    font-family: $font-family-mono !important
+    display: block
+    border: none
+    
 code
   padding: 0 5px
   border: 1px dotted $color-border
@@ -245,20 +259,6 @@ td
     padding: .2em .4em
     border-radius: 4px
     background-color: rgba(27, 31, 35, .05)
-    font-weight: 500
-    font-family: $font-family-mono
-    -webkit-border-radius: 4px
-
-pre
-  padding: .2em .4em
-  border: $color-border
-  background-color: rgba(27, 31, 35, .05)
-
-  code
-    overflow-x: auto
-    margin: 1rem 0
-    padding-left: 1em
-    border-radius: 4px
     font-weight: 500
     font-family: $font-family-mono
     -webkit-border-radius: 4px
@@ -311,38 +311,46 @@ table
     a:hover
       color: lighten($color-meta-code, 20%)
 
-    &:before, content: ""
-      display: table
+&
+:
+before
+,
+content
+:
+""
+display
+:
+table
 
-    &:after
-      clear: both
+&:after
+  clear: both
+
+&:hover
+  .btn-copy
+    opacity: 1
+
+.btn-copy
+  position: absolute
+  right: 20px
+  font-size: 1.2rem
+  opacity: 0
+  transition: opacity .2s ease-in
 
   &:hover
-    .btn-copy
-      opacity: 1
+    color: $color-accent-1
 
-  .btn-copy
-    position: absolute
-    right: 20px
-    font-size: 1.2rem
-    opacity: 0
-    transition: opacity .2s ease-in
+pre
+  margin: 0 5px 10px 0
+  padding: 0
+  border: none
+  background: none
 
-    &:hover
-      color: $color-accent-1
+table
+  width: auto
+  font-weight: 500
 
-  pre
-    margin: 0 5px 10px 0
-    padding: 0
-    border: none
-    background: none
+td.gutter
+  text-align: right
 
-  table
-    width: auto
-    font-weight: 500
-
-  td.gutter
-    text-align: right
-
-  .line
-    height: 22px
+.line
+  height: 22px
