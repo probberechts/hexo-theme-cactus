@@ -340,6 +340,15 @@ nav:
   search: /search/
 ```
 
+If you encounter the error message during your search process, such as "Cannot GET /search/undefined/".
+
+Try to check the contents of your `public/search.xml`, if your `search.xml` includes <url> instead of <link>, you should change the `search.js`.
+
+```
+# url: $("link", this).attr("href")
+url: $("url", this).text()
+```
 
 ## License
+
 MIT
