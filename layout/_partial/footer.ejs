@@ -1,33 +1,34 @@
 <footer id="footer">
-    <div class="footer-left">
-        <%= __('footer.copyright') %> &copy; <%= new Date().getFullYear() %> <i class="fas fa-heart"></i>
-        <%= config.author || config.title %>
-        <% if (theme.icp.enabled && theme.icp.text) { %>
-            <a href="<%- theme.icp.url %>" target="_blank"><%= __(theme.icp.text) %></a>
-        <% } %>
-    </div>
-    <!-- <div class="footer-right">
-    <nav>
-      <ul>
-        <% for (var i in theme.nav) { %>
-        <li><a href="<%- url_for(theme.nav[i]) %>"><%= __('nav.' + i).replace("nav.", "") %></a></li>
-        <% } %>
-      </ul>
-    </nav>
-  </div> -->
+  <div class="footer-top">
+    &copy; <%= new Date().getFullYear() %> <i class="fas fa-heart"></i>
+    <%= config.author || config.title %> <% if (theme.icp.enabled &&
+    theme.icp.text) { %>
+    <a href="<%- theme.icp.url %>" target="_blank"><%= __(theme.icp.text) %></a>
+    <% } %>
+  </div>
 
-    <div class="footer-custom">
-        Framework by <a href="https://hexo.io" target="_blank">Hexo</a> & Theme by <a
-                href="https://github.com/xuthus5/hexo-theme-cactus" target="_blank">Cactus-CN</a>
-        <% if (theme.cdn.enabled) { %> &
-        CDN provided by
-        <a href="<%- theme.cdn.site %>" target="_blank">
-            <% if (theme.cdn.image) { %>
-                <img class="img-response" src="<%- theme.cdn.image %>" alt="cdn image">
-            <% } else { %>
-                <%- theme.cdn.text %>
-            <% } %>
-        </a>
-        <% } %>
-    </div>
+  <div class="footer-bottom">
+    <% if (theme.tongji.enabled) { %>
+    <!-- tongji -->
+    <script
+      async
+      src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+    ></script>
+    <span class="site-uv">
+      <i class="fa fa-user"></i> 访问人数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+    <span class="site-pv">
+      <i class="fa fa-eye"></i> 访问总量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+    <br />
+    <% } %> <% if (theme.cdn.enabled) { %> CDN 由
+    <a href="<%- theme.cdn.site %>" target="_blank">
+      <% if (theme.cdn.image) { %>
+      <img class="img-response" src="<%- theme.cdn.image %>" alt="cdn image" />
+      <% } else { %> <%- theme.cdn.text %> <% } %>
+    </a>
+    赞助 <% } %>
+  </div>
 </footer>

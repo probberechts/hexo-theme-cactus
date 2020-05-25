@@ -124,27 +124,27 @@ gravatar:
 
 # valine评论
 # - appId/appKey: 从LeanCloud的应用中得到的appId/appKey.
-# - notify: 评论回复邮件提醒
-# - verify: 验证码服务
 # - avatar: Gravatar 头像展示方式
 # - placeholder: 评论框占位提示符
 # - guest_info: 评论者相关属性 不建议修改
 # - pageSize: 评论列表分页，每页条数
 # - visitor: 文章访问量统计
-# - lang: 多语言支持 zh-cn / en
+# - lang: 多语言支持 (zh-cn / en)
+# - push: 有新评论通知推送 (sc | qmsg | 空)  sc:server酱  qmsg:Qmsg酱; 
+# - pushLink: 推送目标完整地址 例:https://sc.ftqq.com/SCUxxxxxx.send | https://qmsg.zendee.cn:443/send/xxx
 # https://valine.js.org/
 valine:
-  enabled: true
-  appId: sVBw4AmJkXaJhXn2gcALUY3z-gzGzoHsz
-  appKey: Bajkin9zR59iuKcqQ26TPQcw
-  notify: true
-  verify: false
-  avatar: mm
+  enabled: false
+  appId: 
+  appKey: 
+  avatar: mp
   placeholder: Just go go
   guest_info: nick,mail,link
-  pageSize: 10
-  visitor: false
+  pageSize: 15
+  visitor: true
   lang: zh-cn
+  pushType: 
+  pushLink: 
 
 ##############################################################################
 # 底部配置项

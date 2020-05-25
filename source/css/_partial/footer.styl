@@ -41,7 +41,7 @@
   .footer-left
     vertical-align: middle
 
-@media (min-width: 367px)
+@media (min-width: 300px)
   #footer
     display: flex
     flex-flow: row wrap
@@ -49,8 +49,12 @@
     align-items: center
     align-content: center
     margin: auto
+    a
+      text-decoration: none
+    a:hover
+      text-decoration: underline
 
-    .footer-left
+    .footer-top
       align-self: flex-start
       flex-basis: auto
       flex-grow: 1
@@ -60,8 +64,19 @@
       overflow: hidden
       white-space: nowrap
 
-    .footer-right
-      align-self: flex-end
-      flex-basis: auto
-      flex-grow: 1
-      flex-shrink: 1
+    .footer-bottom
+      margin: .3rem 0 1rem 0
+      width: 100%
+      height: 40px
+      text-align: center
+      .site-uv
+        margin-right: .2rem
+      .site-uv::after
+        content: "|"
+        padding-left: .2rem
+
+    .img-response
+      width: 64px
+      height: 32px
+      vertical-align: middle
+      line-height: 40px
