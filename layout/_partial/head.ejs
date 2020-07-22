@@ -15,7 +15,7 @@
     <% if (theme.favicon) { %>
         <% if (theme.favicon.desktop) { %>
           <% if (theme.gravatar && theme.gravatar.email && theme.favicon.desktop.gravatar) { %>
-              <link rel="shortcut icon" href="<%= gravatar(theme.gravatar.email, 16) %>">
+              <link rel="shortcut icon" href="<%= gravatar(theme.gravatar.email, 48) %>">
           <% } else { %>
               <link rel="shortcut icon" href="<%= url_for(theme.favicon.desktop.url) %>">
           <% } %>
