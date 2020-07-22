@@ -110,10 +110,10 @@ Setup the navigation menu in the `_config.yml`:
 
 ```yml
 nav:
-  Home: /
-  About: /about/
-  Writing: /archives/
-  Projects: http://github.com/probberechts
+  home: /
+  about: /about/
+  articles: /archives/
+  projects: http://github.com/probberechts
   LINK_NAME: URL
 ```
 
@@ -306,8 +306,8 @@ Finally, don't forget to create a link to these pages, for example in the naviga
 
 ```yml
 nav:
-  tags: /tags/
-  categories: /categories/
+  tag: /tags/
+  category: /categories/
 ```
 
 
