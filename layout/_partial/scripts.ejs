@@ -77,15 +77,19 @@
 <% } %>
 <!-- Baidu Analytics -->
 <% if (theme.baidu_analytics.enabled && theme.baidu_analytics.id){ %>
-    <script type="text/javascript">
+  <script type="text/javascript">
         var _hmt = _hmt || [];
         (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?<%= theme.baidu_analytics.id %>";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?<%= theme.baidu_analytics.id %>";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
         })();
-    </script>
+        </script>
+<% } %>
+<!-- Umami Analytics -->
+<% if (theme.umami_analytics.enabled && theme.umami_analytics.id && theme.umami_analytics.host){ %>
+  <script async defer data-website-id="<%= theme.umami_analytics.id %>" src="<%= theme.umami_analytics.host %>/umami.js"></script>
 <% } %>
 <!-- Disqus Comments -->
 <% if (theme.disqus.enabled && theme.disqus.shortname){ %>
