@@ -159,7 +159,9 @@ umami_analytics:
   id: e77e68be-f6e4-4br3-9365-2b76b57cd571
   host: https://analytics.domain.com
 
-# Fill in you Gravatar user id / email if you want to use your gravatar as the
+# Fill in you Gravatar email or hash if you want to use your gravatar as the
 # logo and/or favicons of you website.
+# To generate hash: `$ echo -n "name@email.com" | md5`.
 gravatar:
   email: name@email.com
+  hash: d41d8cd98f00b204e9800998ecf8427e
