@@ -76,12 +76,14 @@ copyright:
 #   - height: height of the logo in pixel units
 #   - url: where the logo can be found
 #   - gravatar: whether to use your Gravatar as the logo
+#   - grayout: whether to enable a hover effect on the logo
 logo:
   enabled: true
   width: 50
   height: 50
   url: /images/logo.png
   gravatar: false
+  grayout: true
 
 # Customize the favicons.
 # Cactus supports a limited set of the three most important icons:
