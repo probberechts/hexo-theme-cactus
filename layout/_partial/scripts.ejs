@@ -66,7 +66,7 @@
 <% } %>
 <!-- Google Analytics -->
 <% if (theme.google_analytics.enabled && theme.google_analytics.id){ %>
-    <script async src="https://www.googletagmanager.com/gtag/js?<%= theme.google_analytics.id %>"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= theme.google_analytics.id %>"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
