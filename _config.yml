@@ -147,6 +147,11 @@ google_analytics:
   enabled: false
   id: UA-86660611-1
 
+# Fill in your Microsoft Clarity tracking ID to enable Microsoft Analytics.
+microsoft_clarity:
+  enabled: false
+  id: xyz
+
 # Fill in your Baidu Analytics tracking ID to enable Baidu Analytics.
 baidu_analytics:
   enabled: false
