@@ -81,7 +81,9 @@ var searchFunc = function(path, searchId, contentId) {
             data.title = "Untitled";
           }
           var dataTitle = data.title.trim().toLowerCase();
+          var dataTitleLowerCase = dataTitle.toLowerCase();
           var dataContent = stripHtml(data.content.trim());
+          var dataContentLowerCase = dataContent.toLowerCase();
           var dataUrl = data.url;
           var indexTitle = -1;
           var indexContent = -1;
@@ -89,8 +91,8 @@ var searchFunc = function(path, searchId, contentId) {
           // only match artiles with not empty contents
           if (dataContent !== "") {
             keywords.forEach(function(keyword) {
-              indexTitle = dataTitle.indexOf(keyword);
-              indexContent = dataContent.indexOf(keyword);
+              indexTitle = dataTitleLowerCase.indexOf(keyword);
+              indexContent = dataContentLowerCase.indexOf(keyword);
 
               if( indexTitle >= 0 || indexContent >= 0 ){
                 matches += 1;
@@ -139,7 +141,6 @@ var searchFunc = function(path, searchId, contentId) {
             resultList.push(searchResult);
           }
         });
-		
         if (resultList.length) {
           resultList.sort(function(a, b) {
               return b.rank - a.rank;
