@@ -7,13 +7,16 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: site
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: "12"
       - uses: extractions/netrc@v1
         with:
           machine: github.com
           username: ${{ secrets.REPO_USER }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: build and publish
-        run: |
+      - run: |
+          npm install -g hexo-cli
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           bash ./build && bash ./publish
