@@ -1,0 +1,19 @@
+name: Build and Publish
+on: [push]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: site
+      - uses: extractions/netrc@v1
+        with:
+          machine: github.com
+          username: ${{ secrets.REPO_USER }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: build and publish
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          bash ./build && bash ./publish
