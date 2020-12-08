@@ -16,6 +16,7 @@ jobs:
           username: ${{ secrets.REPO_USER }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - run: |
+          npm install
           npm install -g hexo-cli
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
