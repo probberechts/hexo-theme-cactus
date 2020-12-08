@@ -19,7 +19,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           npm install -g hexo-cli
-          ls -al
           bash ./build
-          ls -al demos/cactus-dark/themes
           bash ./publish
