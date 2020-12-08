@@ -11,8 +11,8 @@ for theme in "${themes[@]}"
 do
   echo "Generating $theme"
   pushd demos/$theme
-  hexo clean
-  hexo generate
+  npx hexo clean
+  npx hexo generate
   cp -r ../source/assets public/assets
   popd
   mkdir -p dist/$theme
