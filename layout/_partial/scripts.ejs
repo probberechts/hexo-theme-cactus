@@ -86,6 +86,10 @@
         })();
         </script>
 <% } %>
+<!-- Cloudflare Analytics -->
+<% if (theme.cloudflare_analytics.enabled && theme.cloudflare_analytics.id){ %>
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "<%= theme.cloudflare_analytics.id %>"}'></script>
+<% } %>
 <!-- Umami Analytics -->
 <% if (theme.umami_analytics.enabled && theme.umami_analytics.id && theme.umami_analytics.host){ %>
   <script async defer data-website-id="<%= theme.umami_analytics.id %>" src="<%= theme.umami_analytics.host %>/umami.js"></script>
