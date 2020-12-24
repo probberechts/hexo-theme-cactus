@@ -152,6 +152,11 @@ baidu_analytics:
   enabled: false
   id: 2e6da3c375c8a87f5b664cea6d4cb29c
 
+# Fill in your Cloudflare Analytics tracking ID to enable Cloudflare Analytics.
+cloudflare_analytics:
+  enabled: false
+  id: 0dabb6e21848405483a237e6a7b6ed04
+
 # Fill in your Umami Analytics tracking ID to enable Umami Analytics.
 umami_analytics:
   enabled: false
