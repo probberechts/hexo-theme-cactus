@@ -29,7 +29,7 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
 - Projects list
 - I18n support
 - Disqus integration
-- Google analytics / Baidu Tongji / [Umami Analytics](https://umami.is) 
+- Google Analytics / Baidu Tongji / [Cloudflare Analytics](https://www.cloudflare.com/zh-cn/web-analytics/) / [Umami Analytics](https://umami.is)
 - Font Awesome icons
 - Simplicity
 
