@@ -9,15 +9,15 @@
       <% var i = 0 %>
       <% for(var link in theme.social_links) { %>
         <% if (link == 'mail') { %>
-          <a class="icon" target="_blank" rel="noopener" href="<%- theme.social_links[link] %>">
+          <a class="icon" target="_blank" rel="noopener" href="<%- theme.social_links[link] %>" aria-label="<%- link %>">
             <i class="fas fa-envelope"></i><!--
       ---></a>
         <% } else if (link == 'rss') { %>
-          <a class="icon" target="_blank" rel="noopener" href="<%- theme.social_links[link] %>">
+          <a class="icon" target="_blank" rel="noopener" href="<%- theme.social_links[link] %>" aria-label="<%- link %>">
             <i class="fas fa-rss"></i>
           </a>
         <% } else { %>
-          <a class="icon" target="_blank" rel="noopener" href="<%- url_for(theme.social_links[link]) %>">
+          <a class="icon" target="_blank" rel="noopener" href="<%- url_for(theme.social_links[link]) %>" aria-label="<%- link %>">
             <i class="fab fa-<%= link %>"></i><!--
       ---></a><!--
     ---><% } %><!--
