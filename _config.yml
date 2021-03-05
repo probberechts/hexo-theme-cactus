@@ -15,9 +15,6 @@ direction: ltr
 # languages/*.yml
 nav:
   home: /
-  articles: /archives/
-  search: /search/
-  about: /about/
 
 # Links to your social media accounts.
 # The keys should correspond to Fontawesome icon names
