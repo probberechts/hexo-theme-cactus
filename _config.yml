@@ -5,7 +5,7 @@
 # Link to a page that gives an overview of all your projects.
 # This can be an external link (e.g., to you GitHub profile) or to another
 # page within your website.
-projects_url: https://github.com/maaaaarco
+projects_url: ''
 
 # Set the page direction to RTL or LTR. default is LTR. (if you set it 'rtl', the 'vazir' font will be loaded.)
 direction: ltr
@@ -24,9 +24,9 @@ nav:
 # (see https://fontawesome.com/icons?d=gallery&s=brands);
 # only 'mail' is an exception.
 social_links:
-  github: https://github.com/maaaaarco
-  reddit: https://www.reddit.com/user/maaaaarco
-  mail: mailto:marco@spaghetti.dev
+  github: ''
+  reddit: ''
+  mail: ''
 
 # Customize the overview with displaying a tagcloud on the index page.
 # Options: https://hexo.io/docs/helpers.html#tagcloud
