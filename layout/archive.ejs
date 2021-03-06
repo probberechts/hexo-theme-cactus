@@ -8,7 +8,7 @@
       <% change = year !== itemYear %>
       <% year = change ? itemYear : year %>
       <% if (change) { %>
-        <h2><%= year %></h2>
+        <li aria-label="year"><h2><%= year %></h2></li>
       <% } %>
       <li class="post-item">
         <%- partial('_partial/post/date', { post: post, class_name: 'meta' }) %>
