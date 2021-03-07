@@ -1,6 +1,9 @@
 <!-- styles -->
-<link rel="preload" href="/lib/justified-gallery/css/justifiedGallery.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<% if (page.photos && page.photos.length) { %>
+  <link rel="preload" href="/lib/justified-gallery/css/justifiedGallery.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css"></noscript>
+<% } %>
+
 <link rel="preload" href="/lib/font-awesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css"></noscript>
 <noscript><link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"></noscript>
 
