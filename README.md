@@ -256,7 +256,7 @@ umami_analytics:
 
 ### CDN
 
-Allows to load Javascript and CSS resources from a CDN.
+Load Javascript and CSS resources from a CDN. Enabled by default, loads all resources from [cdnjs](https://cdnjs.com/).
 
 ```yml
 cdn:
@@ -268,7 +268,7 @@ cdn:
   justified_gallery_js: 'url'
 ```
 
-Set `enable: false` to completely disable CDN and load all resources from your domain. If you want to disable CDN only for a specific resource(s) then just remove the specific entry.
+Set `enable: false` to completely disable CDN and load all resources from your domain. If you want to disable it only for specific resource(s) then just remove the corresponding entry(s).
 
 ```yml
 cdn:
@@ -276,7 +276,7 @@ cdn:
   jquery: 'url'
 ```
 
-This will enabled CDN only for JQuery.
+Only JQuery will be loaded from the specified CDN.
 
 ### Comments
 
