@@ -19,7 +19,6 @@ function split (str, sep) {
 
 hexo.extend.helper.register('meta', function (post) {
     var metas = post.meta || [];
-    var output = '';
     var metaDOMArray = metas.map(function (meta) {
         var entities = split(meta, /(?:[^\\;]+|\\.)+/g);
         var entityArray = entities.map(function (entity) {
