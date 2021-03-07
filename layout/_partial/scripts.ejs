@@ -1,11 +1,25 @@
 <!-- jquery -->
-<%- js('lib/jquery/jquery.min') %>
-<% if (page.photos && page.photos.length) { %>
-  <%- js('lib/justified-gallery/js/jquery.justifiedGallery.min.js') %>
+<% if (isCdnEnable('jquery')) {%> 
+  <%- getCdnScript('jquery') %> 
+<% } else { %> 
+  <%- js('lib/jquery/jquery.min') %>
 <% } %>
+
+<% if (page.photos && page.photos.length) { %>
+  <% if (isCdnEnable('justified_gallery_js')) {%>
+    <%- getCdnScript('justified_gallery_js') %> 
+  <% } else { %> 
+    <%- js('lib/justified-gallery/js/jquery.justifiedGallery.min.js') %>
+  <% } %> 
+<% } %>
+
 <!-- clipboard -->
 <% if (is_post()){ %>
-  <%- js('lib/clipboard/clipboard.min') %>
+  <% if (isCdnEnable('clipboard')) { %>
+    <%- getCdnScript('clipboard') %> 
+  <% } else { %> 
+    <%- js('lib/clipboard/clipboard.min') %>
+  <% } %>
   <script type="text/javascript">
   $(function() {
     // copy-btn HTML
