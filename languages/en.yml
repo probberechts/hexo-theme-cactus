@@ -7,6 +7,10 @@ nav:
   projects: Projects
   search: Search
 
+icons:
+  menu: Menu
+  top: Top
+
 footer:
   copyright: Copyright
 
