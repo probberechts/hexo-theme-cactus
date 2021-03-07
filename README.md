@@ -254,6 +254,29 @@ umami_analytics:
   host: https://analytics.domain.com
 ```
 
+### CDN
+
+Allows to load Javascript and CSS resources from a CDN.
+
+```yml
+cdn:
+  enable: true
+  jquery: 'url'
+  clipboard: 'url'
+  font_awesome: 'url'
+  justified_gallery_css: 'url'
+  justified_gallery_js: 'url'
+```
+
+Set `enable: false` to completely disable CDN and load all resources from your domain. If you want to disable CDN only for a specific resource(s) then just remove the specific entry.
+
+```yml
+cdn:
+  enable: true
+  jquery: 'url'
+```
+
+This will enabled CDN only for JQuery.
 
 ### Comments
 
@@ -348,7 +371,6 @@ Finally, edit the `_config.yml` and add a link to the navigation menu.
 nav:
   search: /search/
 ```
-
 
 ## License
 MIT
