@@ -1,6 +1,8 @@
 <!-- jquery -->
 <%- js('lib/jquery/jquery.min') %>
-<%- js('lib/justified-gallery/js/jquery.justifiedGallery.min.js') %>
+<% if (page.photos && page.photos.length) { %>
+  <%- js('lib/justified-gallery/js/jquery.justifiedGallery.min.js') %>
+<% } %>
 <!-- clipboard -->
 <% if (is_post()){ %>
   <%- js('lib/clipboard/clipboard.min') %>
