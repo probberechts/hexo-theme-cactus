@@ -1,10 +1,10 @@
 /*!
- * justifiedGallery - v3.7.0
+ * justifiedGallery - v3.8.1
  * http://miromannino.github.io/Justified-Gallery/
- * Copyright (c) 2018 Miro Mannino
+ * Copyright (c) 2020 Miro Mannino
  * Licensed under the MIT license.
  */
-.justified-gallery {
+ .justified-gallery {
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -26,7 +26,13 @@
 .justified-gallery > figure > img,
 .justified-gallery > a > a > img,
 .justified-gallery > div > a > img,
-.justified-gallery > figure > a > img {
+.justified-gallery > figure > a > img,
+.justified-gallery > a > svg,
+.justified-gallery > div > svg,
+.justified-gallery > figure > svg,
+.justified-gallery > a > a > svg,
+.justified-gallery > div > a > svg,
+.justified-gallery > figure > a > svg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -36,9 +42,9 @@
   filter: "alpha(opacity=0)";
   opacity: 0;
 }
-.justified-gallery > a > .caption,
-.justified-gallery > div > .caption,
-.justified-gallery > figure > .caption {
+.justified-gallery > a > .jg-caption,
+.justified-gallery > div > .jg-caption,
+.justified-gallery > figure > .jg-caption {
   display: none;
   position: absolute;
   bottom: 0;
@@ -52,9 +58,9 @@
   font-weight: 300;
   font-family: sans-serif;
 }
-.justified-gallery > a > .caption.caption-visible,
-.justified-gallery > div > .caption.caption-visible,
-.justified-gallery > figure > .caption.caption-visible {
+.justified-gallery > a > .jg-caption.jg-caption-visible,
+.justified-gallery > div > .jg-caption.jg-caption-visible,
+.justified-gallery > figure > .jg-caption.jg-caption-visible {
   display: initial;
   filter: "alpha(opacity=70)";
   opacity: 0.7;
@@ -63,13 +69,15 @@
   -o-transition: opacity 500ms ease-in;
   transition: opacity 500ms ease-in;
 }
-.justified-gallery > .entry-visible {
+.justified-gallery > .jg-entry-visible {
   filter: "alpha(opacity=100)";
   opacity: 1;
   background: none;
 }
-.justified-gallery > .entry-visible > img,
-.justified-gallery > .entry-visible > a > img {
+.justified-gallery > .jg-entry-visible > img,
+.justified-gallery > .jg-entry-visible > a > img,
+.justified-gallery > .jg-entry-visible > svg,
+.justified-gallery > .jg-entry-visible > a > svg {
   filter: "alpha(opacity=100)";
   opacity: 1;
   -webkit-transition: opacity 500ms ease-in;
@@ -80,7 +88,7 @@
 .justified-gallery > .jg-filtered {
   display: none;
 }
-.justified-gallery > .spinner {
+.justified-gallery > .jg-spinner {
   position: absolute;
   bottom: 0;
   margin-left: -24px;
@@ -90,7 +98,7 @@
   opacity: 1;
   overflow: initial;
 }
-.justified-gallery > .spinner > span {
+.justified-gallery > .jg-spinner > span {
   display: inline-block;
   filter: "alpha(opacity=0)";
   opacity: 0;
