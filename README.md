@@ -28,7 +28,7 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
 - Support for local search
 - Projects list
 - I18n support
-- Disqus integration
+- Disqus / Utterances
 - Google analytics / Baidu Tongji / [Umami Analytics](https://umami.is) 
 - Font Awesome icons
 - Simplicity
@@ -280,6 +280,10 @@ Only JQuery will be loaded from the specified CDN.
 
 ### Comments
 
+Cactus supports two commenting systems: [Disqus](https://disqus.com) and [Utterances](https://utteranc.es).
+
+#### Disqus
+
 First, create a site on Disqus: [https://disqus.com/admin/create/](http://disqus.com/admin/create/).
 
 Next, update the `_config.yml` file:
@@ -292,6 +296,27 @@ disqus:
 
 where `SITENAME` is the name you gave your site on Disqus.
 
+#### Utterances
+
+First, follow the instructions on the [oficial website](https://utteranc.es/) to setup an issue tracker Utterances will connect to.
+
+Next, update the `_config.yml` file:
+
+```yml
+utteranc:
+  enabled: true
+  repo: owner/githubrepo
+  issue_term: pathname
+  label: utteranc
+  theme: themename
+```
+
+where each of the parameters are the respective values ​​provided during the configuration of the Utterances:
+
+* `repo`:  the repository Utterances will connect to.
+* `issue_term`: the mapping between blog posts and GitHub issues.
+* `label`: the label that will be assigned to issues created by Utterances
+* `theme`: the selected Utterances theme.
 
 ### Code Highlighting
 
