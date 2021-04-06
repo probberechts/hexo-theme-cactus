@@ -137,6 +137,10 @@ open_graph:
 # Plugins
 ##############################################################################
 
+# Open MathJax support for Latex
+
+MathJax: true
+
 # Fill in your Disqus Comments Shortname to enable Disqus comments.
 disqus:
   enabled: false
