@@ -138,8 +138,9 @@ open_graph:
 ##############################################################################
 
 # Enable MathJax support for Latex
-mathjax: false
-
+mathjax:
+  enabled: false
+  
 # Fill in your Disqus Comments Shortname to enable Disqus comments.
 disqus:
   enabled: false
