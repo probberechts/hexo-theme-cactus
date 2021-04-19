@@ -33,7 +33,7 @@ $(document).ready(function() {
      * Display the menu on hi-res laptops and desktops.
      */
     if ($(document).width() >= 1440) {
-      menu.css("visibility", "visible");
+      menu.show();
       menuIcon.addClass("active");
     }
 
@@ -41,11 +41,11 @@ $(document).ready(function() {
      * Display the menu if the menu icon is clicked.
      */
     menuIcon.click(function() {
-      if (menu.css("visibility") === "hidden") {
-        menu.css("visibility", "visible");
+      if (menu.is(":hidden")) {
+        menu.show();
         menuIcon.addClass("active");
       } else {
-        menu.css("visibility", "hidden");
+        menu.hide();
         menuIcon.removeClass("active");
       }
       return false;
