@@ -109,7 +109,7 @@ var searchFunc = function(path, searchId, contentId) {
           if (matches > 0) {
             var searchResult = {};
             searchResult.rank = matches;
-            searchResult.str = "<li><a href='"+ dataUrl +"' class='search-result-title'>"+ dataTitle +"</a>";
+            searchResult.str = "<li><a href='/" + dataUrl + "' class='search-result-title'>" + dataTitle + "</a>";
             if (firstOccur >= 0) {
               // cut out 100 characters
               var start = firstOccur - 20;
