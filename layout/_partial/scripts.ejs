@@ -111,7 +111,7 @@
   <script async defer data-website-id="<%= theme.umami_analytics.id %>" src="<%= theme.umami_analytics.host %>/umami.js"></script>
 <% } %>
 <!-- Disqus Comments -->
-<% if (theme.disqus.enabled && theme.disqus.shortname){ %>
+<% if (page.comments && theme.disqus.enabled && theme.disqus.shortname){ %>
     <script type="text/javascript">
         var disqus_shortname = '<%= theme.disqus.shortname %>';
 
@@ -123,4 +123,26 @@
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         }());
     </script>
+<% } %>
+<!-- utterances Comments -->
+<% if (page.comments && theme.utterances.enabled && theme.utterances.repo && theme.utterances.issue_term && theme.utterances.theme){ %>
+    <script type="text/javascript">
+      var utterances_repo = '<%= theme.utterances.repo %>';
+      var utterances_issue_term = '<%= theme.utterances.issue_term %>';
+      var utterances_label = '<%= theme.utterances.label %>';
+      var utterances_theme = '<%= theme.utterances.theme %>';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
 <% } %>

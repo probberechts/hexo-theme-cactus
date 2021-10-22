@@ -5,3 +5,10 @@
         </div>
     </div>
 <% } %>
+<% if(page.comments && theme.utterances.enabled){ %>
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript><%= __('comments.no_js') %></noscript>
+        </div>
+    </div>
+<% } %>
