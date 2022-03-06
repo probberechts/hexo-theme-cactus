@@ -19,7 +19,6 @@ nav:
   articles: /archives/
   projects: projects_url
 
-
 # Links to your social media accounts.
 # The keys should correspond to Fontawesome icon names
 # (see https://fontawesome.com/icons?d=gallery&s=brands);
@@ -117,7 +116,6 @@ colorscheme: dark
 # Maximal width of the page in rem units.
 page_width: 48
 
-
 ##############################################################################
 # Miscellaneous
 ##############################################################################
@@ -132,7 +130,6 @@ open_graph:
   twitter_id:
   google_plus:
 
-
 ##############################################################################
 # Plugins
 ##############################################################################
@@ -140,7 +137,6 @@ open_graph:
 # Enable MathJax support for Latex
 mathjax:
   enabled: false
-  
 # Fill in your Disqus Comments Shortname to enable Disqus comments.
 disqus:
   enabled: false
@@ -161,6 +157,11 @@ google_analytics:
 
 # Fill in your Baidu Analytics tracking ID to enable Baidu Analytics.
 baidu_analytics:
+  enabled: false
+  id: 2e6da3c375c8a87f5b664cea6d4cb29c
+
+# Fill in your PostHog Analytics tracking ID to enable PostHog Analytics.
+posthog_analytics:
   enabled: false
   id: 2e6da3c375c8a87f5b664cea6d4cb29c
 

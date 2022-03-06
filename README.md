@@ -234,7 +234,7 @@ Set the `rss` field in the `_config.yml` to one of the following values:
 
 ### Analytics
 
-Add you Google, Baidu, Cloudflare or Umami Analytics `tracking_id` to the `_config.yml`.
+Add you Google, Baidu, PostHog, Cloudflare or Umami Analytics `tracking_id` to the `_config.yml`.
 
 ```yml
 google_analytics:
@@ -242,6 +242,10 @@ google_analytics:
   id: 'UA-49627206-1'
 
 baidu_analytics:
+  enabled: true
+  id: 2e6da3c375c8a87f5b664cea6d4cb29c
+
+posthog_analytics:
   enabled: true
   id: 2e6da3c375c8a87f5b664cea6d4cb29c
 
