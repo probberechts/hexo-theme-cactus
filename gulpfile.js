@@ -3,10 +3,11 @@ var del = require('del');
 var download = require("gulp-download");
 var fs = require('fs');
 var gulp = require('gulp');
-var jshint = require('gulp-jshint');
 var path = require('path');
 var stylint = require('gulp-stylint');
-var stylish = require('jshint-stylish');
+var stylelintFormatter = require('stylelint-formatter-pretty');
+var jshint = require('gulp-jshint');
+var jshintFormatter = require('jshint-stylish');
 var yaml = require('js-yaml');
 
 
@@ -61,7 +62,7 @@ gulp.task('lint:js', function() {
   return gulp.src([
     './source/js/**/*.js',
   ]).pipe(jshint())
-    .pipe(jshint.reporter(stylish));
+    .pipe(jshint.reporter(jshintFormatter));
 });
 
 gulp.task('lint:stylus', function () {
@@ -71,14 +72,10 @@ gulp.task('lint:stylus', function () {
     './source/css/_colors/*.styl'
   ]).pipe(stylint({
       config: '.stylintrc',
-      reporter: {
-        reporter: 'stylint-stylish',
-        reporterOptions: {
-          verbose: true
-        }
-      }
+      reporters: [
+        {formatter: stylelintFormatter, console: true}
+      ]
     }))
-    .pipe(stylint.reporter());
 });
 
 gulp.task('validate:config', function(cb) {
