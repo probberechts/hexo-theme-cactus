@@ -127,7 +127,7 @@ var searchFunc = function(path, searchId, contentId) {
                 end = dataContent.length;
               }
 
-              var matchContent = dataContent.substr(start, end);
+              var matchContent = dataContent.substring(start, end);
 
               // highlight all keywords
               var regS = new RegExp(keywords.join("|"), "gi");
