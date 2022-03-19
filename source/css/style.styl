@@ -10,6 +10,29 @@ global-reset()
 *, *:before, *:after
   box-sizing: border-box
 
+/* Scroll bar */
+/* For Firefox */
+*
+  scrollbar-color: $color-scrollbar transparent
+
+/* For Chrome, Edge, and Safari */
+*::-webkit-scrollbar
+  width: 8px
+  height: 6px
+
+*::-webkit-scrollbar-track
+  background: transparent
+
+*::-webkit-scrollbar-thumb
+  background-color: $color-scrollbar
+  border-radius: 6px
+
+*::-webkit-scrollbar-thumb:hover
+  background-color: darken($color-scrollbar, 20%)
+
+*::-webkit-scrollbar-thumb:active
+  background-color: darken($color-scrollbar, 30%)
+
 html
   margin: 0
   padding: 0
