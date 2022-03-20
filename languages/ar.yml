@@ -1,0 +1,61 @@
+nav:
+  home: الرئيسية
+  about: نبذة عني
+  articles: منشورات
+  projects: مشاريع
+  search: بحث
+
+footer:
+  copyright: حقوق الملكية
+
+index:
+  find_me_on: يمكننا التواصل من خلال
+  enum_comma: ","
+  enum_and: و
+  articles: منشورات
+  projects: مشاريع
+
+post:
+  desktop:
+    previous: المنشور السابق
+    next: المنشور التالي
+    back_to_top: العودة
+    share: مشاركة
+  mobile:
+    menu: القائمة
+    toc: المحتويات
+    back_to_top: العودة
+    share: مشاركة
+
+search:
+  search: بحث...
+  no_results: لم يتم العثور على أي نتيجة.
+
+tag_cloud:
+  zero: لايوجد تسميات
+
+counter:
+  tag_cloud:
+    zero: لايوجد تسميات
+    one: ""
+    other: ""
+
+  categories:
+    zero: لايوجد تصنيفات
+    one: ""
+    other: ""
+
+  archive_posts:
+    zero: لايوجد منشورات.
+    one: ""
+    other: ""
+
+pagination:
+  page: الصفحة %d من أصل %d
+
+comments:
+  no_js: يرجى تفعيل JavaScript في المتصفح.
+
+tooltip:
+  copy_tip: انسخ!
+  copied: تم النسخ!
