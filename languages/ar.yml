@@ -1,12 +1,18 @@
 nav:
   home: الرئيسية
-  about: نبذة عني
+  about: معلومات عنّي
   articles: منشورات
+  tag: تسمية
+  category: تصنيف
   projects: مشاريع
   search: بحث
 
+icons:
+  menu: القائمة
+  top: الأعلى
+
 footer:
-  copyright: حقوق الملكية
+  copyright: حقوق النشر
 
 index:
   find_me_on: يمكننا التواصل من خلال
@@ -14,25 +20,30 @@ index:
   enum_and: و
   articles: منشورات
   projects: مشاريع
+  topics: مواضيع
+  most_recent: المنشور مؤخراً
 
 post:
   desktop:
     previous: المنشور السابق
     next: المنشور التالي
-    back_to_top: العودة
-    share: مشاركة
+    back_to_top: العودة إلى الأعلى
+    share: مشاركة المنشور
   mobile:
     menu: القائمة
     toc: المحتويات
-    back_to_top: العودة
+    back_to_top: العودة إلى الأعلى
     share: مشاركة
 
 search:
   search: بحث...
-  no_results: لم يتم العثور على أي نتيجة.
+  no_results: لم يتم العثور على نتائج.
 
 tag_cloud:
   zero: لايوجد تسميات
+
+pagination:
+  page: الصفحة %d من أصل %d
 
 counter:
   tag_cloud:
@@ -50,11 +61,8 @@ counter:
     one: ""
     other: ""
 
-pagination:
-  page: الصفحة %d من أصل %d
-
 comments:
-  no_js: يرجى تفعيل JavaScript في المتصفح.
+  no_js: يرجى تفعيل JavaScript في المتصفح لعرض التعليقات.
 
 tooltip:
   copy_tip: انسخ!
