@@ -34,6 +34,9 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
 - Font Awesome icons
 - Simplicity
 
+## Prerequisites
+In order to use this theme you must have installed [hexo](https://hexo.io/docs/).
+
 ## Install
 1. In the `root` directory:
 
