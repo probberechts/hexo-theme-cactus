@@ -44,7 +44,7 @@ In order to use this theme you must have installed [hexo](https://hexo.io/docs/)
     $ git clone https://github.com/probberechts/hexo-theme-cactus.git themes/cactus
     ```
 
-2. Change the `theme` property in the `config.yml` file.
+2. Change the `theme` property in the `_config.yml` file.
 
     ```yml
     # theme: landscape
