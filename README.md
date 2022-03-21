@@ -38,22 +38,34 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
 In order to use this theme you must have installed [hexo](https://hexo.io/docs/).
 
 ## Install
-1. In the `root` directory:
+1. Create the `root` directory for the blog by initializing it with hexo:
 
-    ```git
+    ```sh
+    $ hexo init my-blog
+    ```
+
+2. Navigate into the new directory:
+
+    ```sh
+    $ cd my-blog
+    ```
+
+3. In the `root` directory:
+
+    ```sh
     $ git clone https://github.com/probberechts/hexo-theme-cactus.git themes/cactus
     ```
 
-2. Change the `theme` property in the `_config.yml` file.
+4. Change the `theme` property in the `_config.yml` file.
 
     ```yml
     # theme: landscape
     theme: cactus
     ```
-    See below for more information on how to customize this theme.
-    
-3. Create pages and articles with the `hexo new [layout] <title>` command.
-    For example, to create an "about me" page, run:
+   See below for more information on how to customize this theme.
+
+5. Create pages and articles with the `hexo new [layout] <title>` command.
+   For example, to create an "about me" page, run:
     ```sh
     $ hexo new page about
     ```
@@ -62,12 +74,11 @@ In order to use this theme you must have installed [hexo](https://hexo.io/docs/)
     ```sh
     $ hexo new post "hello world"
     ```
-    and add some interesting content in `source/_posts/hello-world.md`.
-    
-4. Run: `hexo generate` and `hexo server`
+   and add some interesting content in `source/_posts/hello-world.md`.
 
-5. [Publish your blog](https://hexo.io/docs/one-command-deployment.html)!
+6. Run: `hexo generate` and `hexo server`
 
+7. [Publish your blog](https://hexo.io/docs/one-command-deployment.html)!
 
 ## Configuration
 You can (and should) modify a couple of settings. An overview of all settings
