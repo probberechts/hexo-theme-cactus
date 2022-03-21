@@ -57,8 +57,8 @@ In order to use this theme you must have installed [hexo](https://hexo.io/docs/)
     ```sh
     $ hexo new page about
     ```
-    This will create a new file in `source/about/index.md`
-    Similary, you can create a new article with
+   This will create a new file in `source/about/index.md`
+   Similarly, you can create a new article with
     ```sh
     $ hexo new post "hello world"
     ```
