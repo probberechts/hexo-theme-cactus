@@ -11,6 +11,7 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
 
 - [General](#general)
 - [Features](#features)
+- [Prerequisites](#prerequisites)
 - [Install](#install)
 - [Configuration](#configuration)
 - [License](#license)
