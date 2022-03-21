@@ -122,7 +122,7 @@ file in `source/css/_colors`.
 
 ### Navigation
 
-Setup the navigation menu in the `_config.yml`:
+Set up the navigation menu in the `_config.yml`:
 
 ```yml
 nav:
