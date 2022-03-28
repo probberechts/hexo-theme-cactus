@@ -33,6 +33,7 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
 - Google analytics / Baidu Tongji / [Umami Analytics](https://umami.is) 
 - Font Awesome icons
 - Simplicity
+- Custom 404 page
 
 ## Install
 1. In the `root` directory:
@@ -396,6 +397,27 @@ Finally, edit the `_config.yml` and add a link to the navigation menu.
 ```yml
 nav:
   search: /search/
+```
+
+### Custom Github 404 page
+
+When you hosting your hexo blog use Github Page, if Visitors a not exist post page, it will be redicrt to a deafult github 404 page. about this , you can custom the 404 page.
+
+First, as you create 404 page in Hexo
+
+```sh
+$ hexo new page "404"
+```
+
+It will generates a new 404 folder and new index file at `source/404/index.md`, you can customize the 404 page .md file
+
+And, you need defining the permalink in the Frontmatter of `source/404/index.md`
+
+```markdown
+---
+title: 404
+permalink: /404.html
+---
 ```
 
 ## License
