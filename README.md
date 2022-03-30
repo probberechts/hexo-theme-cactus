@@ -36,29 +36,29 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
 
 ## Prerequisites
 
-In order to use this theme you must have installed [hexo](https://hexo.io/docs/).
+1. In order to use this theme you must have installed [hexo](https://hexo.io/docs/).
 
-## Install
-
-1. Create the `root` directory for the blog by initializing it with hexo:
+2. Create the `root` directory for the blog by initializing it with hexo:
 
     ```sh
     $ hexo init my-blog
     ```
 
-2. Navigate into the new directory:
+3. Navigate into the new directory:
 
     ```sh
     $ cd my-blog
     ```
 
-3. In the `root` directory:
+## Install
+
+1. In the `root` directory:
 
     ```sh
     $ git clone https://github.com/probberechts/hexo-theme-cactus.git themes/cactus
     ```
 
-4. Change the `theme` property in the `_config.yml` file.
+2. Change the `theme` property in the `_config.yml` file.
 
     ```yml
     # theme: landscape
@@ -67,7 +67,7 @@ In order to use this theme you must have installed [hexo](https://hexo.io/docs/)
    
    See below for more information on how to customize this theme.
 
-5. Create pages and articles with the `hexo new [layout] <title>` command.
+3. Create pages and articles with the `hexo new [layout] <title>` command.
    For example, to create an "about me" page, run:
    
     ```sh
@@ -83,9 +83,9 @@ In order to use this theme you must have installed [hexo](https://hexo.io/docs/)
    
    and add some interesting content in `source/_posts/hello-world.md`.
 
-6. Run: `hexo generate` and `hexo server`
+4. Run: `hexo generate` and `hexo server`
 
-7. [Publish your blog](https://hexo.io/docs/one-command-deployment.html)!
+5. [Publish your blog](https://hexo.io/docs/one-command-deployment.html)!
 
 ## Configuration
 
