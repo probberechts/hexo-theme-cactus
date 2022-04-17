@@ -320,7 +320,7 @@ First, follow the instructions on the [oficial website](https://utteranc.es/) to
 Next, update the `_config.yml` file:
 
 ```yml
-utteranc:
+utterances:
   enabled: true
   repo: owner/githubrepo
   issue_term: pathname
