@@ -15,9 +15,9 @@ direction: ltr
 # languages/*.yml
 nav:
   home: /
-  about: /about/
+#  about: /about/
   articles: /archives/
-  projects: http://github.com/metters
+#  projects: http://github.com/metters
 
 
 # Links to your social media accounts.
@@ -39,7 +39,7 @@ tags_overview: false
 #   - sort_updated: sort posts by last modification date instead of creation date.
 posts_overview:
   show_all_posts: false
-  post_count: 10
+  post_count: 5
   sort_updated: false
 
 # Customize the archive view.
