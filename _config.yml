@@ -27,6 +27,8 @@ nav:
 social_links:
   github: http://github.com/metters
   mail: mailto:metters@web.de
+#  stack-overflow: https://stackoverflow.com/users/7917574/metters
+#  hacker-news:  https://news.ycombinator.com/user?id=metters
 
 # Customize the overview with displaying a tagcloud on the index page.
 # Options: https://hexo.io/docs/helpers.html#tagcloud
