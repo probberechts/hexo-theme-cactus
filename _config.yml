@@ -15,6 +15,7 @@ direction: ltr
 # languages/*.yml
 nav:
   home: /
+  search: /search/
 #  about: /about/
   articles: /archives/
 #  projects: http://github.com/metters
