@@ -40,7 +40,7 @@ tags_overview: false
 #   - post_count: whether to show only the x most recent posts.
 #   - sort_updated: sort posts by last modification date instead of creation date.
 posts_overview:
-  show_all_posts: false
+  show_all_posts: true
   post_count: 5
   sort_updated: false
 
