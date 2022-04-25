@@ -107,7 +107,8 @@ favicon:
 
 # The color scheme that should be used to highlight codeblocks.
 # See source/css/_highlight for a list of all available color schemes.
-# highlight: rainbow
+# Good options: paraiso, arta, agate, darkula, tomorrow-night-eighties, sunburst, obsidian, atelier-dune-dark, atelier-cave-dark,
+highlight: monokai
 
 # Set the color scheme.
 # Available color schemes are 'dark', 'light', 'classic' and 'white'.
