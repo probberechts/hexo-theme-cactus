@@ -16,6 +16,7 @@ direction: ltr
 nav:
   home: /
   search: /search/
+  CV: /CV/Curriculum_Vitae_Matthias_Streidel.pdf
 #  about: /about/
   articles: /archives/
 #  projects: http://github.com/metters
