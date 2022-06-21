@@ -6,18 +6,22 @@ nav:
   tag: 标签
   category: 分类
   search: 搜索
+  
+icons:
+  menu: 目录
+  top: 顶部
 
 footer:
   copyright: Copyright
 
 index:
   find_me_on: 在这里找到我：
-  enum_comma: ' '
-  enum_and: ' '
+  enum_comma: '，'
+  enum_and: 和
   articles: 文章
   projects: 项目
   topics: 标签
-  most_recent: 最新的文章
+  most_recent: 最新发布
 
 post:
   desktop:
@@ -35,12 +39,31 @@ search:
   search: 搜索...
   no_results: 抱歉，没有符合您搜索条件的结果。请换其它关键词再试。
 
+tag_cloud:
+  zero: 没有标签
+
 pagination:
   page: 第 %d 页，共 %d 页
+ 
+counter:
+  tag_cloud:
+    zero: 没有标签
+    one: ""
+    other: ""
+
+  categories:
+    zero: 没有分类
+    one: ""
+    other: ""
+
+  archive_posts:
+    zero: 没有归档
+    one: ""
+    other: ""
 
 comments:
   no_js: 加载评论需要在浏览器启用 JavaScript 脚本支持。
 
 tooltip:
-  copy_tip: 复制到粘贴板!
-  copied: 复制成功!
+  copy_tip: 复制到粘贴板！
+  copied: 复制成功！
