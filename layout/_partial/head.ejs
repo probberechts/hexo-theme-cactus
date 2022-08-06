@@ -74,4 +74,11 @@
 		</script>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 	<% } %>
+    <!-- Umami Analytics -->
+    <% if (theme.umami_analytics.enabled && theme.umami_analytics.id && theme.umami_analytics.host && theme.umami_analytics.script_name){ %>
+        <script async defer
+                data-website-id="<%= theme.umami_analytics.id %>"
+                src="<%= theme.umami_analytics.host %>/<%= theme.umami_analytics.script_name %>">
+        </script>
+    <% } %>
 </head>
