@@ -271,7 +271,7 @@ umami_analytics:
   host: https://analytics.domain.com
 ```
 
-### DN
+### CDN
 
 从CDN中加载Javascript和CSS资源，以提升访问速度。 默认从 [cdnjs](https://cdnjs.com/) 中加载资源
 
@@ -333,7 +333,7 @@ utterances:
 
 * `repo`:用于 Utterances 链接
 * `issue_term`:用于创建博客文章和 GitHub issues 之间的映射
-* `label`: the label that will be assigned to issues created by Utterances
+* `label`:   创建属于 Utterances 的 issues 标签 label
 * `theme`:选择 Utterances 的主题
 
 ### 代码高亮设置
@@ -421,7 +421,7 @@ MIT
 
 ## 翻译版本
 
-Chinese Translation Version : 0.8 (Incomplete translation)
+Chinese Translation Version : 1.0 
 
 
-中文翻译版本: 0.8 (不完整翻译)
+中文翻译版本: 1.0 
