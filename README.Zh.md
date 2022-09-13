@@ -14,7 +14,7 @@
 - [安装主题](#安装主题)
 - [主题配置](#主题配置)
 - [许可证](#许可证)
-- [Translation Version 翻译版本](##Translation Version 翻译版本)
+- [Translation Version 翻译版本](#Translation Version 翻译版本)
 
 ## General
 
