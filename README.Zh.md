@@ -8,12 +8,13 @@
 
 ## 索引
 
-- [版本信息](#general)
-- [主题特色](#features)
-- [安装准备](#prerequisites)
-- [安装主题](#install)
-- [主题配置](#configuration)
-- [许可证](#license)
+- [版本信息](## 版本信息l)
+- [主题特色](## 主题特色)
+- [安装准备](## 安装准备)
+- [安装主题](## 安装主题)
+- [主题配置](## 主题配置)
+- [许可证](## 许可证)
+- [Translation Version 翻译版本](## Translation Version 翻译版本)
 
 ## 版本信息
 
@@ -418,7 +419,7 @@ nav:
 MIT
 
 
-### Translation Version 翻译版本
+## Translation Version 翻译版本
 
 Chinese Translation Version : 0.8 (Incomplete translation)
 中文翻译版本: 0.8 (不完整翻译)
