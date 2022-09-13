@@ -14,7 +14,7 @@
 - [安装主题](#安装主题)
 - [主题配置](#主题配置)
 - [许可证](#许可证)
-- [Translation Version 翻译版本](#Translation Version 翻译版本)
+- [Translation Version 翻译版本](#翻译版本)
 
 ## General
 
@@ -419,7 +419,9 @@ nav:
 MIT
 
 
-## Translation Version 翻译版本
+## 翻译版本
 
 Chinese Translation Version : 0.8 (Incomplete translation)
+
+
 中文翻译版本: 0.8 (不完整翻译)
