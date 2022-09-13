@@ -333,7 +333,7 @@ utterances:
 
 * `repo`:用于 Utterances 链接
 * `issue_term`:用于创建博客文章和 GitHub issues 之间的映射
-* `label`:   创建属于 Utterances 的 issues 标签 label
+* `label`:   创建属于 Utterances 的 issues 标签 
 * `theme`:选择 Utterances 的主题
 
 ### 代码高亮设置
