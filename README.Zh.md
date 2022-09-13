@@ -1,5 +1,8 @@
 # Cactus
 
+[简体中文](/README.Zh.md)/[English](/README.md)
+
+
 一款响应迅速,简洁大气,干净的 [Hexo](http://hexo.io) 站点主题。
 
 演示地址: [Demo](https://probberechts.github.io/hexo-theme-cactus/)
