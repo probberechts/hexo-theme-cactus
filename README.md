@@ -1,5 +1,5 @@
 # Cactus
-[简体中文](https://github.com/Xenolies/hexo-theme-cactus/blob/master/README.Zh.md)
+[简体中文](/README.Zh.md)/[English](/README.md)
 
 A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal website.
 
