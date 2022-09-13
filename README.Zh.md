@@ -35,7 +35,7 @@
 - 支持 Font Awesome 图标
 - 设计简洁
 
-##安装准备
+## 安装准备
 
 1.  如果要使用这个主题，您必须先安装 [Hexo](https://hexo.io/docs/).
 
@@ -51,7 +51,7 @@
     $ cd my-blog
     ```
 
-##安装主题
+## 安装主题
 
 1. 在根目录使用命令行输入:
 
@@ -93,7 +93,7 @@
 
 5. [接着，部署博客!](https://hexo.io/docs/one-command-deployment.html)! 
 
-##主题配置
+## 主题配置
 
 您可以(也应该)修改几个设置来让站点更加个性化。所有的设置可以在主题的[_config.yml](_config.yml)中找到。下面是一些重要的配置.
 
@@ -115,7 +115,7 @@ colorscheme: dark
 
  此操作将覆盖你在`themes/cactus/_config.yml`设置的默认的黑色配色方案
 
-###主题颜色
+### 主题颜色
 
 目前，这个主题有四种配色方案:[dark](https://probberechts.github.io/hexo-theme-cactus/cactus-dark/public/), [light](https://probberechts.github.io/hexo-theme-cactus/cactus-light/public/),
 [white](https://probberechts.github.io/hexo-theme-cactus/cactus-white/public/) 和 [classic](https://probberechts.github.io/hexo-theme-cactus/cactus-classic/public/).这些都可以在主题的`_config.yml`中设置。
@@ -126,7 +126,7 @@ colorscheme: light
 
 如果不满意的话，你也可以在`source/css/_colors`中添加新的配色方案。
 
-###导航栏
+### 导航栏
 
 导航栏可以在 `_config.yml`进行设置
 
@@ -139,7 +139,7 @@ nav:
   LINK_NAME: URL
 ```
 
-###首页文章展示
+### 首页文章展示
 
 可以根据自己需要设置首页文章显示，部分显示和全部显示两种
 
@@ -158,7 +158,7 @@ nav:
       show_all_posts: true
     ```
 
-###项目列表
+### 项目列表
 
 可以在`source/_data/projects.json`中设置来展示你想要展示的项目
 
@@ -177,7 +177,7 @@ nav:
 ]
 ```
 
-###社交链接设置
+### 社交链接设置
 
 Cactus主题可以添加您的社交平台链接. 在主题的`_config.yml`中写上链接来启用该功能。
 
@@ -190,7 +190,7 @@ social_links:
 
 其中`NAME`指的是[Font Awesome icon](https://fontawesome.com/icons?d=gallery&s=brands)的名称
 
-###版权信息设置
+### 版权信息设置
 
 默认情况下，Cactus将在您的版权信息中使用当前年份。 如果需要自己设置，请修改主题的`_config.yml`中的信息。
 
@@ -200,7 +200,7 @@ copyright:
   end_year:
 ```
 
-###语言配置
+### 语言配置
 
 如果您第一次使用 Hexo 或者第一次了解到 国际化(i18n) ,请阅读[Hexo documentation - internationalization (i18n) section](https://hexo.io/docs/internationalization.html),来了解详情。
 
@@ -229,7 +229,7 @@ copyright:
 
 **注意:Cactus不支持多语言网站。**
 
-###RTL支持
+### RTL支持
 
 该主题支持波斯语和阿拉伯语的RTL语言。
 如果您想使用RTL布局，请更改主题的`_config.yml`中的`direction`属性,将其修改为 `rtl`
@@ -239,7 +239,7 @@ copyright:
 direction: rtl
 ```
 
-###RSS
+### RSS
 
 在主题的`_config.yml`文件中设置`rss`字段可以设为一下几个:
 
@@ -248,7 +248,7 @@ direction: rtl
 3. 留空以使用[hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed)插件。
 
 
-###分析功能
+### 分析功能
 
 使用 分析 功能要在主题的`_config.yml`中写上 Google, Baidu, Cloudflare or Umami 的`tracking_id`
 
@@ -271,7 +271,7 @@ umami_analytics:
   host: https://analytics.domain.com
 ```
 
-###CDN
+### DN
 
 从CDN中加载Javascript和CSS资源，以提升访问速度。 默认从 [cdnjs](https://cdnjs.com/) 中加载资源
 
@@ -296,11 +296,11 @@ cdn:
 
 只有JQuery将从指定的CDN加载。
 
-###Comments 评论系统
+### 评论系统
 
 Cactus支持两种评论系统: [Disqus](https://disqus.com) 和 [Utterances](https://utteranc.es)
 
-####Disqus 评论
+#### Disqus 评论
 
 首先，在Disqus上创建一个站点:[https://disqus.com/admin/create/](http://disqus.com/admin/create/).
 
@@ -314,7 +314,7 @@ disqus:
 
 其中`SITENAME`是你在Disqus上给你的网站的名字。
 
-####Utterances 评论
+#### Utterances 评论
 
 首先，按照上面的说明[official website](https://utteranc.es/)来设置 issue tracker 并且链接Utterances。
 
@@ -336,7 +336,7 @@ utterances:
 * `label`: the label that will be assigned to issues created by Utterances
 * `theme`:选择 Utterances 的主题
 
-###代码高亮设置
+### 代码高亮设置
 
 在 [the available colorschemes](https://github.com/probberechts/hexo-theme-cactus/tree/master/source/css/_highlight) 中找一个喜欢的，并且添加到主题的`_config.yml`
 
@@ -344,7 +344,7 @@ utterances:
 highlight: COLORSCHEME_NAME
 ```
 
-###标签和分类
+### 标签和分类
 
 标签和分类可以在你文章开头显示。
  例如: 
@@ -386,7 +386,7 @@ nav:
   category: /categories/
 ```
 
-###本地搜索
+### 本地搜索
  
 首先，安装 [hexo-generate-search](https://www.npmjs.com/package/hexo-generator-search) 插件，来实现本地搜索。
 
@@ -419,7 +419,7 @@ nav:
 MIT
 
 
-##Translation Version 翻译版本
+## Translation Version 翻译版本
 
 Chinese Translation Version : 0.8 (Incomplete translation)
 中文翻译版本: 0.8 (不完整翻译)
