@@ -16,7 +16,7 @@
 - [许可证](#许可证)
 - [Translation Version 翻译版本](#翻译版本)
 
-## General
+## 版本信息
 
 - **主题版本** : 3.0
 - **兼容性** : Hexo 3 or later 支持 Hexo 3 以上版本
