@@ -6,22 +6,22 @@
 
 ![screenshot](https://user-images.githubusercontent.com/2175271/137625287-24a4ac77-fbc9-4c99-a4cd-90455d93d13c.png)
 
-##索引
+## 索引
 
-- [版本信息](##版本信息)
+- [版本信息](#general)
 - [主题特色](##主题特色)
 - [安装准备](##安装准备)
 - [安装主题](##安装主题)
 - [主题配置](##主题配置)
-- [许可证](## 许可证)
-- [Translation Version 翻译版本](## Translation Version 翻译版本)
+- [许可证](##许可证)
+- [Translation Version 翻译版本](##Translation Version 翻译版本)
 
-##版本信息
+## General
 
 - **主题版本** : 3.0
 - **兼容性** : Hexo 3 or later 支持 Hexo 3 以上版本
 
-##主题特色
+## 主题特色
 
 - 响应迅速
 - 拥有多种配色方案
