@@ -65,6 +65,15 @@ copyright:
   start_year: 2016
   end_year:
 
+# Customize the 404 page
+# Options:
+#   - enabled: whether to enable the 404 page (404.html).
+error_404:
+  enabled: true
+  title: "404 Page Not Found"
+  description: "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
+
+
 ##############################################################################
 # Look and Feel
 ##############################################################################

@@ -1,0 +1,9 @@
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <%- partial('_partial/post/gallery') %>
+    <div class="content" itemprop="articleBody">
+        <% if (theme.error_404.enabled && theme.error_404.title && theme.error_404.description ) { %>
+            <h1><%= theme.error_404.title %></h1>
+            <p><%= theme.error_404.description %></p>
+        <% } %>
+    </div>
+</article>
