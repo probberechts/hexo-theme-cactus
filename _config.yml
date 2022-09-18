@@ -195,3 +195,7 @@ cdn:
 icp_setting:
   enable: false
   icp: ""
+
+#UpYun footer setting
+upyun_setting:
+  enable: false
