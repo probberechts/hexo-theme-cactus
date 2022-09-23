@@ -11,6 +11,7 @@
         twitter_id:     theme.open_graph.twitter_id,
         google_plus:    theme.open_graph.google_plus,
     }) %>
+    <% if (page.title && page.comments && theme.giscus.enabled) { %><meta property="og:title" content="<%= page.title %>"/><% } %>
     <%- meta(page) %>
     <% if (theme.favicon) { %>
       <% if (theme.favicon.desktop) { %>

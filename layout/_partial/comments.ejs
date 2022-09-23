@@ -12,3 +12,10 @@
         </div>
     </div>
 <% } %>
+<% if(page.comments && theme.giscus.enabled){ %>
+    <div class="blog-post-comments">
+        <div class="giscus">
+            <noscript><%= __('comments.no_js') %></noscript>
+        </div>
+    </div>
+<% } %>
