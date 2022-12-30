@@ -1,6 +1,6 @@
 var decompress = require('gulp-decompress');
 var del = require('del');
-var download = require("gulp-download");
+var download = require("gulp-download-stream");
 var fs = require('fs');
 var gulp = require('gulp');
 var path = require('path');
