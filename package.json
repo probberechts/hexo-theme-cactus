@@ -27,7 +27,7 @@
     "del": "*",
     "gulp": "^4.0.0",
     "gulp-decompress": "*",
-    "gulp-download": "*",
+    "gulp-download-stream": "*",
     "gulp-jshint": "*",
     "gulp-stylint": "*",
     "js-yaml": "*",
