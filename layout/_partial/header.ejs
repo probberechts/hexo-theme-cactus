@@ -3,12 +3,12 @@
   <% if (theme.logo && theme.logo.enabled) { %>
     <% if (theme.gravatar && (theme.gravatar.email || theme.gravatar.hash) && theme.logo.gravatar) { %>
       <% if (theme.gravatar.email) { %>
-        <div id="logo" style="background-image: url(<%- gravatar(theme.gravatar.email) %>);"></div>
+        <img id="logo" class="u-logo" src="<%- gravatar(theme.gravatar.email) %>" />
       <% } else { %>
-        <div id="logo" style="background-image: url(https://www.gravatar.com/avatar/<%= theme.gravatar.hash %>);"></div>
+        <img id="logo" class="u-logo" src="https://www.gravatar.com/avatar/<%= theme.gravatar.hash %>" />
       <% } %>
     <% } else { %>
-      <div id="logo" style="background-image: url(<%- url_for(theme.logo.url) %>);"></div>
+      <img id="logo" class="u-logo" src="<%- url_for(theme.logo.url) %>" />
     <% } %>
   <% } %>
     <div id="title">
