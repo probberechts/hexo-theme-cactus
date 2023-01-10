@@ -3,12 +3,16 @@
   <% if (theme.logo && theme.logo.enabled) { %>
     <% if (theme.gravatar && (theme.gravatar.email || theme.gravatar.hash) && theme.logo.gravatar) { %>
       <% if (theme.gravatar.email) { %>
-        <img id="logo" class="u-logo" src="<%- gravatar(theme.gravatar.email) %>" />
+        <img id="logo" alt class="u-logo" 
+          srcset="<%- gravatar(theme.gravatar.email) %>?s=<%= theme.logo.width %>, <%- gravatar(theme.gravatar.email) %>?s=<%= theme.logo.width*1.5 %> 1.5x, <%- gravatar(theme.gravatar.email) %>?s=<%= theme.logo.width*2 %> 2x"
+          src="<%- gravatar(theme.gravatar.email) %>" />
       <% } else { %>
-        <img id="logo" class="u-logo" src="https://www.gravatar.com/avatar/<%= theme.gravatar.hash %>" />
+        <img id="logo" alt class="u-logo" 
+          srcset="https://www.gravatar.com/avatar/<%= theme.gravatar.hash %>?s=<%= theme.logo.width %>, https://www.gravatar.com/avatar/<%= theme.gravatar.hash %>?s=<%= theme.logo.width*1.5 %> 1.5x, https://www.gravatar.com/avatar/<%= theme.gravatar.hash %>?s=<%= theme.logo.width*2 %> 2x"
+          src="https://www.gravatar.com/avatar/<%= theme.gravatar.hash %>" />
       <% } %>
     <% } else { %>
-      <img id="logo" class="u-logo" src="<%- url_for(theme.logo.url) %>" />
+      <img id="logo" alt class="u-logo" src="<%- url_for(theme.logo.url) %>" />
     <% } %>
   <% } %>
     <div id="title">
