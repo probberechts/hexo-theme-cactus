@@ -21,15 +21,32 @@ nav:
 
 
 # Links to your social media accounts.
-# The keys should correspond to Fontawesome icon names
+# The 'icon' keys should correspond to Fontawesome icon names
 # (see https://fontawesome.com/icons?d=gallery&s=brands);
 # only 'mail' is an exception.
+# You can optionally add a 'label' key to set the title attribute on the link. 
+# 'icon' value will be used as title when 'label' is missing.
 social_links:
-  github: http://github.com/probberechts/cactus-dark
-  twitter: /
-  facebook: /
-  linkedin: /
-  mail: mailto:name@email.com
+  -
+    icon: github
+    link: http://github.com/probberechts/cactus-dark
+  -
+    icon: twitter
+    link: /
+  -
+    icon: facebook
+    link: /
+  -
+    icon: mail
+    link: mailto:name@email.com
+  -
+    icon: mastodon
+    label: mastodon.social
+    link: https://mastodon.social/@alice
+  -
+    icon: mastodon
+    label: fosstodon.org
+    link: https://fosstodon.org/@alice
 
 # Customize the overview with displaying a tagcloud on the index page.
 # Options: https://hexo.io/docs/helpers.html#tagcloud
