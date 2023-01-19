@@ -5,20 +5,21 @@
   <% if (theme.social_links) { %>
     <p>
       <%= __('index.find_me_on') %>
-      <% var nb_links = Object.keys(theme.social_links).length %>
+      <% var nb_links = theme.social_links.length %>
       <% var i = 0 %>
-      <% for(var link in theme.social_links) { %>
-        <% if (link == 'mail') { %>
-          <a class="icon" target="_blank" rel="noopener" href="<%- theme.social_links[link] %>" aria-label="<%- link %>">
+      <% for(var {label, icon, link} of theme.social_links) { %>
+        <% var title = label || icon %>
+        <% if (icon == 'mail') { %>
+          <a class="icon" target="_blank" rel="noopener" href="<%- link %>" aria-label="<%- title %>" title="<%- title %>">
             <i class="fas fa-envelope"></i><!--
       ---></a>
-        <% } else if (link == 'rss') { %>
-          <a class="icon" target="_blank" rel="noopener" href="<%- theme.social_links[link] %>" aria-label="<%- link %>">
+        <% } else if (icon == 'rss') { %>
+          <a class="icon" target="_blank" rel="noopener" href="<%- link %>" aria-label="<%- title %>" title="<%- title %>">
             <i class="fas fa-rss"></i>
           </a>
         <% } else { %>
-          <a class="icon" target="_blank" rel="noopener me" href="<%- url_for(theme.social_links[link]) %>" aria-label="<%- link %>">
-            <i class="fab fa-<%= link %>"></i><!--
+          <a class="icon" target="_blank" rel="noopener me" href="<%- url_for(link) %>" aria-label="<%- title %>" title="<%- title %>">
+            <i class="fab fa-<%= icon %>"></i><!--
       ---></a><!--
     ---><% } %><!--
     ---><%= ( nb_links > 0 && i < nb_links-1 ?
