@@ -17,7 +17,7 @@ nav:
   home: /
   about: /about/
   articles: /archives/
-  projects: http://github.com/probberechts
+  projects: http://github.com/MiladMoulayi
 
 
 # Links to your social media accounts.
@@ -25,11 +25,11 @@ nav:
 # (see https://fontawesome.com/icons?d=gallery&s=brands);
 # only 'mail' is an exception.
 social_links:
-  github: http://github.com/probberechts/cactus-dark
-  twitter: /
-  facebook: /
-  linkedin: /
-  mail: mailto:name@email.com
+  github: http://github.com/MiladMoulayi
+  # twitter: /
+  # facebook: /
+  linkedin: https://www.linkedin.com/in/milad-moulayi/
+  mail: mailto:m.moulayi123@gmail.com
 
 # Customize the overview with displaying a tagcloud on the index page.
 # Options: https://hexo.io/docs/helpers.html#tagcloud
@@ -149,7 +149,7 @@ open_graph:
 # Enable MathJax support for Latex
 mathjax:
   enabled: false
-  
+
 # Fill in your Disqus Comments Shortname to enable Disqus comments.
 disqus:
   enabled: false
