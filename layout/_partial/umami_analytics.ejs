@@ -1,0 +1,7 @@
+<!-- Umami Analytics -->
+<% if (theme.umami_analytics.enabled && theme.umami_analytics.id && theme.umami_analytics.host && theme.umami_analytics.script_name){ %>
+    <script async defer
+            data-website-id="<%= theme.umami_analytics.id %>"
+            src="<%= theme.umami_analytics.host %>/<%= theme.umami_analytics.script_name %>">
+    </script>
+<% } %>

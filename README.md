@@ -277,6 +277,7 @@ umami_analytics:
   enabled: false
   id: e77e68be-f6e4-4br3-9365-2b76b57cd571
   host: https://analytics.domain.com
+  script_name: umami.js
 ```
 
 ### CDN
