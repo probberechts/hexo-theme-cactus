@@ -5,7 +5,7 @@
     <% if (is_post()) { %>
       <%- partial('_partial/post/actions_desktop') %>
     <% } %>
-    <div class="content index py4">
+    <div class="content index py4 <%= is_home() ? 'h-card' : '' %>">
         <% if (!is_post()) { %>
           <%- partial('_partial/header') %>
         <% } %>

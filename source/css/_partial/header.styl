@@ -98,10 +98,17 @@ if $logo-grayout
         top: 77px
         right: 1rem
         display: inline-block
+        text-align: center
 
     ul.responsive
       li
         display: block
+    
+    ul 
+      a[aria-label="Menu"]
+        display: inline-block
+        min-width: 48px
+        min-height: 48px
 
     li:not(:first-child)
       padding-top: 1rem
