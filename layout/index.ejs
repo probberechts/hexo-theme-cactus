@@ -1,4 +1,4 @@
-<section id="about">
+<section id="about" class="p-note">
   <% if (config.description) { %>
     <%- markdown(config.description) %>
   <% } %>
@@ -10,7 +10,7 @@
       <% for(var {label, icon, link} of theme.social_links) { %>
         <% var title = label || icon %>
         <% if (icon == 'mail') { %>
-          <a class="icon" target="_blank" rel="noopener" href="<%- link %>" aria-label="<%- title %>" title="<%- title %>">
+          <a class="icon u-email" target="_blank" rel="noopener" href="<%- link %>" aria-label="<%- title %>" title="<%- title %>">
             <i class="fas fa-envelope"></i><!--
       ---></a>
         <% } else if (icon == 'rss') { %>
@@ -18,7 +18,9 @@
             <i class="fas fa-rss"></i>
           </a>
         <% } else { %>
-          <a class="icon" target="_blank" rel="noopener me" href="<%- url_for(link) %>" aria-label="<%- title %>" title="<%- title %>">
+          <a class="icon u-url" target="_blank" rel="noopener me" href="<%- url_for(theme.social_links[link]) %>" aria-label="<%- link %>">
+            <i class="fab fa-<%= link %>"></i><!--
+          <a class="icon u-url" target="_blank" rel="noopener me" href="<%- url_for(link) %>" aria-label="<%- title %>" title="<%- title %>">
             <i class="fab fa-<%= icon %>"></i><!--
       ---></a><!--
     ---><% } %><!--
