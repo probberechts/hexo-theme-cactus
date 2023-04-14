@@ -182,12 +182,20 @@ Therefore, update the theme's `_config.yml`:
 
 ```yml
 social_links:
-  github: your-github-url
-  twitter: your-twitter-url
-  NAME: your-NAME-url
+  -
+    icon: github
+    link: your-github-url
+  -
+    icon: twitter
+    label: "@your-twitter-handle"
+    link: your-twitter-url
+  -
+    icon: NAME
+    label: LABEL
+    link: your-NAME-url
 ```
 
-where `NAME` is the name of a [Font Awesome icon](https://fontawesome.com/icons?d=gallery&s=brands).
+where `NAME` is the name of a [Font Awesome icon](https://fontawesome.com/icons?d=gallery&s=brands), and LABEL is an optional value used as a title attribute on the link (NAME value is used if LABEL is missing).
 
 ### Copyright years
 
