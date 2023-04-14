@@ -1,5 +1,4 @@
 <head>
-    <%- partial('./google_analytics.ejs') %>
     <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -50,6 +49,8 @@
     <% } %>
     <!-- title -->
     <title><%= page_title() %></title>
+    <!-- async scripts -->
+    <%- partial('./google_analytics.ejs') %>
     <!-- styles -->
     <%- css('css/style') %>
     <!-- persian styles -->
