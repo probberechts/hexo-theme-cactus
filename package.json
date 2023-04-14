@@ -23,6 +23,7 @@
     "url": "https://github.com/probberechts/cactus-dark/issues"
   },
   "homepage": "https://github.com/probberechts/cactus-dark#readme",
+  "type": "module",
   "devDependencies": {
     "del": "*",
     "gulp": "^4.0.0",
