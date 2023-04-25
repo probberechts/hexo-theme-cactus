@@ -11,15 +11,15 @@
         <% var title = label || icon %>
         <% if (icon == 'mail') { %>
           <a class="icon u-email" target="_blank" rel="noopener" href="<%- link %>" aria-label="<%- title %>" title="<%- title %>">
-            <i class="fas fa-envelope"></i><!--
+            <i class="fa-solid fa-envelope"></i><!--
       ---></a>
         <% } else if (icon == 'rss') { %>
           <a class="icon" target="_blank" rel="noopener" href="<%- link %>" aria-label="<%- title %>" title="<%- title %>">
-            <i class="fas fa-rss"></i>
+            <i class="fa-solid fa-rss"></i>
           </a>
         <% } else { %>
           <a class="icon u-url" target="_blank" rel="noopener me" href="<%- url_for(link) %>" aria-label="<%- title %>" title="<%- title %>">
-            <i class="fab fa-<%= icon %>"></i><!--
+            <i class="fa-brands fa-<%= icon %>"></i><!--
       ---></a><!--
     ---><% } %><!--
     ---><%= ( nb_links > 0 && i < nb_links-1 ?
