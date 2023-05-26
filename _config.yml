@@ -72,8 +72,10 @@ archive:
 
 # Customize the article view.
 # Options:
+#   - show_share: show share entrance
 #   - show_updated: show the last modification date.
 post:
+  show_share: true
   show_updated: false
 
 # Customize the copyright years
