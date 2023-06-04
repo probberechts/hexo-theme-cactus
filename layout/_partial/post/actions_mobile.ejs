@@ -9,9 +9,12 @@
       </ul>
     </div>
 
-    <div id="toc-footer" style="display: none">
-      <%- toc(page.content) %>
-    </div>
+    <% let tocHTML = toc(page.content) %>
+    <% if (tocHTML !== '') { %>
+      <div id="toc-footer" style="display: none">
+        <%- toc(page.content) %>
+      </div>
+    <% } %>
 
     <% if (theme.post.show_share) { %>
       <div id="share-footer" style="display: none">
@@ -21,7 +24,9 @@
 
     <div id="actions-footer">
         <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> <%= __('post.mobile.menu') %></a>
-        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> <%= __('post.mobile.toc') %></a>
+        <% if (tocHTML !== '') { %>
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> <%= __('post.mobile.toc') %></a>
+        <% } %>
         <% if (theme.post.show_share) { %>
           <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> <%= __('post.mobile.share') %></a>
         <% } %>
