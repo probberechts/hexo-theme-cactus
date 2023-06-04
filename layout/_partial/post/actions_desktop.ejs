@@ -20,17 +20,23 @@
         <li><a class="icon" aria-label="<%- __('post.desktop.next') %>" href="<%- url_for(page.next.path) %>"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         <% } %>
         <li><a class="icon" aria-label="<%- __('post.desktop.back_to_top') %>" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
-        <li><a class="icon" aria-label="<%- __('post.desktop.share') %>" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+        <% if (theme.post.show_share) { %>
+          <li><a class="icon" aria-label="<%- __('post.desktop.share') %>" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+        <% } %>
       </ul>
       <span id="i-prev" class="info" style="display:none;"><%= __('post.desktop.previous') %></span>
       <span id="i-next" class="info" style="display:none;"><%= __('post.desktop.next') %></span>
       <span id="i-top" class="info" style="display:none;"><%= __('post.desktop.back_to_top') %></span>
-      <span id="i-share" class="info" style="display:none;"><%= __('post.desktop.share') %></span>
+      <% if (theme.post.show_share) { %>
+        <span id="i-share" class="info" style="display:none;"><%= __('post.desktop.share') %></span>
+      <% } %>
     </span>
     <br/>
-    <div id="share" style="display: none">
-      <%- partial('_partial/post/share', { icon_class_name: '' }) %>
-    </div>
+    <% if (theme.post.show_share) { %>
+      <div id="share" style="display: none">
+        <%- partial('_partial/post/share', { icon_class_name: '' }) %>
+      </div>
+    <% } %>
     <% let tocHTML = toc(page.content) %>
     <% if (tocHTML !== '') { %>
       <div id="toc">
