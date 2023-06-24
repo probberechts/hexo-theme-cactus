@@ -32,6 +32,7 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
 - Disqus / Utterances
 - Google analytics / Baidu Tongji / [Umami Analytics](https://umami.is)
 - Web-App manifests
+- Custom style injection
 - Font Awesome icons
 - Simplicity
 
@@ -313,6 +314,21 @@ Example of a simple `manifest.json` file:
     }
   ]
 }
+```
+
+### Custom Style Injection
+
+Want to overwrite Cactus' styles with your own? No problem. Put a `global.styl` ([Stylus](https://stylus-lang.com/)) or `global.css` (normal CSS) file at `source/css/global.styl` or `source/css/global.css` and tell Cactus where to find it.
+
+```yaml
+styles:
+  - url: /css/global
+```
+
+Hexo will compile Stylus files as needed and Cactus will include a link to the style sheet in all generated HTML files.
+
+```html
+<link rel="stylesheet" href="/css/global.css">
 ```
 
 ### CDN

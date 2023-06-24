@@ -60,6 +60,11 @@
     <%- partial('./umami_analytics.ejs') %>
     <!-- styles -->
     <%- css('css/style') %>
+    <% if (theme.styles) { %>
+      <% for (var i in theme.styles) { %>
+        <%- css(theme.styles[i].url) %>
+      <% } %>
+    <% } %>
     <!-- persian styles -->
     <% if (theme.direction && theme.direction === 'rtl') { %>
       <%- css('css/rtl') %>
