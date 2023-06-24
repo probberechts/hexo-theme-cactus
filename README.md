@@ -30,7 +30,8 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
 - Projects list
 - I18n support
 - Disqus / Utterances
-- Google analytics / Baidu Tongji / [Umami Analytics](https://umami.is) 
+- Google analytics / Baidu Tongji / [Umami Analytics](https://umami.is)
+- Web-App manifests
 - Font Awesome icons
 - Simplicity
 
@@ -64,23 +65,23 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
     # theme: landscape
     theme: cactus
     ```
-   
+
    See below for more information on how to customize this theme.
 
 3. Create pages and articles with the `hexo new [layout] <title>` command.
    For example, to create an "about me" page, run:
-   
+
     ```sh
     $ hexo new page about
     ```
-   
+
    This will create a new file in `source/about/index.md`
    Similarly, you can create a new article with
-   
+
     ```sh
     $ hexo new post "hello world"
     ```
-   
+
    and add some interesting content in `source/_posts/hello-world.md`.
 
 4. Run: `hexo generate` and `hexo server`
@@ -258,7 +259,7 @@ Set the `rss` field in the `_config.yml` to one of the following values:
 
 ### Analytics
 
-Add you Google, Baidu, Cloudflare or Umami Analytics `tracking_id` to the `_config.yml`.
+Add your Google, Baidu, Cloudflare or Umami Analytics `tracking_id` to the `_config.yml`.
 
 ```yml
 google_analytics:
@@ -278,6 +279,40 @@ umami_analytics:
   id: e77e68be-f6e4-4br3-9365-2b76b57cd571
   host: https://analytics.domain.com
   script_name: umami.js
+```
+
+### Web-App Manifests
+
+Cactus supports [Web-App Manifests](https://developer.mozilla.org/en-US/docs/Web/Manifest). Add an entry like this to the `_config.yml`:
+
+```yml
+manifest:
+  url: /manifest.json
+```
+
+This will tell Cactus to insert a manifest link into generated HTML files.
+
+```html
+<link rel="manifest" href="/meta/manifest.json">
+```
+
+Example of a simple `manifest.json` file:
+
+```json
+{
+  "name": "MyApp",
+  "short_name": "MyApp",
+  "theme_color": "#323232",
+  "background_color":"#323232",
+  "display":"standalone",
+  "icons": [
+    {
+      "src": "/images/my-app-icon-128x128.png",
+      "sizes": "128x128",
+      "type":"image/png"
+    }
+  ]
+}
 ```
 
 ### CDN
@@ -362,7 +397,7 @@ date: 2017-12-24 23:29:53
 tags:
 - Foo
 - Bar
-categories: 
+categories:
 - Baz
 ---
 
@@ -384,7 +419,7 @@ Similarly, you can create a page with an overview of all categories by running:
 $ hexo new page categories
 ```
 
-and adding `type: categories` to the front-matter of `source/categories/index.md`. 
+and adding `type: categories` to the front-matter of `source/categories/index.md`.
 
 Finally, don't forget to create a link to these pages, for example in the navigation menu:
 
