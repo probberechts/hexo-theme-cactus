@@ -12,6 +12,12 @@
         google_plus:    theme.open_graph.google_plus,
     }) %>
     <%- meta(page) %>
+
+    <% if (theme.manifest) { %>
+      <% if (theme.manifest.url) { %>
+        <link rel="manifest" href="<%= url_for(theme.manifest.url) %>">
+      <% } %>
+    <% } %>
     <% if (theme.favicon) { %>
       <% if (theme.favicon.desktop) { %>
         <% if (theme.gravatar && (theme.gravatar.email || theme.gravatar.hash) && theme.favicon.desktop.gravatar) { %>
@@ -54,6 +60,11 @@
     <%- partial('./umami_analytics.ejs') %>
     <!-- styles -->
     <%- css('css/style') %>
+    <% if (theme.styles) { %>
+      <% for (var i in theme.styles) { %>
+        <%- css(theme.styles[i].url) %>
+      <% } %>
+    <% } %>
     <!-- persian styles -->
     <% if (theme.direction && theme.direction === 'rtl') { %>
       <%- css('css/rtl') %>
