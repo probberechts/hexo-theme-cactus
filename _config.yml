@@ -19,7 +19,6 @@ nav:
   articles: /archives/
   projects: http://github.com/probberechts
 
-
 # Links to your social media accounts.
 # The 'icon' keys should correspond to Fontawesome icon names
 # (see https://fontawesome.com/icons?d=gallery&s=brands);
@@ -201,6 +200,10 @@ umami_analytics:
   id: e77e68be-f6e4-4br3-9365-2b76b57cd571
   host: https://analytics.domain.com
   script_name: umami.js
+
+# Enable Simple Analytics, no id or host needed
+simple_analytics:
+  enabled: false
 
 # Fill in you Gravatar email or hash if you want to use your gravatar as the
 # logo and/or favicons of you website.
