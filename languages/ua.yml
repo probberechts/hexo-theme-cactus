@@ -25,10 +25,10 @@ index:
 
 post:
   desktop:
-    previous: Попередній пост
-    next: Наступний пост
+    previous: Попередній допис
+    next: Наступний допис
     back_to_top: Вгору
-    share: Поширити пост
+    share: Поширити допис
   mobile:
     menu: Меню
     toc: TOC
@@ -57,7 +57,7 @@ counter:
     other: ""
 
   archive_posts:
-    zero: Пости відсутні
+    zero: Дописи відсутні
     one: ""
     other: ""
 
