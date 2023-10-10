@@ -12,3 +12,8 @@
         </div>
     </div>
 <% } %>
+<% if(page.comments && theme.waline && theme.waline.enabled){ %>
+    <div class="blog-post-comments">
+        <div id="waline_thread"></div>
+    </div>
+<% } %>

@@ -132,3 +132,49 @@
       }());
   </script>
 <% } %>
+<!-- Waline Comments -->
+<% if (theme.waline.enabled){ %>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+    var EMOJI = ['//unpkg.com/@waline/emojis@1.2.0/weibo']
+    var META = ['nick', 'mail', 'link'];
+    var REQUIREDFIELDS = ['nick', 'mail', 'link'];
+
+    var emoji = '<%= theme.waline.emoji %>'.split(',').filter(function(item){
+      return item !== ''; // filter()返回满足不为空item
+    });
+    emoji = emoji.length == 0 ? EMOJI : emoji;
+
+    var meta = '<%= theme.waline.meta %>'.split(',').filter(function(item){
+      return META.indexOf(item) > -1; // filter()返回满足META.indexOf(item) > -1为true的item
+    });
+    meta = meta.length == 0 ? META : meta;
+
+    var requiredFields = '<%= theme.waline.requiredFields %>'.split(',').filter(function(item){
+      return REQUIREDFIELDS.indexOf(item) > -1; // filter()返回满足META.indexOf(item) > -1为true的item
+    });
+    requiredFields = requiredFields.length == 0 ? REQUIREDFIELDS : requiredFields;
+
+    init({
+      el: '#waline_thread',
+      serverURL: '<%= theme.waline.serverURL %>', // Waline 的服务端地址
+      path: '<%= theme.waline.path %>' == '' ? window.location.pathname : '<%= theme.waline.path %>', // 当前文章页路径，用于区分不同的文章页，以保证正确读取该文章页下的评论列表
+      lang: '<%= theme.waline.lang %>' == '' ? 'zh-CN' : '<%= theme.waline.lang %>', // 多语言支持，未设置默认英文
+      emoji: emoji,
+      dark: '<%= theme.waline.dark %>', // 暗黑模式适配
+      commentSorting: '<%= theme.waline.commentSorting %>' == '' ? 'latest' : '<%= theme.waline.commentSorting %>', // 评论列表排序方式
+      meta: meta, // 评论者相关属性
+      requiredFields: requiredFields, // 设置必填项，默认匿名
+      login: '<%= theme.waline.login %>', // 登录模式状态
+      wordLimit: '<%= theme.waline.wordLimit %>', // 评论字数限制
+      pageSize: '<%= theme.waline.pageSize %>' == '' ? 10 : '<%= theme.waline.pageSize %>', // 评论列表分页，每页条数
+      imageUploader: '<%= theme.waline.imageUploader %>', // 自定义图片上传方法
+      highlighter: '<%= theme.waline.highlighter %>', // 代码高亮
+      placeholder: '<%= theme.waline.placeholder %>',
+      avatar: '<%= theme.waline.avatar %>',
+      visitor: '<%= theme.waline.visitor %>',
+      comment_count: '<%= theme.waline.comment_count %>',
+    });
+  </script>
+<% } %>
