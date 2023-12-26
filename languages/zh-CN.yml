@@ -6,7 +6,7 @@ nav:
   tag: 标签
   category: 分类
   search: 搜索
-  
+
 icons:
   menu: 目录
   top: 顶部
@@ -44,7 +44,7 @@ tag_cloud:
 
 pagination:
   page: 第 %d 页，共 %d 页
- 
+
 counter:
   tag_cloud:
     zero: 没有标签
@@ -63,6 +63,7 @@ counter:
 
 comments:
   no_js: 加载评论需要在浏览器启用 JavaScript 脚本支持。
+  header: 评论
 
 tooltip:
   copy_tip: 复制到粘贴板！

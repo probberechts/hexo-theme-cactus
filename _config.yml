@@ -24,7 +24,7 @@ nav:
 # The 'icon' keys should correspond to Fontawesome icon names
 # (see https://fontawesome.com/icons?d=gallery&s=brands);
 # only 'mail' is an exception.
-# You can optionally add a 'label' key to set the title attribute on the link. 
+# You can optionally add a 'label' key to set the title attribute on the link.
 # 'icon' value will be used as title when 'label' is missing.
 social_links:
   -
@@ -179,6 +179,13 @@ utterances:
   issue_term: pathname
   label: Comment
   theme: github-dark
+
+# Fill in your Cusdis Comments Shortname to enable Cusdis comments.
+cusdis:
+  enabled: false
+  host: https://cusdis.com
+  app_id: XXX
+  script: https://cusdis.com/js/cusdis.es.js
 
 # Fill in your Google Analytics tracking ID to enable Google Analytics.
 google_analytics:
