@@ -132,3 +132,16 @@
       }());
   </script>
 <% } %>
+<!-- Cusdis Comments -->
+<% if (page.comments && theme.cusdis.enabled){ %>
+  <script type="text/javascript">
+
+      (function(){
+          var script = document.createElement('script');
+          script.type = 'text/javascript';
+          script.async = true;
+          script.src = '<%= theme.cusdis.script || "https://cusdis.com/js/cusdis.es.js" %>';
+          (document.getElementById('cusdis_thread')).appendChild(script);
+      }());
+  </script>
+<% } %>
