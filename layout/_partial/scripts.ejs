@@ -96,6 +96,12 @@
 <% if (theme.cloudflare_analytics.enabled && theme.cloudflare_analytics.id){ %>
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "<%= theme.cloudflare_analytics.id %>"}'></script>
 <% } %>
+<!-- Simple Analytics -->
+<% if (theme.simple_analytics.enabled){ %>
+  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
+      referrerpolicy="no-referrer-when-downgrade" /></noscript>
+<% } %>
 <!-- Disqus Comments -->
 <% if (page.comments && theme.disqus.enabled && theme.disqus.shortname){ %>
     <script type="text/javascript">
@@ -123,7 +129,7 @@
 
           script.src = 'https://utteranc.es/client.js';
           script.setAttribute('repo', utterances_repo);
-          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('issue-term', utterances_issue_term);
           script.setAttribute('label', utterances_label);
           script.setAttribute('theme', utterances_theme);
           script.setAttribute('crossorigin', 'anonymous');
