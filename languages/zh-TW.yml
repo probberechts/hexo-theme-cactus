@@ -7,6 +7,10 @@ nav:
   projects: 項目
   search: 搜尋
 
+icons:
+  menu: 目錄
+  top: 頂部
+
 footer:
   copyright: Copyright
 
@@ -59,3 +63,7 @@ counter:
 
 comments:
   no_js: 請開啟 JavaScript 功能來使用留言系統
+
+tooltip:
+  copy_tip: 複製到剪貼簿！
+  copied: 複製成功！
