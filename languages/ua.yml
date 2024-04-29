@@ -1,0 +1,69 @@
+nav:
+  home: Головна
+  about: Про мене
+  articles: Статті
+  tag: Теґи
+  category: Категорії
+  projects: Проєкти
+  search: Пошук
+
+icons:
+  menu: Меню
+  top: Вгору
+
+footer:
+  copyright: Copyright
+
+index:
+  find_me_on: Знайди мене в
+  enum_comma: ','
+  enum_and: і
+  articles: Статті
+  projects: Проєкти
+  topics: Теми
+  most_recent: Нові
+
+post:
+  desktop:
+    previous: Попередній допис
+    next: Наступний допис
+    back_to_top: Вгору
+    share: Поширити допис
+  mobile:
+    menu: Меню
+    toc: TOC
+    back_to_top: Вгору
+    share: Поширити
+
+search:
+  search: Пошук...
+  no_results: Нічого не знайдено.
+
+tag_cloud:
+  zero: Теґи відсутні
+
+pagination:
+  page: Сторінка %d з %d
+
+counter:
+  tag_cloud:
+    zero: Теґи відсутні
+    one: ""
+    other: ""
+
+  categories:
+    zero: Категорії відсутні
+    one: ""
+    other: ""
+
+  archive_posts:
+    zero: Дописи відсутні
+    one: ""
+    other: ""
+
+comments:
+  no_js: Це не працювавтиме без JavaScript.
+
+tooltip:
+  copy_tip: Скопіювати до буферу обміну!
+  copied: Скопійовано!
