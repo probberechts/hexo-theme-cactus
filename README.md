@@ -226,6 +226,7 @@ Currently, the theme is delivered with support for:
 - Russian (ru)
 - Spanish (es)
 - German (de)
+- Ukrainian (ua)
 
 If you would like to use one the languages listed above, simply set `language`
 to the desired language (e.g., `fr`) in `_config.yml`.
