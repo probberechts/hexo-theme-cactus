@@ -216,17 +216,23 @@ If you are new to Hexo and internationalization (i18n), please read
 Currently, the theme is delivered with support for:
 
 - English (en), default
-- Brazilian Portuguese (pt-br)
+- Arabic (ar)
+- Brazilian Portuguese (pt-BR)
 - Catalan (ca)
 - Chinese (Simplified, PRC) (zh-CN)
 - Dutch (nl)
 - French (fr)
+- German (de)
 - Italian (it)
+- Korean (kr)
 - Persian (fa)
+- Polish (pl)
 - Russian (ru)
 - Spanish (es)
-- German (de)
+- Taiwanese (Taiwanese Mandarin) (zh-TW)
+- Turkish (tr)
 - Ukrainian (ua)
+- Vietnamese (vi)
 
 If you would like to use one the languages listed above, simply set `language`
 to the desired language (e.g., `fr`) in `_config.yml`.
