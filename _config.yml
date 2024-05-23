@@ -180,6 +180,21 @@ utterances:
   label: Comment
   theme: github-dark
 
+# Waline
+# For more information: https://waline.js.org, https://github.com/walinejs/waline
+waline:
+  enabled: true #是否开启
+  serverURL: 'https://blog-comments-vercel-server.vercel.app' # Waline #服务端地址，我们这里就是上面部署的 Vercel 地址
+  avatar: mm # 头像风格
+  meta: [nick, mail] # 自定义评论框上面的三个输入框的内容
+  pageSize: 10 # 评论数量多少时显示分页
+  lang: zh-CN # 语言, 可选值: en, zh-cn
+  # Warning: 不要同时启用 `waline.visitor` 以及 `leancloud_visitors`.
+  visitor: false # 文章阅读统计
+  comment_count: true # 如果为 false , 评论数量只会在当前评论页面显示, 主页则不显示
+  requiredFields: [nick, mail] # 设置用户评论时必填的信息，[nick,mail]: [nick] | [nick, mail]
+  emoji: //unpkg.com/@waline/emojis@1.2.0/qq
+
 # Fill in your Google Analytics tracking ID to enable Google Analytics.
 google_analytics:
   enabled: false
