@@ -63,6 +63,7 @@ counter:
 
 comments:
   no_js: Please enable JavaScript to view the comments.
+  header: Comments
 
 tooltip:
   copy_tip: Copy to clipboard!

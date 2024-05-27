@@ -29,8 +29,8 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
 - Support for local search
 - Projects list
 - I18n support
-- Disqus / Utterances
-- Google analytics / Baidu Tongji / [Umami Analytics](https://umami.is) 
+- Disqus / Utterances / Cusdis
+- Google analytics / Baidu Tongji / [Umami Analytics](https://umami.is)
 - Font Awesome icons
 - Simplicity
 
@@ -64,23 +64,23 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
     # theme: landscape
     theme: cactus
     ```
-   
+
    See below for more information on how to customize this theme.
 
 3. Create pages and articles with the `hexo new [layout] <title>` command.
    For example, to create an "about me" page, run:
-   
+
     ```sh
     $ hexo new page about
     ```
-   
+
    This will create a new file in `source/about/index.md`
    Similarly, you can create a new article with
-   
+
     ```sh
     $ hexo new post "hello world"
     ```
-   
+
    and add some interesting content in `source/_posts/hello-world.md`.
 
 4. Run: `hexo generate` and `hexo server`
@@ -351,6 +351,26 @@ where each of the parameters are the respective values ​​provided during the
 * `label`: the label that will be assigned to issues created by Utterances
 * `theme`: the selected Utterances theme.
 
+#### Cusdis
+
+First, create an account on Cusdis: [https://cusdis.com/](https://cusdis.com/).
+
+Next, update the `_config.yml` file:
+
+```yml
+cusdis:
+  enabled: false
+  host: https://cusdis.com
+  app_id: XXX
+  script: https://cusdis.com/js/cusdis.es.js
+```
+
+where each of the parameters are the respective values ​​provided during the configuration of the Cusdis:
+
+* `host`:  the host domain. Default is `https://cusdis.com`.
+* `app_id`: the id provided when you create an app on Cusdis.
+* `script`: the url for importing the JS script, default is the source file on official website.
+
 ### Code Highlighting
 
 Pick one of [the available colorschemes](https://github.com/probberechts/hexo-theme-cactus/tree/master/source/css/_highlight) and add it to the `_config.yml`:
@@ -369,7 +389,7 @@ date: 2017-12-24 23:29:53
 tags:
 - Foo
 - Bar
-categories: 
+categories:
 - Baz
 ---
 
@@ -391,7 +411,7 @@ Similarly, you can create a page with an overview of all categories by running:
 $ hexo new page categories
 ```
 
-and adding `type: categories` to the front-matter of `source/categories/index.md`. 
+and adding `type: categories` to the front-matter of `source/categories/index.md`.
 
 Finally, don't forget to create a link to these pages, for example in the navigation menu:
 

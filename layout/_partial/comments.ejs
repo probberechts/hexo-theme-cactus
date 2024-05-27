@@ -12,3 +12,17 @@
         </div>
     </div>
 <% } %>
+<% if (page.comments && theme.cusdis.enabled){ %>
+    <div id="blog-post-comments">
+        <h1 class="title"><%= __('comments.header') %></h1>
+        <div id="cusdis_thread"
+        data-host="<%= theme.cusdis.host || 'https://cusdis.com' %>"
+        data-app-id="<%= theme.cusdis.app_id %>"
+        data-page-id="<%= page.path %>"
+        data-page-url="<%= page.permalink %>"
+        data-page-title="<%= page.title %>"
+    ></div>
+    <!-- <script async defer src="https://cusdis.com/js/cusdis.es.js"></script> -->
+
+    </div>
+<% } %>
