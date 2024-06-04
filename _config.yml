@@ -24,7 +24,7 @@ nav:
 # The 'icon' keys should correspond to Fontawesome icon names
 # (see https://fontawesome.com/icons?d=gallery&s=brands);
 # only 'mail' is an exception.
-# You can optionally add a 'label' key to set the title attribute on the link. 
+# You can optionally add a 'label' key to set the title attribute on the link.
 # 'icon' value will be used as title when 'label' is missing.
 social_links:
   -
@@ -130,6 +130,17 @@ favicon:
   apple:
     url: /images/apple-touch-icon.png
     gravatar: false
+
+# Inserts a <link> to a web-app manifest file.
+#
+# manifest:
+#   url: /manifest.json
+
+# Add custom CSS styles to every page.
+# This will try to compile an Stylus file at /css/global.styl
+# or a normal CSS sheet at /css/global.css
+# styles:
+#   - url: /css/global
 
 # The color scheme that should be used to highlight codeblocks.
 # See source/css/_highlight for a list of all available color schemes.
