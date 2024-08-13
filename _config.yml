@@ -19,6 +19,11 @@ nav:
   articles: /archives/
   projects: http://github.com/probberechts
 
+# Show a Tags section on the home page
+show_tags_section: true
+
+# Show a Category section on the home page
+show_category_section: true
 
 # Links to your social media accounts.
 # The 'icon' keys should correspond to Fontawesome icon names

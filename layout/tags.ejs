@@ -1,0 +1,26 @@
+<%- partial('_partial/head') %>
+<div class="page">
+  <div class="post-list">
+    <span class="h1"><a href="<%- url_for('/tags') %>">Tags</a></span>
+    a tag wise display of posts 
+    <% if (site.tags && site.tags.length > 0) { %>
+      <ul class="tag-list">
+        <% site.tags.forEach(function(tag){ %>
+          <li class="tag">
+            <b><a href="<%= url_for(tag.path) %>"><%= tag.name %></a></b> (<%= tag.length %>)
+            <ul class="post-list">
+              <% tag.posts.forEach(function(post){ %>
+                <li>
+                  <a href="<%= url_for(post.path) %>"><%= post.title %></a>
+                </li>
+              <% }) %>
+            </ul>
+          </li><br />
+        <% }) %>
+      </ul>
+    <% } else { %>
+      <p>No tags found.</p>
+    <% } %>
+  </div>
+</div>
+<%- partial('_partial/footer') %>

@@ -72,3 +72,37 @@
   </ul>
 </section>
 <% } %>
+
+<% if (theme.show_tags_section) { %>
+<section id="tags">
+  <span class="h1"><a href="<%- url_for('/tags') %>">Tags</a></span>
+  <% if (site.tags && site.tags.length > 0) { %>
+    <ul class="tag-list">
+      <% site.tags.forEach(function(tag){ %>
+        <li class="tag">
+          <a href="<%= url_for(tag.path) %>"><%= tag.name %></a> (<%= tag.length %>)
+        </li>
+      <% }) %>
+    </ul>
+  <% } else { %>
+    <p>No tags found.</p>
+  <% } %>
+</section>
+<% } %>
+
+<% if (theme.show_category_section) { %>
+  <section id="categories">
+    <span class="h1"><a href="<%- url_for('/categories') %>">Categories</a></span>
+    <% if (site.categories && site.categories.length > 0) { %>
+      <ul class="category-list">
+        <% site.categories.forEach(function(category){ %>
+          <li class="category">
+            <a href="<%= url_for(category.path) %>"><%= category.name %></a> (<%= category.length %>)
+          </li>
+        <% }) %>
+      </ul>
+    <% } else { %>
+      <p>No categories found.</p>
+    <% } %>
+  </section>
+  <% } %>

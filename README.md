@@ -156,6 +156,22 @@ You have two options for the list of blog posts on the home page:
       show_all_posts: true
     ```
 
+
+### Category and Tag section on home page
+You can show a category and tag section on the home page by editing the hexo ```_config.yml``` file.
+
+  ```yml
+  # Show a Tags section on the home page
+  show_tags_section: true
+
+  # Show a Category section on the home page
+  show_category_section: true
+  ```
+The theme has a provision to make separate tags and category pages. For this, you need to follow these steps:
+- make a new hexo page.
+- changing the layout to ```tags``` for a tags page or ```categories``` for a categories page.
+- adding the relevant paths in your nav menu.
+
 ### Projects list
 
 Create a projects file `source/_data/projects.json` to show a list of your projects on the index page.

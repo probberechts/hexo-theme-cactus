@@ -1,0 +1,26 @@
+<%- partial('_partial/head') %>
+<div class="page">
+  <div class="post-list">
+    <span class="h1"><a href="<%- url_for('/categories') %>">Categories</a></span>
+    a category wise display of posts 
+    <% if (site.categories && site.categories.length > 0) { %>
+      <ul class="category-list">
+        <% site.categories.forEach(function(category){ %>
+          <li class="category">
+            <b><a href="<%= url_for(category.path) %>"><%= category.name %></a></b> (<%= category.length %>)
+            <ul class="post-list">
+              <% category.posts.forEach(function(post){ %>
+                <li>
+                  <a href="<%= url_for(post.path) %>"><%= post.title %></a>
+                </li>
+              <% }) %>
+            </ul>
+          </li><br />
+        <% }) %>
+      </ul>
+    <% } else { %>
+      <p>No categories found.</p>
+    <% } %>
+  </div>
+</div>
+<%- partial('_partial/footer') %>
