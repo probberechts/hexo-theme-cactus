@@ -180,6 +180,17 @@ utterances:
   label: Comment
   theme: github-dark
 
+# FIll in your Giscus data to enable Gitcus comments.
+giscus:
+  enabled: true
+  repo: "username/repo_name"
+  repo_id: ""
+  category: ""
+  category_id: ""
+  dark_mode: false
+
+
+
 # Fill in your Google Analytics tracking ID to enable Google Analytics.
 google_analytics:
   enabled: false

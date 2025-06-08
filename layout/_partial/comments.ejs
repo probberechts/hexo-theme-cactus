@@ -12,3 +12,22 @@
         </div>
     </div>
 <% } %>
+<% if(page.comments && theme.giscus.enabled){ %>
+    <div class="blog-post-comments">
+        <script src="https://giscus.app/client.js"
+        data-repo="<%= theme.giscus.repo %>"
+        data-repo-id="<%= theme.giscus.repo_id %>"
+        data-category="<%= theme.giscus.category %>"
+        data-category-id="<%= theme.giscus.category_id %>"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="<%- theme.giscus.dark_mode ? 'dark_dimmed' : 'light_protanopia' %>"
+        data-lang="en"
+        crossorigin="anonymous"
+    async>
+  </script>
+</div>
+<% } %>

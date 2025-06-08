@@ -313,7 +313,7 @@ Only JQuery will be loaded from the specified CDN.
 
 ### Comments
 
-Cactus supports two commenting systems: [Disqus](https://disqus.com) and [Utterances](https://utteranc.es).
+Cactus supports three commenting systems: [Disqus](https://disqus.com), [Utterances](https://utteranc.es) and [Giscus](https://giscus.app)
 
 #### Disqus
 
@@ -331,7 +331,7 @@ where `SITENAME` is the name you gave your site on Disqus.
 
 #### Utterances
 
-First, follow the instructions on the [oficial website](https://utteranc.es/) to setup an issue tracker Utterances will connect to.
+First, follow the instructions on the [official website](https://utteranc.es/) to setup an issue tracker Utterances will connect to.
 
 Next, update the `_config.yml` file:
 
@@ -342,6 +342,21 @@ utterances:
   issue_term: pathname
   label: utteranc
   theme: themename
+```
+
+#### Giscus
+
+First, visit [the official website of Giscus](https://giscus.app/) to retrieve your repository and category IDs.
+Next, update the `_config.yml` file:
+
+```yml
+giscus:
+  enabled: true
+  repo: "username/repo"
+  repo_id: "your_repo_id"
+  category: "category_name"
+  category_id: "your_category_id"
+  dark_mode: false
 ```
 
 where each of the parameters are the respective values ​​provided during the configuration of the Utterances:
