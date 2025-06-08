@@ -313,7 +313,7 @@ Only JQuery will be loaded from the specified CDN.
 
 ### Comments
 
-Cactus supports three commenting systems: [Disqus](https://disqus.com) and [Utterances](https://utteranc.es).
+Cactus supports three commenting systems: [Disqus](https://disqus.com), [Utterances](https://utteranc.es) and [Giscus](https://giscus.app)
 
 #### Disqus
 
@@ -358,7 +358,6 @@ giscus:
   category_id: "your_category_id"
   dark_mode: false
 ```
-
 
 where each of the parameters are the respective values ​​provided during the configuration of the Utterances:
 
