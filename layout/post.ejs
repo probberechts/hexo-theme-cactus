@@ -8,6 +8,15 @@
       <%- partial('_partial/post/date', { post: page, class_name: 'postdate' }) %>
       <%- partial('_partial/post/category') %>
       <%- partial('_partial/post/tag') %>
+      <% if (config.symbols_count_time.symbols || config.symbols_count_time.time) { %>
+        <span class="meta-divider"> | </span>
+        <% if (config.symbols_count_time.symbols) { %>
+          <span class="word-count"><%- symbolsCount(page) %> words</span><%
+        } %><% if (config.symbols_count_time.symbols && config.symbols_count_time.time) { %><span class="meta-divider">, </span><%
+        } %><% if (config.symbols_count_time.time) { %>
+          <span class="time-to-read"><%- symbolsTime(page) %></span>
+        <% } %>
+      <% } %>
     </div>
   </header>
   <%- partial('_partial/post/gallery') %>
