@@ -167,6 +167,13 @@ open_graph:
 mathjax:
   enabled: false
 
+# Enable Mermaid diagram support for ```mermaid code fences
+mermaid:
+  enable: false
+  # Mermaid theme: auto | dark | default | forest | neutral
+  # 'auto' detects from colorscheme setting
+  theme: auto
+
 # Fill in your Disqus Comments Shortname to enable Disqus comments.
 disqus:
   enabled: false
@@ -217,3 +224,4 @@ cdn:
   font_awesome: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
   justified_gallery_css: https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css
   justified_gallery_js: https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js
+  mermaid: https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
